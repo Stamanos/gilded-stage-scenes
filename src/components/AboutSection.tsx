@@ -9,42 +9,44 @@ const AboutSection = () => {
             </h2>
             <div className="space-y-6">
               <p className="text-body-lg text-muted-foreground leading-relaxed">
-                Atelier Theater was founded on the belief that theater is not merely entertainment, 
-                but a transformative experience that challenges, inspires, and connects us to our 
-                shared humanity.
-              </p>
+                Η εταιρία θεατρικών παραγωγών “ΜΕΘΕΞΙΣ”, ιδρύθηκε το 2013 από τον Χρήστο Τριπόδη. 
               <p className="text-body text-muted-foreground leading-relaxed">
-                In our intimate 150-seat theater, we create a space where stories come alive 
-                through the marriage of classical technique and contemporary vision. Each production 
-                is meticulously crafted to honor the text while speaking to modern audiences.
+                Έχοντας ήδη διανύσει δώδεκα χρόνια από την ίδρυσή της και με πάνω από τριάντα  
+                παραγωγές στο ιστορικό της, η “ΜΕΘΕΞΙΣ” πιστά και με σεβασμό, δραστηριοποιείται, 
+                δημιουργεί και παρουσιάζει παραστάσεις για ενήλικες και παιδιά  με σκοπό να ψυχαγωγήσει 
+                και να διασκεδάσει θεατές όλων των ηλικιών.
+                Στόχος και όραμα της εταιρίας είναι να δημιουργεί ποιοτικές παραστάσεις που 
+                ανταποκρίνονται σε υψηλά καλλιτεχνικά κριτήρια και να συμβάλει στη θεατρική 
+                παιδία και τη διάδοση της, τόσο στο ενήλικο, όσο και στο παιδικό κοινό.
               </p>
-              <p className="text-body text-muted-foreground leading-relaxed">
-                Our artistic philosophy centers on the power of live performance to create 
-                genuine moments of revelation and connection. We believe in theater as a 
-                collaborative art form that brings together artists and audiences in shared discovery.
               </p>
             </div>
           </div>
 
           <div className="space-y-8 animate-fade-up">
             <div className="bg-card p-8 rounded-lg shadow-elegant">
-              <h3 className="text-display-md text-card-foreground mb-4">Our Mission</h3>
+              <h3 className="text-display-md text-card-foreground mb-4">Ο Στόχος μας</h3>
               <p className="text-body text-muted-foreground leading-relaxed">
-                To create exceptional theatrical experiences that honor the craft while 
-                pushing artistic boundaries, fostering a deeper understanding of the human condition.
+                Μέλημα επίσης της εταιρίας Μέθεξις και του Χρήστου Τριπόδη είναι 
+                να διατηρεί ένα αξιόπιστο δίκτυο συνεργατών, πάντα με γνώμονα τον αλληλοσεβασμό και 
+                την κοινή καλλιτεχνική ματιά.
               </p>
             </div>
 
             <div className="bg-accent/5 p-8 rounded-lg border border-accent/20">
-              <h3 className="text-display-md text-foreground mb-4">Artistic Vision</h3>
+              <h3 className="text-display-md text-foreground mb-4">Επιτεύγματα</h3>
               <p className="text-body text-muted-foreground leading-relaxed">
-                We seek to illuminate the profound within the intimate, creating theater 
-                that is both intellectually rigorous and emotionally resonant.
+                Βασικός σταθμός στην πορεία της εταιρίας είναι η πολυετή 
+                συνεργασία με το Ίδρυμα Μείζονος Ελληνισμού «Ελληνικός Κόσμος», η καλλιτεχνική 
+                διοργάνωση του Καλοκαιρινού Φεστιβάλ Δήμου Παπάγου, στο Κηποθέατρο Παπάγου, τα τελευταία 
+                πέντε χρόνια και του καλοκαιρινού θεατρικού φεστιβάλ του Δήμου Ηλιούπολης, τα τελευταία 
+                δύο χρόνια, καθώς και η συνεργασία με σημαντικούς καλλιτέχνες και συγγραφείς του 
+                σύγχρονου θεατρικού γίγνεσθαι. 
               </p>
             </div>
 
             <div className="bg-card p-8 rounded-lg shadow-elegant">
-              <h3 className="text-display-md text-card-foreground mb-4">Community</h3>
+              <h3 className="text-display-md text-card-foreground mb-4">Κοινότητα</h3>
               <p className="text-body text-muted-foreground leading-relaxed">
                 Theater thrives in community. We cultivate relationships with artists, 
                 audiences, and the broader cultural landscape to nurture the art form.

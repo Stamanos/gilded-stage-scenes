@@ -5,8 +5,8 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="md:col-span-2">
             <div className="text-display-md mb-4">
-              <span className="text-foreground">Atelier</span>
-              <span className="text-accent ml-2">Theater</span>
+              <span className="text-foreground">Μέθεξις</span>
+              <span className="text-accent ml-2">Productions</span>
             </div>
             <p className="text-body text-muted-foreground leading-relaxed max-w-md">
               Creating transformative theatrical experiences that honor tradition 
@@ -69,7 +69,7 @@ const Footer = () => {
 
         <div className="border-t border-border mt-12 pt-8 flex flex-col md:flex-row justify-between items-center text-muted-foreground">
           <p className="text-sm">
-            © 2024 Atelier Theater. Όλα τα δικαιώματα διατηρούνται.
+            © 2024 Μέθεξις productions. Όλα τα δικαιώματα διατηρούνται.
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0 text-sm">
             <a href="/privacy" className="hover:text-accent transition-colors duration-300">

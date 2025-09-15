@@ -24,7 +24,7 @@ const Cookies = () => {
 
             <div>
               <h2 className="text-display-md text-foreground mb-4">Πώς Χρησιμοποιούμε τα Cookies</h2>
-              <p>Το Atelier Theater χρησιμοποιεί cookies για:</p>
+              <p>Το Μέθεξις productions χρησιμοποιεί cookies για:</p>
               <ul className="list-disc list-inside space-y-2 ml-4">
                 <li>Να θυμόμαστε τις προτιμήσεις σας</li>
                 <li>Να βελτιώσουμε την απόδοση της ιστοσελίδας</li>

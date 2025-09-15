@@ -4,17 +4,17 @@ const NowPlayingSection = () => {
   const nowPlaying = [
     {
       id: 1,
-      title: "Η Θύελλα",
-      subtitle: "Shakespeare σε σύγχρονη ερμηνεία",
-      shortDescription: "Μια σύγχρονη ερμηνεία του τελευταίου αριστουργήματος του Shakespeare.",
-      nextShow: "Σήμερα 20:30",
-      status: "Τώρα στη σκηνή"
+      title: "ΕΙΡΗΝΗ",
+      subtitle: "Η κωμωδία του Αριστοφάνη ",
+      shortDescription: "Σε συμπαραγωγή με το Θεσσαλικό Θέατρο, σε μετάφραση Λάκη Λαζόπουλο και σκηνοθεσία Νικορέστη Χανιωτάκη.",
+      nextShow: "20/10 20:30",
+      status: "Προσεχώς"
     },
     {
       id: 2,
-      title: "Περιμένοντας τον Γκοντό",
-      subtitle: "Το υπαρξιακό ταξίδι του Beckett",
-      shortDescription: "Μια βαθιά εξερεύνηση της ελπίδας και της απόγνωσης στο διαχρονικό έργο του Beckett.",
+      title: "ΦΙΛΟΚΤΗΤΗΣ",
+      subtitle: "Η τραγωδία του Σοφοκλή ",
+      shortDescription: "Σε σκηνοθεσία Γιώργου Κιμούλη.",
       nextShow: "Αύριο 19:00",
       status: "Επόμενη παράσταση"
     }

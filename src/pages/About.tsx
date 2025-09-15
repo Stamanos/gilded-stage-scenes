@@ -30,7 +30,7 @@ const About = () => {
           <div className="text-center animate-fade-up">
             <h1 className="text-display-xl mb-6">Σχετικά με εμάς</h1>
             <p className="text-body-lg opacity-90 max-w-3xl mx-auto">
-              Το Atelier Theater δημιουργήθηκε με την πεποίθηση ότι το θέατρο δεν είναι απλώς ψυχαγωγία, 
+              Το Μέθεξις productions δημιουργήθηκε με την πεποίθηση ότι το θέατρο δεν είναι απλώς ψυχαγωγία, 
               αλλά μια μεταμορφωτική εμπειρία που προκαλεί, εμπνέει και μας συνδέει με την κοινή μας ανθρωπιά.
             </p>
           </div>

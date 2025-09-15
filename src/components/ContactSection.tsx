@@ -22,10 +22,10 @@ const ContactSection = () => {
             <h3 className="text-xl font-display mb-3">Email</h3>
             <p className="opacity-90">
               <a 
-                href="mailto:info@ateliertheater.com" 
+                href="mailto:methexis.productions@gmail.com" 
                 className="hover:text-gold transition-colors duration-300"
               >
-                info@ateliertheater.com
+                methexis.productions@gmail.com
               </a>
             </p>
           </div>
