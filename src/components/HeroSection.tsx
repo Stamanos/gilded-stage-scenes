@@ -16,18 +16,18 @@ const HeroSection = () => {
       <div className="relative z-10 text-center max-w-4xl mx-auto px-6">
         <div className="animate-fade-up">
           <h1 className="text-display-xl text-primary-foreground mb-6">
-            The Tempest
+            Τώρα στη σκηνή: <span className="text-gold">Η Θύελλα</span>
           </h1>
           <p className="text-body-lg text-primary-foreground/90 mb-8 max-w-2xl mx-auto">
-            Experience Shakespeare's masterpiece reimagined through contemporary lens. 
-            A story of power, forgiveness, and magic unfolds on our intimate stage.
+            Μια σύγχρονη ερμηνεία του τελευταίου αριστουργήματος του Shakespeare, 
+            που εξερευνά θέματα εξουσίας, συγχώρεσης και λύτρωσης.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <button className="bg-accent hover:bg-accent/90 text-accent-foreground px-8 py-4 text-lg font-medium transition-all duration-300 hover:shadow-elegant">
-              Book Tickets
+              Κλείσε Εισιτήρια
             </button>
             <button className="border border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 px-8 py-4 text-lg font-medium transition-all duration-300">
-              Learn More
+              Μάθετε περισσότερα
             </button>
           </div>
         </div>

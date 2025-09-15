@@ -15,36 +15,36 @@ const Footer = () => {
           </div>
 
           <div>
-            <h4 className="font-display text-lg text-foreground mb-4">Quick Links</h4>
+            <h4 className="font-display text-lg text-foreground mb-4">Γρήγοροι Σύνδεσμοι</h4>
             <ul className="space-y-2 text-muted-foreground">
               <li>
-                <a href="#productions" className="hover:text-accent transition-colors duration-300">
-                  Current Season
+                <a href="/productions" className="hover:text-accent transition-colors duration-300">
+                  Παραστάσεις
                 </a>
               </li>
               <li>
-                <a href="#about" className="hover:text-accent transition-colors duration-300">
-                  About Us
+                <a href="/about" className="hover:text-accent transition-colors duration-300">
+                  Σχετικά με εμάς
                 </a>
               </li>
               <li>
-                <a href="#contact" className="hover:text-accent transition-colors duration-300">
-                  Box Office
+                <a href="/contact" className="hover:text-accent transition-colors duration-300">
+                  Επικοινωνία
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-accent transition-colors duration-300">
-                  Education Programs
+                <a href="/news" className="hover:text-accent transition-colors duration-300">
+                  Νέα & Τύπος
                 </a>
               </li>
             </ul>
           </div>
 
           <div>
-            <h4 className="font-display text-lg text-foreground mb-4">Connect</h4>
+            <h4 className="font-display text-lg text-foreground mb-4">Επικοινωνία</h4>
             <ul className="space-y-2 text-muted-foreground">
               <li>
-                <a href="#" className="hover:text-accent transition-colors duration-300">
+                <a href="/contact" className="hover:text-accent transition-colors duration-300">
                   Newsletter
                 </a>
               </li>
@@ -55,12 +55,12 @@ const Footer = () => {
               </li>
               <li>
                 <a href="#" className="hover:text-accent transition-colors duration-300">
-                  Twitter
+                  Facebook
                 </a>
               </li>
               <li>
                 <a href="#" className="hover:text-accent transition-colors duration-300">
-                  Facebook
+                  YouTube
                 </a>
               </li>
             </ul>
@@ -69,17 +69,17 @@ const Footer = () => {
 
         <div className="border-t border-border mt-12 pt-8 flex flex-col md:flex-row justify-between items-center text-muted-foreground">
           <p className="text-sm">
-            © 2024 Atelier Theater. All rights reserved.
+            © 2024 Atelier Theater. Όλα τα δικαιώματα διατηρούνται.
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0 text-sm">
-            <a href="#" className="hover:text-accent transition-colors duration-300">
-              Privacy Policy
+            <a href="/privacy" className="hover:text-accent transition-colors duration-300">
+              Προσωπικά Δεδομένα
             </a>
-            <a href="#" className="hover:text-accent transition-colors duration-300">
-              Terms of Service
+            <a href="/terms" className="hover:text-accent transition-colors duration-300">
+              Όροι Χρήσης
             </a>
-            <a href="#" className="hover:text-accent transition-colors duration-300">
-              Accessibility
+            <a href="/cookies" className="hover:text-accent transition-colors duration-300">
+              Cookies
             </a>
           </div>
         </div>

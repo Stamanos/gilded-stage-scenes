@@ -17,28 +17,28 @@ const Navigation = () => {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-12">
             <a 
-              href="#productions" 
+              href="/productions" 
               className="text-body text-foreground hover:text-accent transition-colors duration-300"
             >
-              Productions
+              Παραστάσεις
             </a>
             <a 
-              href="#about" 
+              href="/about" 
               className="text-body text-foreground hover:text-accent transition-colors duration-300"
             >
-              About Us
+              Σχετικά με εμάς
             </a>
             <a 
-              href="#news" 
+              href="/news" 
               className="text-body text-foreground hover:text-accent transition-colors duration-300"
             >
-              News
+              Νέα
             </a>
             <a 
-              href="#contact" 
+              href="/contact" 
               className="text-body text-foreground hover:text-accent transition-colors duration-300"
             >
-              Contact
+              Επικοινωνία
             </a>
           </div>
 
@@ -57,32 +57,32 @@ const Navigation = () => {
           <div className="md:hidden mt-6 pb-6 border-t border-border">
             <div className="flex flex-col space-y-4 mt-6">
               <a 
-                href="#productions" 
+                href="/productions" 
                 className="text-body text-foreground hover:text-accent transition-colors duration-300"
                 onClick={() => setIsOpen(false)}
               >
-                Productions
+                Παραστάσεις
               </a>
               <a 
-                href="#about" 
+                href="/about" 
                 className="text-body text-foreground hover:text-accent transition-colors duration-300"
                 onClick={() => setIsOpen(false)}
               >
-                About Us
+                Σχετικά με εμάς
               </a>
               <a 
-                href="#news" 
+                href="/news" 
                 className="text-body text-foreground hover:text-accent transition-colors duration-300"
                 onClick={() => setIsOpen(false)}
               >
-                News
+                Νέα
               </a>
               <a 
-                href="#contact" 
+                href="/contact" 
                 className="text-body text-foreground hover:text-accent transition-colors duration-300"
                 onClick={() => setIsOpen(false)}
               >
-                Contact
+                Επικοινωνία
               </a>
             </div>
           </div>
