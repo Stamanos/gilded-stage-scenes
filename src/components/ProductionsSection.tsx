@@ -1,27 +1,9 @@
+import productionsData from "../data/productions.json";
+
 const ProductionsSection = () => {
-  const productions = [
-    {
-      title: "The Tempest",
-      subtitle: "Shakespeare Reimagined",
-      dates: "March 15 - April 28, 2024",
-      description: "A contemporary interpretation of Shakespeare's final masterpiece, exploring themes of power, forgiveness, and redemption.",
-      status: "Current Production"
-    },
-    {
-      title: "Waiting for Godot",
-      subtitle: "Beckett's Existential Journey", 
-      dates: "June 8 - July 20, 2024",
-      description: "An intimate exploration of hope, despair, and the human condition in Beckett's timeless theatrical poem.",
-      status: "Coming Soon"
-    },
-    {
-      title: "Three Sisters",
-      subtitle: "Chekhov's Poetic Drama",
-      dates: "September 14 - November 2, 2024", 
-      description: "A haunting portrait of longing and loss, set against the backdrop of a changing world.",
-      status: "Upcoming"
-    }
-  ];
+  const productions = productionsData.productions.filter(
+    (p) => p.status === "current" || p.status === "upcoming"
+  );
 
   return (
     <section id="productions" className="py-24 bg-secondary">
@@ -39,10 +21,18 @@ const ProductionsSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {productions.map((production, index) => (
             <div 
-              key={index}
+              key={production.id}
               className="group bg-card rounded-lg overflow-hidden shadow-elegant hover:shadow-dramatic transition-all duration-500 animate-scale-in"
               style={{ animationDelay: `${index * 0.2}s` }}
             >
+              {/* Εικόνα παράστασης */}
+              {production.image && (
+                <img
+                  src={production.image}
+                  alt={production.title}
+                  className="w-full h-64 object-cover"
+                />
+              )}
               <div className="p-8">
                 <div className="mb-4">
                   <span className="text-sm font-medium text-accent bg-accent/10 px-3 py-1 rounded-full">

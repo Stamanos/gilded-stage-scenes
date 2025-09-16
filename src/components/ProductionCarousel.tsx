@@ -6,44 +6,11 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 
+import productionsData from "@/data/productions.json";
+// ...existing code...
+
 const ProductionCarousel = () => {
-  const productions = [
-    {
-      id: 1,
-      title: "Η Θύελλα",
-      subtitle: "Shakespeare Reimagined",
-      status: "Τρέχουσα Παράσταση",
-      image: "/placeholder.svg"
-    },
-    {
-      id: 2,
-      title: "Περιμένοντας τον Γκοντό",
-      subtitle: "Beckett's Existential Journey",
-      status: "Επόμενη Παράσταση",
-      image: "/placeholder.svg"
-    },
-    {
-      id: 3,
-      title: "Τρεις Αδερφές",
-      subtitle: "Chekhov's Poetic Drama",
-      status: "Αρχείο",
-      image: "/placeholder.svg"
-    },
-    {
-      id: 4,
-      title: "Αντιγόνη",
-      subtitle: "Sophocles Classic",
-      status: "Αρχείο",
-      image: "/placeholder.svg"
-    },
-    {
-      id: 5,
-      title: "Ο Κήπος με τις Κερασιές",
-      subtitle: "Chekhov's Masterpiece",
-      status: "Αρχείο",
-      image: "/placeholder.svg"
-    }
-  ];
+  const productions = productionsData.productions;
 
   const getStatusColor = (status: string) => {
     switch (status) {
@@ -81,13 +48,12 @@ const ProductionCarousel = () => {
               <CarouselItem key={production.id} className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
                 <div className="group bg-card rounded-lg overflow-hidden shadow-elegant hover:shadow-dramatic transition-all duration-500">
                   <div className="aspect-[3/4] bg-secondary relative overflow-hidden">
-                    <div className="absolute inset-0 bg-gradient-to-br from-accent/20 to-accent/5 flex items-center justify-center">
-                      <div className="text-center text-accent">
-                        <span className="text-3xl block mb-2">🎭</span>
-                        <span className="text-xs opacity-75">Εικόνα παράστασης</span>
-                      </div>
-                    </div>
-                    
+                    {/* Εμφάνιση εικόνας παράστασης */}
+                    <img
+                      src={production.image}
+                      alt={production.title}
+                      className="w-full h-full object-cover"
+                    />
                     {/* Status Badge */}
                     <div className="absolute top-4 left-4">
                       <span className={`px-3 py-1 rounded-full text-xs font-medium ${getStatusColor(production.status)}`}>
@@ -100,7 +66,6 @@ const ProductionCarousel = () => {
                     <h3 className="text-lg font-semibold text-card-foreground mb-2 group-hover:text-accent transition-colors duration-300">
                       {production.title}
                     </h3>
-                    
                     <p className="text-sm text-muted-foreground font-light">
                       {production.subtitle}
                     </p>

@@ -1,24 +1,10 @@
 import { Button } from "@/components/ui/button";
+import productionsData from '../data/productions.json';
 
 const NowPlayingSection = () => {
-  const nowPlaying = [
-    {
-      id: 1,
-      title: "ΕΙΡΗΝΗ",
-      subtitle: "Η κωμωδία του Αριστοφάνη ",
-      shortDescription: "Σε συμπαραγωγή με το Θεσσαλικό Θέατρο, σε μετάφραση Λάκη Λαζόπουλο και σκηνοθεσία Νικορέστη Χανιωτάκη.",
-      nextShow: "20/10 20:30",
-      status: "Προσεχώς"
-    },
-    {
-      id: 2,
-      title: "ΦΙΛΟΚΤΗΤΗΣ",
-      subtitle: "Η τραγωδία του Σοφοκλή ",
-      shortDescription: "Σε σκηνοθεσία Γιώργου Κιμούλη.",
-      nextShow: "Αύριο 19:00",
-      status: "Επόμενη παράσταση"
-    }
-  ];
+  const nowPlaying = productionsData.productions.filter(
+        (p) => p.status === "current"
+  );
 
   return (
     <section className="py-24 bg-accent/5">
@@ -41,13 +27,12 @@ const NowPlayingSection = () => {
               style={{ animationDelay: `${index * 0.2}s` }}
             >
               <div className="aspect-[4/3] bg-secondary relative overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-br from-accent/30 to-accent/10 flex items-center justify-center">
-                  <div className="text-center text-accent-foreground">
-                    <span className="text-4xl block mb-2">🎭</span>
-                    <span className="text-sm opacity-75">Φωτογραφία παράστασης</span>
-                  </div>
-                </div>
-                
+                {/* Εμφάνιση φωτογραφίας παράστασης */}
+                <img
+                  src={show.image}
+                  alt={show.title}
+                  className="w-full h-full object-cover"
+                />
                 {/* Status Badge */}
                 <div className="absolute top-4 left-4">
                   <span className="bg-accent text-accent-foreground px-3 py-1 rounded-full text-sm font-medium">
@@ -66,7 +51,7 @@ const NowPlayingSection = () => {
                 </h4>
                 
                 <p className="text-body text-muted-foreground mb-6 leading-relaxed">
-                  {show.shortDescription}
+                  {show.description}
                 </p>
                 
                 <div className="flex items-center justify-between">

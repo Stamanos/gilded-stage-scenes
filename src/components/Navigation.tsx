@@ -10,8 +10,8 @@ const Navigation = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="text-display-md">
-            <span className="text-foreground">Atelier</span>
-            <span className="text-accent ml-2">Theater</span>
+            <span className="text-foreground">Θέατρο</span>
+            <span className="text-accent ml-2">Φιλίπ</span>
           </div>
 
           {/* Desktop Navigation */}
