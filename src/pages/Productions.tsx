@@ -2,6 +2,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import productionsData from "@/data/productions.json";
+import { Link } from "react-router-dom";
 
 const Productions = () => {
   const productions = productionsData.productions;
@@ -34,9 +35,10 @@ const Productions = () => {
           
           <div className="space-y-16">
             {currentProductions.map((production, index) => (
-              <div 
+              <Link
+                to={`/productions/${production.id}`}
                 key={production.id}
-                className="group animate-fade-up"
+                className="group animate-fade-up block"
                 style={{ animationDelay: `${index * 0.2}s` }}
               >
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -86,7 +88,7 @@ const Productions = () => {
                     </Button>
                   </div>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </div>
@@ -102,9 +104,10 @@ const Productions = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             {pastProductions.map((production, index) => (
-              <div 
+              <Link
+                to={`/productions/${production.id}`}
                 key={production.id}
-                className="group bg-card rounded-lg overflow-hidden shadow-elegant hover:shadow-dramatic transition-all duration-500 animate-scale-in"
+                className="group bg-card rounded-lg overflow-hidden shadow-elegant hover:shadow-dramatic transition-all duration-500 animate-scale-in block"
                 style={{ animationDelay: `${index * 0.2}s` }}
               >
                 <div className="aspect-[4/3] bg-secondary rounded-lg overflow-hidden">
@@ -144,7 +147,7 @@ const Productions = () => {
                     📅 {production.dates}
                   </span>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </div>

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import { Link } from "react-router-dom"; // προσθήκη import
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -10,8 +11,10 @@ const Navigation = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="text-display-md">
-            <span className="text-foreground">Θέατρο</span>
-            <span className="text-accent ml-2">Φιλίπ</span>
+            <Link to="/" className="flex items-center">
+              <span className="text-foreground">Θέατρο</span>
+              <span className="text-accent ml-2">Φιλίπ</span>
+            </Link>
           </div>
 
           {/* Desktop Navigation */}

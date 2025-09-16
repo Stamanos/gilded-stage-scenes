@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import productionsData from '../data/productions.json';
+import { Link } from "react-router-dom";
 
 const NowPlayingSection = () => {
   const nowPlaying = productionsData.productions.filter(
@@ -21,11 +22,12 @@ const NowPlayingSection = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {nowPlaying.map((show, index) => (
-            <div 
-              key={show.id}
-              className="group bg-card rounded-lg overflow-hidden shadow-elegant hover:shadow-dramatic transition-all duration-500 animate-scale-in"
-              style={{ animationDelay: `${index * 0.2}s` }}
-            >
+          <Link
+            to={`/productions/${show.id}`}
+            key={show.id}
+            className="group bg-card rounded-lg overflow-hidden shadow-elegant hover:shadow-dramatic transition-all duration-500 animate-scale-in block"
+            style={{ animationDelay: `${index * 0.2}s` }}
+          >
               <div className="aspect-[4/3] bg-secondary relative overflow-hidden">
                 {/* Εμφάνιση φωτογραφίας παράστασης */}
                 <img
@@ -66,7 +68,7 @@ const NowPlayingSection = () => {
                   </Button>
                 </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>

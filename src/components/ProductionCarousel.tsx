@@ -5,7 +5,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-
+import { Link } from "react-router-dom";
 import productionsData from "@/data/productions.json";
 // ...existing code...
 
@@ -46,22 +46,22 @@ const ProductionCarousel = () => {
           <CarouselContent className="-ml-2 md:-ml-4">
             {productions.map((production, index) => (
               <CarouselItem key={production.id} className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
-                <div className="group bg-card rounded-lg overflow-hidden shadow-elegant hover:shadow-dramatic transition-all duration-500">
+                <Link
+                  to={`/productions/${production.id}`}
+                  className="group bg-card rounded-lg overflow-hidden shadow-elegant hover:shadow-dramatic transition-all duration-500 block"
+                >
                   <div className="aspect-[3/4] bg-secondary relative overflow-hidden">
-                    {/* Εμφάνιση εικόνας παράστασης */}
                     <img
                       src={production.image}
                       alt={production.title}
                       className="w-full h-full object-cover"
                     />
-                    {/* Status Badge */}
                     <div className="absolute top-4 left-4">
                       <span className={`px-3 py-1 rounded-full text-xs font-medium ${getStatusColor(production.status)}`}>
                         {production.status}
                       </span>
                     </div>
                   </div>
-
                   <div className="p-6">
                     <h3 className="text-lg font-semibold text-card-foreground mb-2 group-hover:text-accent transition-colors duration-300">
                       {production.title}
@@ -70,7 +70,7 @@ const ProductionCarousel = () => {
                       {production.subtitle}
                     </p>
                   </div>
-                </div>
+                </Link>
               </CarouselItem>
             ))}
           </CarouselContent>
