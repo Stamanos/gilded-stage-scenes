@@ -1,5 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import FloatingSocial from "@/components/FloatingSocial";
 
 const Privacy = () => {
   return (
@@ -72,6 +73,7 @@ const Privacy = () => {
       </section>
 
       <Footer />
+      <FloatingSocial />
     </div>
   );
 };

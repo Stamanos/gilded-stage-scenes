@@ -4,6 +4,7 @@ import productionsData from "@/data/productions.json";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import ImageLightbox from "@/components/ImageLightbox";
+import FloatingSocial from "@/components/FloatingSocial";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -394,6 +395,7 @@ const ProductionDetails = () => {
           productionTitle={production.title}
         />
       )}
+      <FloatingSocial />
     </div>
   );
 };

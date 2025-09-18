@@ -1,5 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import FloatingSocial from "@/components/FloatingSocial";
 
 const Cookies = () => {
   return (
@@ -77,6 +78,7 @@ const Cookies = () => {
       </section>
 
       <Footer />
+      <FloatingSocial />
     </div>
   );
 };

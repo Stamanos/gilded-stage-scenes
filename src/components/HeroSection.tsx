@@ -75,12 +75,12 @@ const HeroSection = () => {
       <div className="relative z-10 text-center max-w-4xl mx-auto px-6">
         <div className="animate-fade-up">
           {/* Title with enhanced contrast */}
-          <h1 className="text-display-xl text-white mb-6 drop-shadow-2xl">
+          <h1 className="text-display-lg text-white mb-6 drop-shadow-2xl">
             Τώρα στη σκηνή: <span className="text-gold drop-shadow-lg">{currentProduction.title}</span>
           </h1>
           
           {/* Subtitle with animated background */}
-          <div className="inline-block bg-gradient-to-r from-background/60 via-background/80 to-background/60 backdrop-blur-md rounded-2xl px-8 py-4 mb-8 animate-fade-in shadow-elegant border border-white/10">
+          <div className="inline-block bg-gradient-to-r from-background/60 via-background/80 to-background/60 backdrop-blur-md rounded-2xl px-8 py-4 mb-8 animate-fade-in shadow-elegant">
             <h2 className="text-display-md text-foreground font-light animate-scale-in">
               {currentProduction.subtitle}
             </h2>

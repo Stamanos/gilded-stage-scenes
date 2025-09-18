@@ -1,5 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import FloatingSocial from "@/components/FloatingSocial";
 import { Mail, Phone, MapPin, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -214,6 +215,7 @@ const Contact = () => {
       </section>
 
       <Footer />
+      <FloatingSocial />
     </div>
   );
 };

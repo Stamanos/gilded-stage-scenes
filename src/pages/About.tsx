@@ -1,5 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import FloatingSocial from "@/components/FloatingSocial";
 
 const About = () => {
   const teamMembers = [
@@ -153,6 +154,7 @@ const About = () => {
       </section>
 
       <Footer />
+      <FloatingSocial />
     </div>
   );
 };

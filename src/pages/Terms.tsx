@@ -1,5 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import FloatingSocial from "@/components/FloatingSocial";
 
 const Terms = () => {
   return (
@@ -73,6 +74,7 @@ const Terms = () => {
       </section>
 
       <Footer />
+      <FloatingSocial />
     </div>
   );
 };

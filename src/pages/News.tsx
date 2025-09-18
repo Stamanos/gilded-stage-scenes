@@ -1,5 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import FloatingSocial from "@/components/FloatingSocial";
 
 const News = () => {
   const newsItems = [
@@ -146,6 +147,7 @@ const News = () => {
       </section>
 
       <Footer />
+      <FloatingSocial />
     </div>
   );
 };
