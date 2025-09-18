@@ -31,37 +31,39 @@ const ProductionDetails = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="relative h-[70vh] overflow-hidden pt-20">
+      <section className="relative min-h-[85vh] md:min-h-[90vh] overflow-hidden">
         <div className="absolute inset-0">
           <img
             src={production.images?.landscape || production.images?.main || "/images/theater-hero.jpg"}
             alt={production.title}
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-br from-black/70 via-black/40 to-black/60" />
         </div>
         
-        <div className="relative z-10 container mx-auto px-6 h-full flex items-end pb-16">
-          <div className="max-w-3xl">
-            <Badge variant="secondary" className="mb-4 bg-accent/20 text-accent border-accent/30">
-              {production.status === "current" ? "Παίζεται Τώρα" : "Από το Αρχείο"}
-            </Badge>
+        <div className="relative z-10 container mx-auto px-4 md:px-6 min-h-[85vh] md:min-h-[90vh] flex items-center">
+          <div className="max-w-4xl pt-20 md:pt-24">
+            <div className="mb-6">
+              <Badge variant="secondary" className="mb-4 bg-white/10 text-white border-white/20 backdrop-blur-sm">
+                {production.status === "current" ? "Παίζεται Τώρα" : "Από το Αρχείο"}
+              </Badge>
+            </div>
             
-            <h1 className="text-display-xl text-white mb-4 font-bold">
+            <h1 className="text-3xl md:text-5xl lg:text-6xl text-white mb-4 md:mb-6 font-bold leading-tight">
               {production.title}
             </h1>
             
-            <h2 className="text-display-sm text-white/90 mb-6 font-light">
+            <h2 className="text-lg md:text-2xl lg:text-3xl text-white/90 mb-6 md:mb-8 font-light leading-relaxed">
               {production.subtitle}
             </h2>
             
-            <p className="text-body-lg text-white/80 mb-8 max-w-2xl leading-relaxed">
+            <p className="text-base md:text-lg text-white/80 mb-8 md:mb-10 max-w-3xl leading-relaxed">
               {production.description}
             </p>
             
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-col sm:flex-row gap-4">
               {production.bookingLink && production.status === "current" && (
-                <Button size="lg" className="bg-accent hover:bg-accent/90" asChild>
+                <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground shadow-lg" asChild>
                   <a href={production.bookingLink} target="_blank" rel="noopener noreferrer">
                     <ExternalLink className="mr-2 h-4 w-4" />
                     Κλείσε Εισιτήρια

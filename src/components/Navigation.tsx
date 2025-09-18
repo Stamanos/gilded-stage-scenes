@@ -25,11 +25,13 @@ const Navigation = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center">
-            <Link to="/" className="flex items-center">
+            <Link to="/" className="flex items-center hover:scale-105 transition-transform duration-300">
               <img 
                 src="/logo.png" 
                 alt="Μέθεξις - Θεατρικές Παραγωγές" 
-                className="h-12 w-auto transition-transform duration-300 hover:scale-105"
+                className={`h-12 w-auto transition-all duration-300 ${
+                  isScrolled ? '' : 'drop-shadow-lg'
+                }`}
               />
             </Link>
           </div>
@@ -38,25 +40,41 @@ const Navigation = () => {
           <div className="hidden md:flex items-center space-x-12">
             <a 
               href="/productions" 
-              className="text-body text-foreground hover:text-accent transition-colors duration-300"
+              className={`text-body font-medium tracking-wide transition-all duration-300 hover:scale-105 relative after:content-[''] after:absolute after:w-0 after:h-0.5 after:bottom-0 after:left-1/2 after:transition-all after:duration-300 hover:after:w-full hover:after:left-0 ${
+                isScrolled 
+                  ? 'text-foreground hover:text-accent after:bg-accent' 
+                  : 'text-white/90 hover:text-white hover:drop-shadow-lg after:bg-white'
+              }`}
             >
               Παραστάσεις
             </a>
             <a 
               href="/about" 
-              className="text-body text-foreground hover:text-accent transition-colors duration-300"
+              className={`text-body font-medium tracking-wide transition-all duration-300 hover:scale-105 relative after:content-[''] after:absolute after:w-0 after:h-0.5 after:bottom-0 after:left-1/2 after:transition-all after:duration-300 hover:after:w-full hover:after:left-0 ${
+                isScrolled 
+                  ? 'text-foreground hover:text-accent after:bg-accent' 
+                  : 'text-white/90 hover:text-white hover:drop-shadow-lg after:bg-white'
+              }`}
             >
               Σχετικά με εμάς
             </a>
             <a 
               href="/news" 
-              className="text-body text-foreground hover:text-accent transition-colors duration-300"
+              className={`text-body font-medium tracking-wide transition-all duration-300 hover:scale-105 relative after:content-[''] after:absolute after:w-0 after:h-0.5 after:bottom-0 after:left-1/2 after:transition-all after:duration-300 hover:after:w-full hover:after:left-0 ${
+                isScrolled 
+                  ? 'text-foreground hover:text-accent after:bg-accent' 
+                  : 'text-white/90 hover:text-white hover:drop-shadow-lg after:bg-white'
+              }`}
             >
               Νέα
             </a>
             <a 
               href="/contact" 
-              className="text-body text-foreground hover:text-accent transition-colors duration-300"
+              className={`text-body font-medium tracking-wide transition-all duration-300 hover:scale-105 relative after:content-[''] after:absolute after:w-0 after:h-0.5 after:bottom-0 after:left-1/2 after:transition-all after:duration-300 hover:after:w-full hover:after:left-0 ${
+                isScrolled 
+                  ? 'text-foreground hover:text-accent after:bg-accent' 
+                  : 'text-white/90 hover:text-white hover:drop-shadow-lg after:bg-white'
+              }`}
             >
               Επικοινωνία
             </a>
@@ -64,7 +82,11 @@ const Navigation = () => {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden text-foreground"
+            className={`md:hidden transition-all duration-300 hover:scale-110 ${
+              isScrolled 
+                ? 'text-foreground hover:text-accent' 
+                : 'text-white/90 hover:text-white hover:drop-shadow-lg'
+            }`}
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Toggle menu"
           >
