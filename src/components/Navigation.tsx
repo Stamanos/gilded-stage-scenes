@@ -18,7 +18,7 @@ const Navigation = () => {
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled 
-        ? 'bg-background/80 backdrop-blur-md border-b border-border' 
+        ? 'bg-background/40 backdrop-blur-lg border-b border-border/30' 
         : 'bg-transparent'
     }`}>
       <div className="container mx-auto px-6 py-4">
@@ -96,35 +96,51 @@ const Navigation = () => {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="md:hidden absolute top-full left-0 right-0 bg-background/95 backdrop-blur-lg border border-border/50 rounded-b-lg shadow-dramatic animate-slide-in-right">
-            <div className="flex flex-col px-6 py-6 space-y-1">
+          <div className="md:hidden absolute top-full left-0 right-0 bg-background/30 backdrop-blur-xl border border-border/20 rounded-b-lg shadow-elegant animate-slide-in-right z-40">
+            <div className="flex flex-col px-6 py-6 space-y-2">
               <a 
                 href="/productions" 
-                className="text-body text-foreground hover:text-accent transition-all duration-300 px-4 py-3 rounded-lg hover:bg-accent/10 hover:scale-105"
+                className={`text-body font-medium tracking-wide transition-all duration-300 hover:scale-105 px-4 py-3 rounded-lg relative after:content-[''] after:absolute after:w-0 after:h-0.5 after:bottom-1 after:left-1/2 after:transition-all after:duration-300 hover:after:w-full hover:after:left-0 ${
+                  isScrolled 
+                    ? 'text-foreground hover:text-accent after:bg-accent hover:bg-accent/5' 
+                    : 'text-white/90 hover:text-white after:bg-white hover:bg-white/10'
+                }`}
                 onClick={() => setIsOpen(false)}
               >
-                📚 Παραστάσεις
+                Παραστάσεις
               </a>
               <a 
                 href="/about" 
-                className="text-body text-foreground hover:text-accent transition-all duration-300 px-4 py-3 rounded-lg hover:bg-accent/10 hover:scale-105"
+                className={`text-body font-medium tracking-wide transition-all duration-300 hover:scale-105 px-4 py-3 rounded-lg relative after:content-[''] after:absolute after:w-0 after:h-0.5 after:bottom-1 after:left-1/2 after:transition-all after:duration-300 hover:after:w-full hover:after:left-0 ${
+                  isScrolled 
+                    ? 'text-foreground hover:text-accent after:bg-accent hover:bg-accent/5' 
+                    : 'text-white/90 hover:text-white after:bg-white hover:bg-white/10'
+                }`}
                 onClick={() => setIsOpen(false)}
               >
-                🎭 Σχετικά με εμάς
+                Σχετικά με εμάς
               </a>
               <a 
                 href="/news" 
-                className="text-body text-foreground hover:text-accent transition-all duration-300 px-4 py-3 rounded-lg hover:bg-accent/10 hover:scale-105"
+                className={`text-body font-medium tracking-wide transition-all duration-300 hover:scale-105 px-4 py-3 rounded-lg relative after:content-[''] after:absolute after:w-0 after:h-0.5 after:bottom-1 after:left-1/2 after:transition-all after:duration-300 hover:after:w-full hover:after:left-0 ${
+                  isScrolled 
+                    ? 'text-foreground hover:text-accent after:bg-accent hover:bg-accent/5' 
+                    : 'text-white/90 hover:text-white after:bg-white hover:bg-white/10'
+                }`}
                 onClick={() => setIsOpen(false)}
               >
-                📰 Νέα
+                Νέα
               </a>
               <a 
                 href="/contact" 
-                className="text-body text-foreground hover:text-accent transition-all duration-300 px-4 py-3 rounded-lg hover:bg-accent/10 hover:scale-105"
+                className={`text-body font-medium tracking-wide transition-all duration-300 hover:scale-105 px-4 py-3 rounded-lg relative after:content-[''] after:absolute after:w-0 after:h-0.5 after:bottom-1 after:left-1/2 after:transition-all after:duration-300 hover:after:w-full hover:after:left-0 ${
+                  isScrolled 
+                    ? 'text-foreground hover:text-accent after:bg-accent hover:bg-accent/5' 
+                    : 'text-white/90 hover:text-white after:bg-white hover:bg-white/10'
+                }`}
                 onClick={() => setIsOpen(false)}
               >
-                📞 Επικοινωνία
+                Επικοινωνία
               </a>
             </div>
           </div>
