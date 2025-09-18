@@ -172,6 +172,19 @@ All colors MUST be HSL.
   .animate-slide-in {
     animation: slideIn 1s cubic-bezier(0.4, 0, 0.2, 1);
   }
+
+  /* Enhanced Button Styles */
+  .btn-primary {
+    @apply group relative overflow-hidden bg-accent hover:bg-accent/90 text-accent-foreground px-6 py-3 font-medium transition-all duration-300 hover:shadow-dramatic rounded-lg backdrop-blur-sm border border-accent/20 hover:scale-105;
+  }
+  
+  .btn-secondary {
+    @apply group relative overflow-hidden border border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 px-6 py-3 font-medium transition-all duration-300 rounded-lg backdrop-blur-sm hover:scale-105 hover:border-primary-foreground/50;
+  }
+  
+  .btn-glass {
+    @apply relative overflow-hidden bg-background/10 backdrop-blur-md border border-primary-foreground/20 text-primary-foreground hover:bg-background/20 transition-all duration-300 hover:scale-110 rounded-lg;
+  }
 }
 
 @keyframes fadeUp {

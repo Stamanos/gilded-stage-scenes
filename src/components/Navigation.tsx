@@ -10,10 +10,13 @@ const Navigation = () => {
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <div className="text-display-md">
+          <div className="flex items-center">
             <Link to="/" className="flex items-center">
-              <span className="text-foreground">Θέατρο</span>
-              <span className="text-accent ml-2">Φιλίπ</span>
+              <img 
+                src="/logo.png" 
+                alt="Μέθεξις - Θεατρικές Παραγωγές" 
+                className="h-12 w-auto transition-transform duration-300 hover:scale-105"
+              />
             </Link>
           </div>
 
