@@ -52,9 +52,9 @@ const ProductionCarousel = () => {
                 >
                   <div className="aspect-[3/4] bg-secondary relative overflow-hidden">
                     <img
-                      src={production.image}
+                      src={production.images?.main || "/images/theater-placeholder.jpg"}
                       alt={production.title}
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                     />
                     <div className="absolute top-4 left-4">
                       <span className={`px-3 py-1 rounded-full text-xs font-medium ${getStatusColor(production.status)}`}>

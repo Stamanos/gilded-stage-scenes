@@ -29,9 +29,9 @@ const NowPlayingSection = () => {
             >
               <div className="aspect-[4/3] bg-secondary relative overflow-hidden">
                 <img
-                  src={show.image}
+                  src={show.images?.main || "/images/theater-placeholder.jpg"}
                   alt={show.title}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
                 <div className="absolute top-4 left-4">
                   <span className="bg-accent text-accent-foreground px-3 py-1 rounded-full text-sm font-medium">

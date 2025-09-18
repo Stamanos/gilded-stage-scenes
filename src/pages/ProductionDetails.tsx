@@ -2,6 +2,11 @@ import { useParams } from "react-router-dom";
 import productionsData from "@/data/productions.json";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Separator } from "@/components/ui/separator";
+import { Calendar, Clock, MapPin, Users, Phone, Mail, Globe, ExternalLink } from "lucide-react";
 
 const ProductionDetails = () => {
   const { id } = useParams();
@@ -22,48 +27,346 @@ const ProductionDetails = () => {
   }
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-background">
       <Navigation />
-      <section className="py-24 bg-background">
-        <div className="container mx-auto px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <div className="aspect-[4/3] bg-secondary rounded-lg overflow-hidden shadow-elegant mb-8">
-                {production.image ? (
-                  <img
-                    src={production.image}
-                    alt={production.title}
-                    className="w-full h-full object-cover"
-                  />
-                ) : (
-                  <div className="w-full h-full bg-gradient-to-br from-accent/20 to-accent/5 flex items-center justify-center">
-                    <span className="text-muted-foreground text-sm">Εικόνα παράστασης</span>
-                  </div>
-                )}
-              </div>
-            </div>
-            <div>
-              <h1 className="text-display-lg text-foreground mb-4">{production.title}</h1>
-              <h2 className="text-xl text-muted-foreground mb-6">{production.subtitle}</h2>
-              <p className="text-body text-muted-foreground mb-6 leading-relaxed">{production.description}</p>
-              <div className="mb-4">
-                <span className="text-sm font-medium text-accent bg-accent/10 px-3 py-1 rounded-full">
-                  {production.status === "current" ? "Τρέχουσα Παράσταση" : "Αρχείο"}
-                </span>
-              </div>
-              <span className="text-sm text-muted-foreground block mb-4">
-                📅 {production.dates}
-              </span>
-              {production.nextShow && (
-                <span className="text-sm text-muted-foreground block mb-4">
-                  Επόμενη Παράσταση: {production.nextShow}
-                </span>
+      
+      {/* Hero Section */}
+      <section className="relative h-[70vh] overflow-hidden">
+        <div className="absolute inset-0">
+          <img
+            src={production.images?.landscape || production.images?.main || "/images/theater-hero.jpg"}
+            alt={production.title}
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-transparent" />
+        </div>
+        
+        <div className="relative z-10 container mx-auto px-6 h-full flex items-end pb-16">
+          <div className="max-w-3xl">
+            <Badge variant="secondary" className="mb-4 bg-accent/20 text-accent border-accent/30">
+              {production.status === "current" ? "Παίζεται Τώρα" : "Από το Αρχείο"}
+            </Badge>
+            
+            <h1 className="text-display-xl text-white mb-4 font-bold">
+              {production.title}
+            </h1>
+            
+            <h2 className="text-display-sm text-white/90 mb-6 font-light">
+              {production.subtitle}
+            </h2>
+            
+            <p className="text-body-lg text-white/80 mb-8 max-w-2xl leading-relaxed">
+              {production.description}
+            </p>
+            
+            <div className="flex flex-wrap gap-4">
+              {production.bookingLink && production.status === "current" && (
+                <Button size="lg" className="bg-accent hover:bg-accent/90" asChild>
+                  <a href={production.bookingLink} target="_blank" rel="noopener noreferrer">
+                    <ExternalLink className="mr-2 h-4 w-4" />
+                    Κλείσε Εισιτήρια
+                  </a>
+                </Button>
               )}
-              {/* Εδώ μπορείς να προσθέσεις και άλλα πεδία από το JSON αν υπάρχουν */}
             </div>
           </div>
         </div>
       </section>
+
+      {/* Production Details */}
+      <section className="py-16 bg-background">
+        <div className="container mx-auto px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+            
+            {/* Main Info */}
+            <div className="lg:col-span-2 space-y-12">
+              
+              {/* Description */}
+              {production.longDescription && (
+                <div>
+                  <h3 className="text-display-md text-foreground mb-6">Η Ιστορία</h3>
+                  <div className="prose prose-lg max-w-none">
+                    <p className="text-muted-foreground leading-relaxed text-body-lg">
+                      {production.longDescription}
+                    </p>
+                  </div>
+                </div>
+              )}
+
+              {/* Cast & Creative Team */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                {/* Cast */}
+                {production.cast && production.cast.length > 0 && (
+                  <Card className="border-border/50">
+                    <CardHeader>
+                      <CardTitle className="flex items-center gap-2">
+                        <Users className="h-5 w-5 text-accent" />
+                        Πρωταγωνιστούν
+                      </CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <ul className="space-y-2">
+                        {production.cast.map((actor, index) => (
+                          <li key={index} className="text-muted-foreground">
+                            {actor}
+                          </li>
+                        ))}
+                      </ul>
+                    </CardContent>
+                  </Card>
+                )}
+
+                {/* Creative Team */}
+                {production.creativeTeam && (
+                  <Card className="border-border/50">
+                    <CardHeader>
+                      <CardTitle>Συντελεστές</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <div className="space-y-2">
+                        {Object.entries(production.creativeTeam).map(([role, name]) => (
+                          <div key={role} className="text-sm">
+                            <span className="font-medium text-foreground capitalize">
+                              {role.replace(/([A-Z])/g, ' $1').replace(/^./, (str) => str.toUpperCase())}:
+                            </span>
+                            <span className="text-muted-foreground ml-2">{name}</span>
+                          </div>
+                        ))}
+                      </div>
+                    </CardContent>
+                  </Card>
+                )}
+              </div>
+
+              {/* Additional Cast (Chorus, Musicians, Dancers) */}
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                {production.chorus && production.chorus.length > 0 && (
+                  <Card className="border-border/50">
+                    <CardHeader>
+                      <CardTitle className="text-base">Χορός</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <ul className="space-y-1 text-sm">
+                        {production.chorus.map((member, index) => (
+                          <li key={index} className="text-muted-foreground">
+                            {member}
+                          </li>
+                        ))}
+                      </ul>
+                    </CardContent>
+                  </Card>
+                )}
+
+                {production.musicians && production.musicians.length > 0 && (
+                  <Card className="border-border/50">
+                    <CardHeader>
+                      <CardTitle className="text-base">Μουσικοί</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <ul className="space-y-1 text-sm">
+                        {production.musicians.map((musician, index) => (
+                          <li key={index} className="text-muted-foreground">
+                            {musician}
+                          </li>
+                        ))}
+                      </ul>
+                    </CardContent>
+                  </Card>
+                )}
+
+                {production.dancers && production.dancers.length > 0 && (
+                  <Card className="border-border/50">
+                    <CardHeader>
+                      <CardTitle className="text-base">Χορευτές</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <ul className="space-y-1 text-sm">
+                        {production.dancers.map((dancer, index) => (
+                          <li key={index} className="text-muted-foreground">
+                            {dancer}
+                          </li>
+                        ))}
+                      </ul>
+                    </CardContent>
+                  </Card>
+                )}
+              </div>
+            </div>
+
+            {/* Sidebar Info */}
+            <div className="space-y-8">
+              
+              {/* Production Info */}
+              <Card className="border-border/50">
+                <CardHeader>
+                  <CardTitle>Πληροφορίες Παράστασης</CardTitle>
+                </CardHeader>
+                <CardContent className="space-y-4">
+                  
+                  <div className="flex items-start gap-3">
+                    <Calendar className="h-4 w-4 text-accent mt-1" />
+                    <div>
+                      <p className="font-medium text-foreground">Ημερομηνίες</p>
+                      <p className="text-sm text-muted-foreground">{production.dates}</p>
+                      {production.schedule && (
+                        <p className="text-xs text-muted-foreground mt-1">{production.schedule}</p>
+                      )}
+                    </div>
+                  </div>
+
+                  <Separator />
+
+                  <div className="flex items-start gap-3">
+                    <MapPin className="h-4 w-4 text-accent mt-1" />
+                    <div>
+                      <p className="font-medium text-foreground">Χώρος</p>
+                      <p className="text-sm text-muted-foreground">{production.venue}</p>
+                    </div>
+                  </div>
+
+                  {production.duration && (
+                    <>
+                      <Separator />
+                      <div className="flex items-start gap-3">
+                        <Clock className="h-4 w-4 text-accent mt-1" />
+                        <div>
+                          <p className="font-medium text-foreground">Διάρκεια</p>
+                          <p className="text-sm text-muted-foreground">{production.duration}</p>
+                        </div>
+                      </div>
+                    </>
+                  )}
+
+                  {production.targetAudience && (
+                    <>
+                      <Separator />
+                      <div className="flex items-start gap-3">
+                        <Users className="h-4 w-4 text-accent mt-1" />
+                        <div>
+                          <p className="font-medium text-foreground">Κοινό</p>
+                          <p className="text-sm text-muted-foreground">{production.targetAudience}</p>
+                        </div>
+                      </div>
+                    </>
+                  )}
+
+                  {production.nextShow && production.nextShow !== "never" && (
+                    <>
+                      <Separator />
+                      <div className="p-3 bg-accent/10 rounded-lg">
+                        <p className="font-medium text-accent text-sm">Επόμενη Παράσταση</p>
+                        <p className="text-sm text-muted-foreground">{production.nextShow}</p>
+                      </div>
+                    </>
+                  )}
+                </CardContent>
+              </Card>
+
+              {/* Booking & Contact Info */}
+              {(production.bookingInfo || production.pressContact) && (
+                <Card className="border-border/50">
+                  <CardHeader>
+                    <CardTitle>Επικοινωνία</CardTitle>
+                  </CardHeader>
+                  <CardContent className="space-y-4">
+                    
+                    {production.bookingInfo && (
+                      <div>
+                        <p className="font-medium text-foreground mb-2">Κρατήσεις</p>
+                        <div className="space-y-2">
+                          {production.bookingInfo.phone && (
+                            <div className="flex items-center gap-2">
+                              <Phone className="h-3 w-3 text-accent" />
+                              <span className="text-sm text-muted-foreground">{production.bookingInfo.phone}</span>
+                            </div>
+                          )}
+                          {production.bookingInfo.email && (
+                            <div className="flex items-center gap-2">
+                              <Mail className="h-3 w-3 text-accent" />
+                              <span className="text-sm text-muted-foreground">{production.bookingInfo.email}</span>
+                            </div>
+                          )}
+                          {production.bookingInfo.website && (
+                            <div className="flex items-center gap-2">
+                              <Globe className="h-3 w-3 text-accent" />
+                              <a 
+                                href={production.bookingInfo.website} 
+                                className="text-sm text-accent hover:underline"
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                              >
+                                Ιστοσελίδα
+                              </a>
+                            </div>
+                          )}
+                        </div>
+                      </div>
+                    )}
+
+                    {production.pressContact && (
+                      <>
+                        <Separator />
+                        <div>
+                          <p className="font-medium text-foreground mb-2">Δημόσιες Σχέσεις</p>
+                          <div className="space-y-1">
+                            {production.pressContact.name && (
+                              <p className="text-sm text-muted-foreground">{production.pressContact.name}</p>
+                            )}
+                            {production.pressContact.phone && (
+                              <div className="flex items-center gap-2">
+                                <Phone className="h-3 w-3 text-accent" />
+                                <span className="text-sm text-muted-foreground">{production.pressContact.phone}</span>
+                              </div>
+                            )}
+                            {production.pressContact.email && (
+                              <div className="flex items-center gap-2">
+                                <Mail className="h-3 w-3 text-accent" />
+                                <span className="text-sm text-muted-foreground">{production.pressContact.email}</span>
+                              </div>
+                            )}
+                          </div>
+                        </div>
+                      </>
+                    )}
+
+                    {production.productionCompany && (
+                      <>
+                        <Separator />
+                        <div>
+                          <p className="font-medium text-foreground mb-1">Παραγωγή</p>
+                          <p className="text-sm text-muted-foreground">{production.productionCompany}</p>
+                        </div>
+                      </>
+                    )}
+                  </CardContent>
+                </Card>
+              )}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Gallery */}
+      {production.galleryImages && production.galleryImages.length > 0 && (
+        <section className="py-16 bg-secondary/30">
+          <div className="container mx-auto px-6">
+            <h3 className="text-display-md text-foreground mb-8 text-center">Φωτογραφίες από την Παράσταση</h3>
+            
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+              {production.galleryImages.map((image, index) => (
+                <div key={index} className="aspect-square bg-secondary rounded-lg overflow-hidden shadow-sm hover:shadow-elegant transition-shadow duration-300">
+                  <img
+                    src={image}
+                    alt={`${production.title} - Φωτογραφία ${index + 1}`}
+                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
       <Footer />
     </div>
   );

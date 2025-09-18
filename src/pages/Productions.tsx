@@ -44,11 +44,11 @@ const Productions = () => {
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                   <div className={`${index % 2 === 1 ? 'lg:order-2' : ''}`}>
                     <div className="aspect-[4/3] bg-secondary rounded-lg overflow-hidden shadow-elegant">
-                      {production.image ? (
+                      {production.images?.main ? (
                         <img
-                          src={production.image}
+                          src={production.images.main}
                           alt={production.title}
-                          className="w-full h-full object-cover"
+                          className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                         />
                       ) : (
                         <div className="w-full h-full bg-gradient-to-br from-accent/20 to-accent/5 flex items-center justify-center">
@@ -111,11 +111,11 @@ const Productions = () => {
                 style={{ animationDelay: `${index * 0.2}s` }}
               >
                 <div className="aspect-[4/3] bg-secondary rounded-lg overflow-hidden">
-                  {production.image ? (
+                  {production.images?.main ? (
                     <img
-                      src={production.image}
+                      src={production.images.main}
                       alt={production.title}
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                     />
                   ) : (
                     <div className="w-full h-full bg-gradient-to-br from-accent/10 to-accent/5 flex items-center justify-center">
