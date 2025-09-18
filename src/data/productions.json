@@ -1,68 +1,21 @@
 {
   "productions": [
     {
-      "id": 1,
-      "title": "ΕΙΡΗΝΗ",
-      "subtitle": "Η κωμωδία του Αριστοφάνη",
-      "description": "Σε συμπαραγωγή με το Θεσσαλικό Θέατρο, σε μετάφραση Λάκη Λαζόπουλου και σκηνοθεσία Νικορέστη Χανιωτάκη.",
-      "longDescription": "Η «Ειρήνη» του Αριστοφάνη, μια από τις πιο επίκαιρες κωμωδίες του αρχαίου θεάτρου, παρουσιάζεται σε μια σύγχρονη ερμηνεία που αναδεικνύει τη διαχρονική αξία του έργου και την ανάγκη για ειρήνη στον σύγχρονο κόσμο.",
-      "dates": "15 Μαρτίου - 28 Απριλίου 2026",
-      "venue": "Θεσσαλικό Θέατρο",
-      "duration": "120 λεπτά",
-      "images": {
-        "main": "/images/eirini.jpg",
-        "square": "/images/eirini-square.jpg",
-        "landscape": "/images/eirini-landscape.jpg",
-        "portrait": "/images/eirini.jpg"
-      },
-      "galleryImages": [
-        "/images/gallery/eirini-1.jpg",
-        "/images/gallery/eirini-2.jpg",
-        "/images/gallery/eirini-3.jpg"
-      ],
-      "status": "current",
-      "nextShow": "Παρασκευή 20 Μαρτίου, 21:00",
-      "cast": [
-        "Λάκης Λαζόπουλος",
-        "Μαρία Κωνσταντάκη",
-        "Γιάννης Στάνκογλου"
-      ],
-      "creativeTeam": {
-        "director": "Νικορέστης Χανιωτάκης",
-        "translation": "Λάκης Λαζόπουλος",
-        "setDesign": "Μαρία Φιλίππου",
-        "costumes": "Σοφία Νικολαΐδη",
-        "lighting": "Στέλλα Κάλτσου",
-        "music": "Ανδρέας Κατσιγιάννης"
-      },
-      "productionCompany": "Θεσσαλικό Θέατρο",
-      "bookingInfo": {
-        "phone": "2410 123456",
-        "email": "info@thessaliko.gr",
-        "website": "https://www.thessaliko.gr"
-      }
-    },
-    {
       "id": 2,
       "title": "ΦΙΛΟΚΤΗΤΗΣ",
       "subtitle": "Η τραγωδία του Σοφοκλή",
       "description": "Ο Γιώργος Κιμούλης, ο Δημήτρης Γκοτσόπουλος και ο Θοδωρής Κατσαφάδος, σε παραγωγή της εταιρείας Μέθεξις του Χρήστου Τριπόδη και σε συνεργασία με το ΔΗ.ΠΕ.ΘΕ Αγρινίου παρουσιάζουν, την καλοκαιρινή περίοδο σε όλη την Ελλάδα και την Κύπρο, την τραγωδία του Σοφοκλή ΦΙΛΟΚΤΗΤΗΣ.",
-      "longDescription": "Στον Φιλοκτήτη ο Σοφοκλής δραματοποιεί μια επιχείρηση απάτης, την οποία οργανώνει ο Οδυσσέας και αναλαμβάνει να εκτελέσει ο Νεοπτόλεμος, ο νεαρός γιος του Αχιλλέα. Οι δύο άνδρες καταφθάνουν στην ακατοίκητη Λήμνο, στην άκρη, στην εσχατιά του Κόσμου, εκεί όπου οι Αχαιοί είχαν εγκαταλείψει για δέκα χρόνια τον Φιλοκτήτη, πληγωμένο από μία αγιάτρευτη πληγή. Η αποστολή τους είναι να κλέψουν το περίφημο τόξο του Φιλοκτήτη, γιατί χωρίς αυτό είναι αδύνατη η άλωση της Τροίας. \"Μισώ την εποχή που ζω. Σκοτεινά χρόνια. Δεν θέλω τη ζωή μου έτσι\". Ο μύθος αντανακλάται στο σήμερα. Δύο εκπρόσωποι της παλαιάς γενιάς. Ο ένας, εκτός κόσμου αποκλεισμένος, πιστός στις έννοιες της Ουτοπίας και του Επιθυμητού και ο άλλος, μέσα στον κόσμο προσκολλημένος, πιστός στις έννοιες του Ρεαλισμού και του Πολιτικού Εφικτού. O καθένας με τον τρόπο του προσπαθεί να πάρει με το μέρος του έναν εκπρόσωπο της νεότερης γενιάς. Ποιος θα τον κερδίσει; Ο ένας ή ο άλλος; Ή μήπως… κανένας απ' τους δύο;",
-      "dates": "8 Ιουνίου - 20 Ιουλίου 2026",
+      "longDescription": "Στον Φιλοκτήτη ο Σοφοκλής δραματοποιεί μια επιχείρηση απάτης, την οποία οργανώνει ο Οδυσσέας και αναλαμβάνει να εκτελέσει ο Νεοπτόλεμος, ο νεαρός γιος του Αχιλλέα. Οι δύο άνδρες καταφθάνουν στην ακατοίκητη Λήμνο, στην άκρη, στην εσχατιά του Κόσμου, εκεί όπου οι Αχαιοί είχαν εγκαταλείψει για δέκα χρόνια τον Φιλοκτήτη, πληγωμένο από μία αγιάτρευτη πληγή. \"Μισώ την εποχή που ζω. Σκοτεινά χρόνια. Δεν θέλω τη ζωή μου έτσι\". Ο μύθος αντανακλάται στο σήμερα.",
+      "dates": "Καλοκαιρινή περιοδεία 2025",
       "venue": "Καλοκαιρινή περιοδεία σε όλη την Ελλάδα και την Κύπρο",
       "duration": "110 λεπτά",
       "images": {
-        "main": "/images/filoktitis.jpg",
-        "square": "/images/filoktitis-square.jpg",
-        "landscape": "/images/filoktitis-landscape.jpg",
-        "portrait": "/images/filoktitis.jpg"
+        "main": "/productions/filoktitis/banner.jpg",
+        "square": "/productions/filoktitis/banner.jpg",
+        "landscape": "/productions/filoktitis/banner.jpg",
+        "portrait": "/productions/filoktitis/banner.jpg"
       },
-      "galleryImages": [
-        "/images/gallery/filoktitis-1.jpg",
-        "/images/gallery/filoktitis-2.jpg",
-        "/images/gallery/filoktitis-3.jpg",
-        "/images/gallery/filoktitis-4.jpg"
-      ],
+      "galleryImages": [],
       "status": "current",
       "nextShow": "Σάββατο 15 Ιουνίου, 21:30",
       "bookingLink": "https://www.more.com/gr-el/tickets/theater/filoktitis-1",
@@ -105,21 +58,30 @@
       "title": "ΧΑΣΑΜΕ ΤΗ ΘΕΙΑ ΣΤΟΠ",
       "subtitle": "Το θεατρικό κόσμημα του Γιώργου Διαλεγμένου",
       "description": "Το αριστούργημα του Γιώργου Διαλεγμένου, «Χάσαμε τη Θεία Στοπ», ζωντανεύει φέτος το καλοκαίρι στο Αίθριο του Κέντρου Πολιτισμού «Ελληνικός Κόσμος», σε μία παραγωγή της εταιρίας θεατρικών παραγωγών Μέθεξις και σκηνοθεσία του Χρήστου Τριπόδη.",
-      "longDescription": "Στην παράσταση «Χάσαμε τη Θεία Στοπ», ο Θανάσης και η Ουρανία ζουν μέσα στη μιζέρια και τη γκρίνια που φέρνει η φτώχεια, στο Γκάζι τη δεκαετία του '50. Στο διπλανό τους δωμάτιο βρίσκεται η κατάκοιτη και μελλοθάνατη θεία στην κληρονομιά της οποίας στηρίζονται για να εκπληρώσουν τα όνειρά τους για μια καλύτερη ζωή. Ένας καβγάς, μια λάθος κίνηση επιφέρουν λίγο νωρίτερα τον θάνατό της. Έναν θάνατο που δεν φέρνει την πολυπόθητη λύση, αλλά είναι ο σπινθήρας για μια μεγάλη «έκρηξη».",
+      "longDescription": "Στην παράσταση «Χάσαμε τη Θεία Στοπ», ο Θανάσης και η Ουρανία ζουν μέσα στη μιζέρια και τη γκρίνια που φέρνει η φτώχεια, στο Γκάζι τη δεκαετία του '50. Στο διπλανό τους δωμάτιο βρίσκεται η κατάκοιτη και μελλοθάνατη θεία στην κληρονομιά της οποίας στηρίζονται για να εκπληρώσουν τα όνειρά τους για μια καλύτερη ζωή. Ένας καβγάς, μια λάθος κίνηση επιφέρουν λίγο νωρίτερα τον θάνατό της.",
       "dates": "4 Ιουλίου - 31 Αυγούστου 2025",
       "venue": "Αίθριο του Κέντρου Πολιτισμού «Ελληνικός Κόσμος»",
       "duration": "90 λεπτά",
       "schedule": "Κάθε Πέμπτη, Παρασκευή, Σάββατο & Κυριακή, 21:15",
       "images": {
-        "main": "/images/xasame-ti-theia-stop.jpg",
-        "square": "/images/xasame-ti-theia-stop-square.jpg",
-        "landscape": "/images/xasame-ti-theia-stop-landscape.jpg",
-        "portrait": "/images/xasame-ti-theia-stop.jpg"
+        "main": "/productions/xasame-ti-theia-stop/wallpaper.jpg",
+        "square": "/productions/xasame-ti-theia-stop/wallpaper.jpg",
+        "landscape": "/productions/xasame-ti-theia-stop/wallpaper.jpg",
+        "portrait": "/productions/xasame-ti-theia-stop/wallpaper.jpg"
       },
       "galleryImages": [
-        "/images/gallery/xasame-ti-theia-stop-1.jpg",
-        "/images/gallery/xasame-ti-theia-stop-2.jpg",
-        "/images/gallery/xasame-ti-theia-stop-3.jpg"
+        "/productions/xasame-ti-theia-stop/DIAGOUPI.jpg",
+        "/productions/xasame-ti-theia-stop/NATASA.jpg",
+        "/productions/xasame-ti-theia-stop/ORESTIS.jpg",
+        "/productions/xasame-ti-theia-stop/SOYXES.jpg",
+        "/productions/xasame-ti-theia-stop/TZOIS.jpg",
+        "/productions/xasame-ti-theia-stop/VIVIAN.jpg",
+        "/productions/xasame-ti-theia-stop/XARIS.jpg",
+        "/productions/xasame-ti-theia-stop/DSC00220.jpg",
+        "/productions/xasame-ti-theia-stop/DSC00363.jpg",
+        "/productions/xasame-ti-theia-stop/DSC00395.jpg",
+        "/productions/xasame-ti-theia-stop/DSC00500.jpg",
+        "/productions/xasame-ti-theia-stop/DSC00539.jpg"
       ],
       "status": "current",
       "nextShow": "Πέμπτη 11 Ιουλίου, 21:15",
@@ -149,203 +111,145 @@
       }
     },
     {
-      "id": 101,
-      "title": "ΒΟΤΚΑ ΜΟΛΟΤΟΦ",
-      "subtitle": "Η εκρηκτική κωμωδία της Ελένης Ράντου",
-      "description": "Βασισμένη στη διασκευή του Νηλ Σάιμον, πάνω στα διηγήματα του Τσέχωφ, σε σκηνοθεσία Νικορέστη Χανιωτάκη, με τους Ιωάννη Απέργη, Παναγιώτα Βιτετζάκη, Κατερίνα Γερονικολού, Λυδία Σγουράκη, Πάνο Σταθακόπουλο, Δήμητρα Στογιάννη, Χάρη Χιώτη, στο ρόλο του Τχέχωφ ο Τάσος Χαλκιάς, σε χειμερινή περιοδεία ανά την Ελλάδα.",
-      "longDescription": "Μια εκρηκτική κωμωδία βασισμένη στη διασκευή του Νηλ Σάιμον πάνω στα διηγήματα του Τσέχωφ. Ένα έργο που συνδυάζει τη ρωσική μελαγχολία με την αμερικανική κωμωδία, δημιουργώντας ένα μοναδικό θεατρικό γεγονός.",
-      "dates": "15 Μαρτίου - 28 Απριλίου 2024",
-      "venue": "Χειμερινή περιοδεία ανά την Ελλάδα",
-      "duration": "105 λεπτά",
+      "id": 4,
+      "title": "Η ΑΛΙΚΗ ΣΤΗ ΧΩΡΑ ΤΩΝ ΨΑΡΙΩΝ",
+      "subtitle": "Το ανατρεπτικό παραμύθι του Γιάννη Ξανθούλη",
+      "description": "Το Ίδρυμα Μείζονος Ελληνισμού φιλοξενεί στο «Θέατρον» του Κέντρου Πολιτισμού «Ελληνικός Κόσμος» το ανατρεπτικό παραμύθι «Η Αλίκη στη χώρα των ψαριών» του Γιάννη Ξανθούλη, σε παραγωγή της εταιρίας Μέθεξις και σκηνοθεσία του Χρήστου Τριπόδη.",
+      "longDescription": "Η Αλίκη ξεκίνησε τις διακοπές της με το καραβάκι της, τη «Μπουρμπουλήθρα». Όμως, μία φουρτούνα το βυθίζει και το δελφίνι σώζει την Αλίκη και τη μεταφέρει στον βυθό της θάλασσας, όπου όλα είναι «υγρά και νερουλά». Το αλληγορικό παραμύθι είναι ένας ύμνος για την αγάπη, την ισότητα, την ελευθερία, τη διαφορετικότητα και τον σεβασμό στο περιβάλλον.",
+      "dates": "Καλοκαιρινή περίοδος",
+      "venue": "Θέατρον του Κέντρου Πολιτισμού «Ελληνικός Κόσμος»",
+      "duration": "75 λεπτά",
+      "targetAudience": "Παιδιά και οικογένειες",
       "images": {
-        "main": "/images/votka-molotof.jpg",
-        "square": "/images/votka-molotof-square.jpg",
-        "landscape": "/images/votka-molotof-landscape.jpg",
-        "portrait": "/images/votka-molotof.jpg"
+        "main": "/productions/aliki/wallpaper.jpg",
+        "square": "/productions/aliki/wallpaper.jpg",
+        "landscape": "/productions/aliki/wallpaper.jpg",
+        "portrait": "/productions/aliki/wallpaper.jpg"
       },
-      "galleryImages": [
-        "/images/gallery/votka-molotof-1.jpg",
-        "/images/gallery/votka-molotof-2.jpg"
-      ],
+      "galleryImages": [],
       "status": "past",
       "nextShow": "never",
       "cast": [
-        "Ιωάννης Απέργης",
-        "Παναγιώτα Βιτετζάκη",
-        "Κατερίνα Γερονικολού",
-        "Λυδία Σγουράκη",
-        "Πάνος Σταθακόπουλος",
-        "Δήμητρα Στογιάννη",
-        "Χάρης Χιώτης",
-        "Τάσος Χαλκιάς (ως Τσέχωφ)"
+        "Άννα Βασιλείου",
+        "Βασίλης Γιαννέλος"
       ],
       "creativeTeam": {
-        "director": "Νικορέστης Χανιωτάκης",
-        "adaptation": "Νηλ Σάιμον",
-        "basedOn": "Διηγήματα του Τσέχωφ"
-      }
+        "playwright": "Γιάννης Ξανθούλης",
+        "director": "Χρήστος Τριπόδης",
+        "setDesignCostumes": "Αγγελίνα Παπαχατζάκη",
+        "music": "Μιχάλης Τριπόδης",
+        "creativeAgency": "GRIDFOX"
+      },
+      "productionCompany": "Χρήστος Τριπόδης - «Μέθεξις»"
     },
     {
-      "id": 102,
-      "title": "Ο ΘΡΥΛΟΣ ΤΗΣ ΜΟΥΛΑΝ",
-      "subtitle": "Η παιδική παράσταση σε σκηνοθεσία Χρήστου Τριπόδη και διασκευή Μάνου Τσότρα",
-      "description": "με τους Λυδία Σγουράκη, Αντώνη Αντωνάκο,Βαγγέλη Κυπαρίσση, Στρατή Νταλαγιώργο, Χρήστο Σωνάκη, Θεοδώρα Κοκκινίδη, Ελένη Φανδρίδου, Χρόνη Στρίκο, σε καλοκαιρινή περιοδεία ανά την Ελλάδα.",
-      "longDescription": "Ο διαχρονικός θρύλος της Μουλάν ζωντανεύει σε μια παιδική παράσταση γεμάτη χρώμα, μουσική και περιπέτεια. Μια ιστορία για το θάρρος, την αγάπη για την οικογένεια και την ισότητα των φύλων.",
-      "dates": "10 Μαίου - 15 Ιουνίου 2023",
-      "venue": "Καλοκαιρινή περιοδεία ανά την Ελλάδα",
-      "duration": "75 λεπτά",
-      "targetAudience": "Παιδιά 4-12 ετών",
+      "id": 5,
+      "title": "ΤΟ ΚΑΡΝΑΒΑΛΙ ΤΩΝ ΖΩΩΝ",
+      "subtitle": "Του Camille Saint-Saëns",
+      "description": "Μετά την τεράστια επιτυχία της καλοκαιρινής περιοδείας, «Το Καρναβάλι των Ζώων» του Camille Saint-Saëns ανεβαίνει στο «Θέατρον» του Κέντρου Πολιτισμού «Ελληνικός Κόσμος».",
+      "longDescription": "Το διασημότερο μουσικό παραμύθι που έχει γραφτεί για παιδιά, σε κείμενα του Γιώργου Γαλίτη και ενορχήστρωση του Αλέξανδρου Γκόνη. Μία ομάδα ταλαντούχων ηθοποιών, μουσικών, καθώς και χορευτών μας ταξιδεύουν στον υπέροχο κόσμο της κλασικής μουσικής μέσα από ένα παραμύθι που παίζεται σε ολόκληρο τον κόσμο.",
+      "dates": "Οκτώβριος",
+      "venue": "Θέατρον του Κέντρου Πολιτισμού «Ελληνικός Κόσμος» - Αίθουσα Ιφιγένεια",
+      "duration": "85 λεπτά",
+      "targetAudience": "Παιδιά και οικογένειες",
       "images": {
-        "main": "/images/moulan.jpg",
-        "square": "/images/moulan-square.jpg",
-        "landscape": "/images/moulan-landscape.jpg",
-        "portrait": "/images/moulan.jpg"
+        "main": "/productions/karnavali/banner.jpg",
+        "square": "/productions/karnavali/banner.jpg", 
+        "landscape": "/productions/karnavali/banner-2.jpg",
+        "portrait": "/productions/karnavali/banner.jpg"
       },
       "galleryImages": [
-        "/images/gallery/moulan-1.jpg",
-        "/images/gallery/moulan-2.jpg",
-        "/images/gallery/moulan-3.jpg"
+        "/productions/karnavali/atomiko_A2 (1).jpg",
+        "/productions/karnavali/atomiko_B2 (1).jpg",
+        "/productions/karnavali/atomiko_C2 (1).jpg",
+        "/productions/karnavali/atomiko_D2 (1).jpg",
+        "/productions/karnavali/atomiko_F2 (1).jpg",
+        "/productions/karnavali/atomiko_G2 (1).jpg",
+        "/productions/karnavali/atomiko_H2 (1).jpg"
       ],
       "status": "past",
       "nextShow": "never",
-      "cast": [
-        "Λυδία Σγουράκη",
-        "Αντώνης Αντωνάκος",
-        "Βαγγέλης Κυπαρίσσης",
-        "Στρατής Νταλαγιώργος",
-        "Χρήστος Σωνάκης",
-        "Θεοδώρα Κοκκινίδη",
-        "Ελένη Φανδρίδου",
-        "Χρόνης Στρίκος"
-      ],
       "creativeTeam": {
-        "director": "Χρήστος Τριπόδης",
-        "adaptation": "Μάνος Τσότρας"
-      }
+        "composer": "Camille Saint-Saëns",
+        "texts": "Γιώργος Γαλίτης",
+        "orchestration": "Αλέξανδρος Γκόνης"
+      },
+      "productionCompany": "ΜΕΘΕΞΙΣ - Χρήστος Τριπόδης"
+    },
+    {
+      "id": 6,
+      "title": "ΛΑΧΑΝΑ ΚΑΙ ΧΑΧΑΝΑ",
+      "subtitle": "Ο Καλός μου Εαυτός - Μιούζικαλ του Τάσου Ιωαννίδη",
+      "description": "Το επιτυχημένο μιούζικαλ για παιδιά του Τάσου Ιωαννίδη έρχεται για δεύτερη συνεχόμενη χρονιά στο «Θέατρον» του Κέντρου Πολιτισμού «Ελληνικός Κόσμος».",
+      "longDescription": "Το έργο του Τάσου Ιωαννίδη πραγματεύεται με απλό και άμεσο τρόπο τις έννοιες της «αυταγάπης», της «αυτεπάρκειας», της «αυτοεκτίμησης», των «θετικών σκέψεων» και προτείνει παιγνιώδεις τρόπους διαχείρισης των αρνητικών συναισθημάτων.",
+      "dates": "Κάθε Σάββατο στις 17:00",
+      "venue": "Θέατρον του Κέντρου Πολιτισμού «Ελληνικός Κόσμος»",
+      "duration": "80 λεπτά",
+      "targetAudience": "Παιδιά και οικογένειες",
+      "images": {
+        "main": "/productions/laxana-xaxana/banner.jpg",
+        "square": "/productions/laxana-xaxana/banner.jpg",
+        "landscape": "/productions/laxana-xaxana/banner.jpg",
+        "portrait": "/productions/laxana-xaxana/banner.jpg"
+      },
+      "galleryImages": [],
+      "status": "past",
+      "nextShow": "never",
+      "creativeTeam": {
+        "playwright": "Τάσος Ιωαννίδης",
+        "director": "Χρήστος Τριπόδης"
+      },
+      "productionCompany": "ΜΕΘΕΞΙΣ - Χρήστος Τριπόδης"
     },
     {
       "id": 103,
-      "title": "Ο ΠΑΠΠΟΥΣ ΕΧΕΙ ΠΙΕΣΗ",
-      "subtitle": "Την ξέφρενη κωμωδία της Δήμητρας Παπαδοπούλου",
-      "description": "Σε σκηνοθεσία Χρήστου Τριπόδη, με τους Άρης Αντωνόπουλο, Κρατερό Κατσούλη, Μαριλού Κατσαφάδου, Ηρώ Πεκτέση, Δήμητρα Στογιάννη και στο ρόλο του παππού ο Τάσος Χαλκιάς, στο Αίθριο του Κέντρου Πολιτισμού «Ελληνικός Κόσμος», την θερινή θεατρική περίοδο 2024 και σε περιοδεία ανά την Ελλάδα.",
-      "longDescription": "Μια ξέφρενη οικογενειακή κωμωδία που εξερευνά τις σχέσεις μεταξύ των γενεών με χιούμor και τρυφερότητα. Ο παππούς με την πίεση γίνεται ο πρωταγωνιστής μιας ιστορίας γεμάτης γέλιο και συναίσθημα.",
-      "dates": "10 Μαίου - 15 Ιουνίου 2023",
-      "venue": "Αίθριο του Κέντρου Πολιτισμού «Ελληνικός Κόσμος»",
+      "title": "Ο ΠΑΠΠΟΥΣ ΕΧΕΙ ΠΙΕΣΗ", 
+      "subtitle": "Η ξέφρενη κωμωδία της Δήμητρας Παπαδοπούλου",
+      "description": "Η πιο πετυχημένη κωμωδία της Δήμητρας Παπαδοπούλου, «Ο Παππούς έχει Πίεση», για δεύτερη συνεχόμενη χρονιά σε καλοκαιρινή περιοδεία.",
+      "longDescription": "Ένας παππούς, τρεις εξωφρενικές εγγονές, ένας «μπάτσος», ένας ιδεολόγος νεαρός, ένας «φόνος» και ένα ρομαντικό δείπνο με φακές οδηγούν μια θεότρελη ελληνική οικογένεια σε ξεκαρδιστικές καταστάσεις. Ο θρυλικός «Παππούς» της Δήμητρας Παπαδοπούλου επανέρχεται δυναμικά με περισσότερη «πίεση» από ποτέ.",
+      "dates": "Καλοκαιρινή περιοδεία",
+      "venue": "Καλοκαιρινή περιοδεία ανά την Ελλάδα",
       "duration": "95 λεπτά",
       "images": {
-        "main": "/images/pappous.jpg",
-        "square": "/images/pappous-square.jpg",
-        "landscape": "/images/pappous-landscape.jpg",
-        "portrait": "/images/pappous.jpg"
+        "main": "/productions/o-pappous/banner.jpg",
+        "square": "/productions/o-pappous/banner.jpg",
+        "landscape": "/productions/o-pappous/banner.jpg",
+        "portrait": "/productions/o-pappous/banner.jpg"
       },
-      "galleryImages": [
-        "/images/gallery/pappous-1.jpg",
-        "/images/gallery/pappous-2.jpg"
-      ],
+      "galleryImages": [],
       "status": "past",
       "nextShow": "never",
       "cast": [
         "Άρης Αντωνόπουλος",
-        "Κρατερός Κατσούλης",
+        "Κώστας Αποστολάκης",
+        "Σύλβια Δελικούρα", 
         "Μαριλού Κατσαφάδου",
-        "Ηρώ Πεκτέση",
-        "Δήμητρα Στογιάννη",
+        "Φωτεινή Μπαξεβάνη",
         "Τάσος Χαλκιάς (Παππούς)"
       ],
       "creativeTeam": {
         "playwright": "Δήμητρα Παπαδοπούλου",
         "director": "Χρήστος Τριπόδης"
-      }
-    },
-    {
-      "id": 104,
-      "title": "Η ΣΠΑΣΜΕΝΗ ΣΤΑΜΝΑ",
-      "subtitle": "Το διαχρονικό έργο του Χάινριχ Φον Κλάιστ",
-      "description": "Σε σκηνοθεσία Γιώργου Κιμούλη, με τους Γιώργο Κιμούλη, Τζόυς Ευείδη, Αργύρη Αγγέλου, Λίλη Τσεσματζόγλου, Γιώργο Στριφτάρη, Βασίλη Πουλάκο, Βασίλη Γιακουμάρο, σε καλοκαιρινή περιοδεία ανά την Ελλάδα.",
-      "longDescription": "Το κλασικό έργο του Χάινριχ Φον Κλάιστ σε μια σύγχρονη ερμηνεία που αναδεικνύει τη διαχρονικότητα των θεμάτων δικαιοσύνης, εξουσίας και ανθρώπινης φύσης.",
-      "dates": "10 Μαίου - 15 Ιουνίου 2023",
-      "venue": "Καλοκαιρινή περιοδεία ανά την Ελλάδα",
-      "duration": "100 λεπτά",
-      "images": {
-        "main": "/images/stamna.jpg",
-        "square": "/images/stamna-square.jpg",
-        "landscape": "/images/stamna-landscape.jpg",
-        "portrait": "/images/stamna.jpg"
       },
-      "galleryImages": [
-        "/images/gallery/stamna-1.jpg",
-        "/images/gallery/stamna-2.jpg"
-      ],
-      "status": "past",
-      "nextShow": "never",
-      "cast": [
-        "Γιώργος Κιμούλης",
-        "Τζόυς Ευείδη",
-        "Αργύρης Αγγέλου",
-        "Λίλη Τσεσματζόγλου",
-        "Γιώργος Στριφτάρης",
-        "Βασίλης Πουλάκος",
-        "Βασίλης Γιακουμάρος"
-      ],
-      "creativeTeam": {
-        "playwright": "Χάινριχ Φον Κλάιστ",
-        "director": "Γιώργος Κιμούλης"
-      }
-    },
-    {
-      "id": 105,
-      "title": "Η ΣΥΝΑΝΤΗΣΗ",
-      "subtitle": "Η παράσταση του Stephen Belber",
-      "description": "σε σκηνοθεσία Γιώργου Κιμούλη, με τους Γιώργο Κιμούλη, Κατερίνα Θεοχάρη, Βασίλη Γιακουμάρο, στο θέατρο Coronet, τη χειμερινή θεατρική περίοδο 2024-2025.",
-      "longDescription": "Ένα δραματικό έργο που εξερευνά τις ανθρώπινες σχέσεις μέσα από μια συναντηση που αλλάζει τη ζωή των πρωταγωνιστών. Ένα ψυχολογικό δράμα γεμάτο ένταση και συναίσθημα.",
-      "dates": "10 Μαίου - 15 Ιουνίου 2023",
-      "venue": "Θέατρο Coronet",
-      "season": "Χειμερινή θεατρική περίοδος 2024-2025",
-      "duration": "85 λεπτά",
-      "images": {
-        "main": "/images/synantisi.jpg",
-        "square": "/images/synantisi-square.jpg",
-        "landscape": "/images/synantisi-landscape.jpg",
-        "portrait": "/images/synantisi.jpg"
-      },
-      "galleryImages": [
-        "/images/gallery/synantisi-1.jpg",
-        "/images/gallery/synantisi-2.jpg"
-      ],
-      "status": "past",
-      "nextShow": "never",
-      "cast": [
-        "Γιώργος Κιμούλης",
-        "Κατερίνα Θεοχάρη",
-        "Βασίλης Γιακουμάρος"
-      ],
-      "creativeTeam": {
-        "playwright": "Stephen Belber",
-        "director": "Γιώργος Κιμούλης"
-      }
+      "productionCompany": "Μέθεξις - Χρήστος Τριπόδης"
     },
     {
       "id": 106,
       "title": "Ο ΠΕΤΡΟΣ ΚΑΙ Ο ΛΥΚΟΣ",
-      "subtitle": "Το διασημότερο μουσικό παραμύθι όλων των εποχών του Σεργκέι Προκόφιεφ",
-      "description": "Σε σκηνοθεσία Χρήστου Τριπόδη, με τον Ιωάννη Απέργη, τους μουσικούς Αλέξανδρο Ζουγανέλη, Κωνσταντίνα Ρούσσου, Ηλία Γυφτονικολό, Μυρτώ Ξηρουχάκη, Αουλόν Μπίνο και τις χορεύτριες Χριστίνα Μπίτου, Ναταλία Μαρτίνη, στο θέατρο Διάνα, τη χειμερινή θεατρική περίοδο 2024-2025.",
-      "longDescription": "Το αγαπημένο μουσικό παραμύθι του Προκόφιεφ ζωντανεύει σε μια παράσταση που συνδυάζει θέατρο, μουσική και χορό. Μια μαγική εμπειρία για όλη την οικογένεια που παρουσιάζει την ιστορία του μικρού Πέτρου και την περιπέτειά του με τον λύκο.",
-      "dates": "10 Μαίου - 15 Ιουνίου 2023",
-      "venue": "Θέατρο Διάνα",
-      "season": "Χειμερινή θεατρική περίοδος 2024-2025",
-      "duration": "65 λεπτά",
+      "subtitle": "Το διασημότερο μουσικό παραμύθι του Σεργκέι Προκόφιεφ",
+      "description": "H εταιρεία θεατρικών παραγωγών ΜΕΘΕΞΙΣ παρουσιάζει το διασημότερο μουσικό παραμύθι όλων των εποχών «Ο Πέτρος και ο λύκος», του Σεργκέι Προκόφιεφ, σε σκηνοθεσία Χρήστου Τριπόδη, με τον Ιωάννη Απέργη.",
+      "longDescription": "Το μαγευτικό κείμενο του Ρώσου συνθέτη Σεργκέι Προκόφιεφ γράφτηκε το 1936 και θεωρείται ένα από τα πιο σημαντικά μουσικά παραμύθια όλων των εποχών. Πρόκειται για μια θεατρική προσέγγιση του παραμυθιού, με στοιχεία χοροκίνησης, τραγουδιών και θέατρο σκιών.",
+      "dates": "Από Κυριακή 3 Νοεμβρίου 2024",
+      "venue": "Θέατρο ΔΙΑΝΑ",
+      "duration": "65 λεπτά", 
       "targetAudience": "Οικογένειες με παιδιά 5-12 ετών",
       "images": {
-        "main": "/images/o-petros-kai-o-lykos.jpg",
-        "square": "/images/o-petros-kai-o-lykos-square.jpg",
-        "landscape": "/images/o-petros-kai-o-lykos-landscape.jpg",
-        "portrait": "/images/o-petros-kai-o-lykos.jpg"
+        "main": "/productions/o-petros-kai-lykos/banner.jpg",
+        "square": "/productions/o-petros-kai-lykos/banner.jpg",
+        "landscape": "/productions/o-petros-kai-lykos/banner.jpg",
+        "portrait": "/productions/o-petros-kai-lykos/banner.jpg"
       },
-      "galleryImages": [
-        "/images/gallery/o-petros-kai-o-lykos-1.jpg",
-        "/images/gallery/o-petros-kai-o-lykos-2.jpg",
-        "/images/gallery/o-petros-kai-o-lykos-3.jpg"
-      ],
+      "galleryImages": [],
       "status": "past",
       "nextShow": "never",
       "cast": [
@@ -365,7 +269,218 @@
       "creativeTeam": {
         "composer": "Σεργκέι Προκόφιεφ",
         "director": "Χρήστος Τριπόδης"
+      },
+      "productionCompany": "ΜΕΘΕΞΙΣ"
+    },
+    {
+      "id": 7,
+      "title": "ΟΥΤΕ ΜΠΡΟΣ ΟΥΤΕ ΠΙΣΩ",
+      "subtitle": "Η νέα σατιρική κωμωδία του Θανάση Παπαθανασίου και του Μιχάλη Ρέππα",
+      "description": "Ο Θανάσης Παπαθανασίου και ο Μιχάλης Ρέππας, σε παραγωγή της εταιρείας Μέθεξις του Χρήστου Τριπόδη, παρουσιάζουν αυτό το καλοκαίρι σε όλη την Ελλάδα τη νέα τους παράσταση, «Ούτε Μπρος ούτε Πίσω».",
+      "longDescription": "Το έργο είναι ένα ξεκαρδιστικό καθρέφτισμα της σύγχρονης ελληνικής πραγματικότητας, με μουσική και τραγούδια, που σατιρίζει το εδώ και το τώρα. Κομμάτια και αποσπάσματα ζωής και ιστορίες καθημερινής τρέλας σαν σύντομα φλας που πυκνώνουν ό,τι μας απελπίζει και ό,τι μας δίνει ελπίδα.",
+      "dates": "Καλοκαιρινή περιοδεία",
+      "venue": "Καλοκαιρινή περιοδεία ανά την Ελλάδα",
+      "duration": "90 λεπτά",
+      "images": {
+        "main": "/productions/oute-mpros-oute-pisw/wallpaper.jpg",
+        "square": "/productions/oute-mpros-oute-pisw/square.jpg",
+        "landscape": "/productions/oute-mpros-oute-pisw/wallpaper.jpg", 
+        "portrait": "/productions/oute-mpros-oute-pisw/square.jpg"
+      },
+      "galleryImages": [
+        "/productions/oute-mpros-oute-pisw/1220_371___mpros_piso.jpg",
+        "/productions/oute-mpros-oute-pisw/500_500_mpros_piso.jpg",
+        "/productions/oute-mpros-oute-pisw/816_465___mpros_piso.jpg",
+        "/productions/oute-mpros-oute-pisw/wallpaper-2.jpg"
+      ],
+      "status": "past",
+      "nextShow": "never",
+      "cast": [
+        "Χρύσα Ρώπα",
+        "Αντώνης Λουδάρος",
+        "Ματθίλδη Μαγγίρα",
+        "Πάνος Σταθακόπουλος",
+        "Δήμητρα Στογιάννη",
+        "Γιάννης Δρακόπουλος",
+        "Ιωάννης Απέργης"
+      ],
+      "creativeTeam": {
+        "directors": "Θανάσης Παπαθανασίου & Μιχάλης Ρέππας",
+        "costumes": "Κώστας Ζήσης",
+        "choreography": "Άννα Αθανασιάδη",
+        "setDesign": "Αγγελίνα Παπαχατζάκη",
+        "orchestrationRecording": "Θωμάς Πούτας",
+        "assistantDirectors": "Βίκυ Πάστρα",
+        "creativeAgency": "GRIDFOX"
+      },
+      "productionCompany": "Χρήστος Τριπόδης - «Μέθεξις»"
+    },
+    {
+      "id": 104,
+      "title": "Η ΣΠΑΣΜΕΝΗ ΣΤΑΜΝΑ",
+      "subtitle": "Το διαχρονικό έργο του Χάινριχ Φον Κλάιστ",
+      "description": "Το Δημοτικό Περιφερειακό Θέατρο Αγρινίου σε συνεργασία με την εταιρεία θεατρικών παραγωγών Μέθεξις παρουσιάζει την κωμωδία \"Η Σπασμένη Στάμνα\", του Χάινριχ Φον Κλάιστ, σε σκηνοθεσία Γιώργου Κιμούλη.",
+      "longDescription": "\"Η Σπασμένη Στάμνα\", γραμμένο το 1806, είναι μία απ' τις πιο σημαντικές κωμωδίες της ευρωπαϊκής δραματουργίας. Το θέμα της κωμωδίας είναι ο λανθασμένος τρόπος που ασκείται η δικαιοσύνη από κάποιους λειτουργούς της. Ένα έργο με σπαρταριστούς χαρακτήρες, απροσδόκητες κωμικές ανατροπές.",
+      "dates": "17 Ιανουαρίου έως 9 Φεβρουαρίου",
+      "venue": "Δημοτικό Περιφερειακό Θέατρο Αγρινίου",
+      "duration": "100 λεπτά",
+      "schedule": "Κάθε Παρασκευή και Σάββατο στις 21:15, Κυριακή στις 20:00",
+      "images": {
+        "main": "/productions/stamna/banner.jpg",
+        "square": "/productions/stamna/banner.jpg",
+        "landscape": "/productions/stamna/banner.jpg", 
+        "portrait": "/productions/stamna/banner.jpg"
+      },
+      "galleryImages": [
+        "/productions/stamna/DSC02435-2.jpg",
+        "/productions/stamna/DSC02578.jpg",
+        "/productions/stamna/DSC02631.jpg",
+        "/productions/stamna/DSC02786.jpg",
+        "/productions/stamna/DSC02824.jpg",
+        "/productions/stamna/DSC03225.jpg",
+        "/productions/stamna/DSC03413.jpg",
+        "/productions/stamna/STAMN00058low (1).jpg"
+      ],
+      "status": "past",
+      "nextShow": "never",
+      "cast": [
+        "Γιώργος Κιμούλης",
+        "Τζόυς Ευείδη",
+        "Αργύρης Αγγέλου",
+        "Λίλη Τσεσματζόγλου",
+        "Γιώργος Στριφτάρης",
+        "Βασίλης Πουλάκος",
+        "Βασίλης Γιακουμάρος"
+      ],
+      "creativeTeam": {
+        "playwright": "Χάινριχ Φον Κλάιστ",
+        "directorTranslatorAdapter": "Γιώργος Κιμούλης",
+        "setDesignCostumes": "Κατερίνα Σβορώνου",
+        "creativeAgency": "Gridfox"
+      },
+      "productionCompany": "Μέθεξις"
+    },
+    {
+      "id": 105,
+      "title": "Η ΣΥΝΑΝΤΗΣΗ",
+      "subtitle": "Η παράσταση του Stephen Belber", 
+      "description": "Το έργο του Αμερικανού συγγραφέα Stephen Belber, «Η Συνάντηση» («Match»), ανεβαίνει στο Θέατρο Coronet από τις 8 Νοεμβρίου, σε σκηνοθεσία Γιώργου Κιμούλη.",
+      "longDescription": "Ένας ηλικιωμένος πρώην διάσημος χορογράφος, ο Τόμπι Πάουελ, δέχεται την επίσκεψη ενός ζευγαριού για συνέντευξη. Όσο προχωράει η «συνέντευξη» γίνεται όλο και πιο σαφές ότι υπάρχουν απώτερα κίνητρα, ώσπου ο μοναχικός χορογράφος αναγκάζεται να έρθει αντιμέτωπος μ' ένα μεγάλο θαμμένο μυστικό του παρελθόντος του.",
+      "dates": "Από 8 Νοεμβρίου 2024",
+      "venue": "Θέατρο Coronet",
+      "duration": "90 λεπτά",
+      "schedule": "Πέμπτη 20:00, Παρασκευή & Σάββατο 21:15, Κυριακή 20:00",
+      "images": {
+        "main": "/productions/synantisi/banner.jpg",
+        "square": "/productions/synantisi/banner.jpg",
+        "landscape": "/productions/synantisi/banner.jpg",
+        "portrait": "/productions/synantisi/banner.jpg"
+      },
+      "galleryImages": [
+        "/productions/synantisi/DSC07461_web.jpg",
+        "/productions/synantisi/DSC07510.jpg", 
+        "/productions/synantisi/Group-1.jpg"
+      ],
+      "status": "past",
+      "nextShow": "never",
+      "cast": [
+        "Γιώργος Κιμούλης",
+        "Κατερίνα Θεοχάρη",
+        "Βασίλης Γιακουμάρος"
+      ],
+      "creativeTeam": {
+        "playwright": "Stephen Belber",
+        "directorTranslator": "Γιώργος Κιμούλης",
+        "setDesign": "Κατερίνα Σβορώνου",
+        "costumes": "Σοφία Νικολαΐδη",
+        "lighting": "Βασίλης Τριπόδης",
+        "assistantDirector": "Γιλμάζ Χουσμέν",
+        "creativeAgency": "GridFox"
+      },
+      "productionCompany": "Χρήστος Τριπόδης - \"Μέθεξις\"",
+      "bookingInfo": {
+        "phone": "210 7012123",
+        "website": "https://www.more.com/theater/i-synantisi/"
+      },
+      "pressContact": {
+        "name": "Μαρίκα Αρβανιτοπούλου"
       }
+    },
+    {
+      "id": 101,
+      "title": "ΒΟΤΚΑ ΜΟΛΟΤΟΦ",
+      "subtitle": "Η εκρηκτική κωμωδία της Ελένης Ράντου",
+      "description": "Η εκρηκτική κωμωδία της Ελένης Ράντου, βασισμένη στη διασκευή του Νηλ Σάιμον πάνω στα διηγήματα του Τσέχωφ παρουσιάζεται στην αίθουσα Ιφιγένεια του Κέντρου Πολιτισμού «Ελληνικός Κόσμος».",
+      "longDescription": "Ο Άντον Τσέχωφ σκιαγραφεί χαρακτήρες τόσο από τα αστικά κέντρα, όσο και από την επαρχία της προεπαναστατικής Ρωσίας. Η Ελένη Ράντου τιτλοφόρησε τη διασκευή της «Βότκα Μολότοφ», κλείνοντας το μάτι στους θεατές για τη θεατρική «έκρηξη» γέλιου και συγκίνησης που ετοιμάζονται να βιώσουν.",
+      "dates": "Από 31 Οκτωβρίου",
+      "venue": "Αίθουσα Ιφιγένεια του Κέντρου Πολιτισμού «Ελληνικός Κόσμος»",
+      "duration": "105 λεπτά",
+      "images": {
+        "main": "/productions/votka-molotof/banner.jpg",
+        "square": "/productions/votka-molotof/banner.jpg",
+        "landscape": "/productions/votka-molotof/banner.jpg",
+        "portrait": "/productions/votka-molotof/banner.jpg"
+      },
+      "galleryImages": [],
+      "status": "past",
+      "nextShow": "never",
+      "cast": [
+        "Γιώργος Γαλίτης",
+        "Ματθίλδη Μαγγίρα",
+        "Λυδία Σγουράκη",
+        "Πάνος Σταθακόπουλος",
+        "Δήμητρα Στογιάννη",
+        "Χρήστος Τριπόδης",
+        "Τάσος Χαλκιάς (ως Τσέχωφ)"
+      ],
+      "creativeTeam": {
+        "director": "Νικορέστης Χανιωτάκης",
+        "adaptation": "Ελένη Ράντου",
+        "basedOn": "Διηγήματα του Άντον Τσέχωφ του Νηλ Σάιμον"
+      },
+      "productionCompany": "Εταιρεία «Μέθεξις» του Χρήστου Τριπόδη"
+    },
+    {
+      "id": 102,
+      "title": "Ο ΘΡΥΛΟΣ ΤΗΣ ΜΟΥΛΑΝ",
+      "subtitle": "Η παιδική παράσταση σε σκηνοθεσία Χρήστου Τριπόδη και διασκευή Μάνου Τσότρα",
+      "description": "«Ο Θρύλος της Μουλάν», ένας από τους διασημότερους μύθους παγκοσμίως παρουσιάζεται για πρώτη φορά στην Ελλάδα, αυτό το καλοκαίρι, από την παιδική σκηνή του Χρήστου Τριπόδη και την εταιρία Μέθεξις.",
+      "longDescription": "Πρόκειται για μία φαντασμαγορική θεατρική παραγωγή, βασισμένη στο αρχαίο κινέζικο ποίημα «Η Μπαλάντα της Χουά Μουλάν», με εντυπωσιακά κοστούμια, σκηνικά, σπαθομαχίες και χορογραφίες, καθώς και διαδραστικό παιχνίδι με το κοινό. Η ηρωίδα Μουλάν είναι μία νέα γυναίκα η οποία, εν καιρώ πολέμου, μεταμφιέζεται σε άνδρα και πάει στον στρατό.",
+      "dates": "Καλοκαιρινή περιοδεία",
+      "venue": "Καλοκαιρινή περιοδεία ανά την Ελλάδα",
+      "duration": "75 λεπτά",
+      "targetAudience": "Παιδιά 4-12 ετών",
+      "images": {
+        "main": "/productions/moulan/banner.jpg",
+        "square": "/productions/moulan/banner.jpg",
+        "landscape": "/productions/moulan/wallpaper.jpg",
+        "portrait": "/productions/moulan/banner.jpg"
+      },
+      "galleryImages": [
+        "/productions/moulan/VILAN.JPG",
+        "/productions/moulan/emperor.JPG",
+        "/productions/moulan/fighter.JPG",
+        "/productions/moulan/kenshi.JPG",
+        "/productions/moulan/moulan.JPG",
+        "/productions/moulan/red_banner.jpg"
+      ],
+      "status": "past",
+      "nextShow": "never",
+      "cast": [
+        "Λυδία Σγουράκη",
+        "Αντώνης Αντωνάκος",
+        "Βαγγέλης Κυπαρίσσης",
+        "Στρατής Νταλαγιώργος",
+        "Χρήστος Σωνάκης",
+        "Θεοδώρα Κοκκινίδη",
+        "Ελένη Φανδρίδου",
+        "Χρόνης Στρίκος"
+      ],
+      "creativeTeam": {
+        "director": "Χρήστος Τριπόδης",
+        "adaptation": "Μάνος Τσότρας"
+      },
+      "productionCompany": "Μέθεξις - Χρήστος Τριπόδης"
     }
   ]
 }
