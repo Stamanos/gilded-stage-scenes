@@ -1,24 +1,64 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import FloatingSocial from "@/components/FloatingSocial";
 import { Button } from "@/components/ui/button";
 import productionsData from "@/data/productions.json";
 import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
 
 const Productions = () => {
   const productions = productionsData.productions;
   const currentProductions = productions.filter(p => p.status === "current");
   const pastProductions = productions.filter(p => p.status === "past");
 
+  // Background slideshow
+  const slideImages = [
+    "/slides/filoktitis-slide.jpg",
+    "/slides/oute-mpros-oute-pisw-slide.jpg", 
+    "/slides/stamna-slide.jpg"
+  ];
+
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % slideImages.length);
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, [slideImages.length]);
+
   return (
     <div className="min-h-screen">
       <Navigation />
+      <FloatingSocial />
       
-      {/* Hero Section */}
-      <section className="pt-32 pb-24 bg-primary text-primary-foreground">
-        <div className="container mx-auto px-6">
+      {/* Hero Section with Background Slideshow */}
+      <section className="relative pt-32 pb-24 overflow-hidden">
+        {/* Background Images */}
+        <div className="absolute inset-0">
+          {slideImages.map((image, index) => (
+            <div
+              key={index}
+              className={`absolute inset-0 transition-opacity duration-1000 ${
+                index === currentSlide ? 'opacity-100' : 'opacity-0'
+              }`}
+            >
+              <img
+                src={image}
+                alt={`Slide ${index + 1}`}
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-black/60"></div>
+            </div>
+          ))}
+        </div>
+        
+        {/* Content */}
+        <div className="relative z-10 container mx-auto px-6">
           <div className="text-center animate-fade-up">
-            <h1 className="text-display-xl mb-6">Παραστάσεις</h1>
-            <p className="text-body-lg opacity-90 max-w-3xl mx-auto">
+            <h1 className="text-display-xl mb-6 text-white drop-shadow-lg">Παραστάσεις</h1>
+            <p className="text-body-lg text-white/90 max-w-3xl mx-auto drop-shadow-md">
               Κάθε παράσταση δημιουργείται με προσοχή για να δημιουργήσει έναν βαθύ διάλογο 
               μεταξύ κοινού και ερμηνευτή, εξερευνώντας τα βάθη της ανθρώπινης εμπειρίας.
             </p>
