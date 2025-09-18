@@ -10,16 +10,7 @@ const HeroSection = () => {
   
   const [currentIndex, setCurrentIndex] = useState(0);
   
-  // Auto-rotation every 4 seconds
-  useEffect(() => {
-    if (currentProductions.length <= 1) return;
-    
-    const interval = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % currentProductions.length);
-    }, 6000);
-    
-    return () => clearInterval(interval);
-  }, [currentProductions.length]);
+  // Manual navigation only - no auto-rotation
   
   const goToNext = () => {
     setCurrentIndex((prev) => (prev + 1) % currentProductions.length);
@@ -88,9 +79,9 @@ const HeroSection = () => {
             Τώρα στη σκηνή: <span className="text-gold drop-shadow-lg">{currentProduction.title}</span>
           </h1>
           
-          {/* Subtitle with background for readability */}
-          <div className="inline-block bg-background/80 backdrop-blur-md rounded-xl px-6 py-3 mb-8">
-            <h2 className="text-display-md text-foreground font-light">
+          {/* Subtitle with animated background */}
+          <div className="inline-block bg-gradient-to-r from-background/60 via-background/80 to-background/60 backdrop-blur-md rounded-2xl px-8 py-4 mb-8 animate-fade-in shadow-elegant border border-white/10">
+            <h2 className="text-display-md text-foreground font-light animate-scale-in">
               {currentProduction.subtitle}
             </h2>
           </div>

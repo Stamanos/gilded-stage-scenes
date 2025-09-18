@@ -1,7 +1,9 @@
+import { useState } from "react";
 import { useParams } from "react-router-dom";
 import productionsData from "@/data/productions.json";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import ImageLightbox from "@/components/ImageLightbox";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -10,9 +12,17 @@ import { Calendar, Clock, MapPin, Users, Phone, Mail, Globe, ExternalLink } from
 
 const ProductionDetails = () => {
   const { id } = useParams();
+  const [lightboxOpen, setLightboxOpen] = useState(false);
+  const [lightboxIndex, setLightboxIndex] = useState(0);
+  
   const production = productionsData.productions.find(
     (p) => String(p.id) === String(id)
   );
+
+  const openLightbox = (index: number) => {
+    setLightboxIndex(index);
+    setLightboxOpen(true);
+  };
 
   if (!production) {
     return (
@@ -57,7 +67,7 @@ const ProductionDetails = () => {
               {production.subtitle}
             </h2>
             
-            <p className="text-base md:text-lg text-white/80 mb-8 md:mb-10 max-w-3xl leading-relaxed">
+            <p className="text-sm md:text-base text-white/80 mb-8 md:mb-10 max-w-3xl leading-relaxed">
               {production.description}
             </p>
             
@@ -87,8 +97,8 @@ const ProductionDetails = () => {
               {production.longDescription && (
                 <div>
                   <h3 className="text-display-md text-foreground mb-6">Η Ιστορία</h3>
-                  <div className="prose prose-lg max-w-none">
-                    <p className="text-muted-foreground leading-relaxed text-body-lg">
+                  <div className="prose prose-md max-w-none">
+                    <p className="text-muted-foreground leading-relaxed text-body">
                       {production.longDescription}
                     </p>
                   </div>
@@ -356,11 +366,15 @@ const ProductionDetails = () => {
             
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
               {production.galleryImages.map((image, index) => (
-                <div key={index} className="aspect-square bg-secondary rounded-lg overflow-hidden shadow-sm hover:shadow-elegant transition-shadow duration-300">
+                <div 
+                  key={index} 
+                  className="aspect-square bg-secondary rounded-lg overflow-hidden shadow-sm hover:shadow-elegant transition-all duration-300 cursor-pointer hover:scale-105"
+                  onClick={() => openLightbox(index)}
+                >
                   <img
                     src={image}
                     alt={`${production.title} - Φωτογραφία ${index + 1}`}
-                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                    className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
                   />
                 </div>
               ))}
@@ -370,6 +384,16 @@ const ProductionDetails = () => {
       )}
 
       <Footer />
+      
+      {/* Lightbox */}
+      {lightboxOpen && production.galleryImages && (
+        <ImageLightbox
+          images={production.galleryImages}
+          currentIndex={lightboxIndex}
+          onClose={() => setLightboxOpen(false)}
+          productionTitle={production.title}
+        />
+      )}
     </div>
   );
 };

@@ -96,35 +96,35 @@ const Navigation = () => {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="md:hidden mt-6 pb-6 border-t border-border">
-            <div className="flex flex-col space-y-4 mt-6">
+          <div className="md:hidden absolute top-full left-0 right-0 bg-background/95 backdrop-blur-lg border border-border/50 rounded-b-lg shadow-dramatic animate-slide-in-right">
+            <div className="flex flex-col px-6 py-6 space-y-1">
               <a 
                 href="/productions" 
-                className="text-body text-foreground hover:text-accent transition-colors duration-300"
+                className="text-body text-foreground hover:text-accent transition-all duration-300 px-4 py-3 rounded-lg hover:bg-accent/10 hover:scale-105"
                 onClick={() => setIsOpen(false)}
               >
-                Παραστάσεις
+                📚 Παραστάσεις
               </a>
               <a 
                 href="/about" 
-                className="text-body text-foreground hover:text-accent transition-colors duration-300"
+                className="text-body text-foreground hover:text-accent transition-all duration-300 px-4 py-3 rounded-lg hover:bg-accent/10 hover:scale-105"
                 onClick={() => setIsOpen(false)}
               >
-                Σχετικά με εμάς
+                🎭 Σχετικά με εμάς
               </a>
               <a 
                 href="/news" 
-                className="text-body text-foreground hover:text-accent transition-colors duration-300"
+                className="text-body text-foreground hover:text-accent transition-all duration-300 px-4 py-3 rounded-lg hover:bg-accent/10 hover:scale-105"
                 onClick={() => setIsOpen(false)}
               >
-                Νέα
+                📰 Νέα
               </a>
               <a 
                 href="/contact" 
-                className="text-body text-foreground hover:text-accent transition-colors duration-300"
+                className="text-body text-foreground hover:text-accent transition-all duration-300 px-4 py-3 rounded-lg hover:bg-accent/10 hover:scale-105"
                 onClick={() => setIsOpen(false)}
               >
-                Επικοινωνία
+                📞 Επικοινωνία
               </a>
             </div>
           </div>
