@@ -16,7 +16,7 @@ const HeroSection = () => {
       <div className="relative z-10 text-center max-w-4xl mx-auto px-6">
         <div className="animate-fade-up">
           <h1 className="text-display-xl text-primary-foreground mb-6">
-            Τώρα στη σκηνή: <span className="text-gold">Ο Φιλοκτήτης </span>
+            Τώρα στη σκηνή: <span className="text-gold">Φιλοκτήτης </span>
           </h1>
           <p className="text-body-lg text-primary-foreground/90 mb-8 max-w-2xl mx-auto">
             Μια σύγχρονη ερμηνεία του τελευταίου αριστουργήματος του Shakespeare, 
