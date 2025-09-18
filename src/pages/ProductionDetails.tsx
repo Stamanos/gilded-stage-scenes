@@ -31,7 +31,7 @@ const ProductionDetails = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="relative h-[70vh] overflow-hidden">
+      <section className="relative h-[70vh] overflow-hidden pt-20">
         <div className="absolute inset-0">
           <img
             src={production.images?.landscape || production.images?.main || "/images/theater-hero.jpg"}
