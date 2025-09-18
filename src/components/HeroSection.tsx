@@ -16,7 +16,7 @@ const HeroSection = () => {
     
     const interval = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % currentProductions.length);
-    }, 4000);
+    }, 6000);
     
     return () => clearInterval(interval);
   }, [currentProductions.length]);
@@ -56,8 +56,9 @@ const HeroSection = () => {
         }}
       />
       
-      {/* Enhanced Overlay */}
-      <div className="absolute inset-0 bg-gradient-hero backdrop-blur-[0.5px]" />
+      {/* Enhanced Overlay for Better Text Contrast */}
+      <div className="absolute inset-0 bg-gradient-to-t from-background/95 via-background/40 to-background/60" />
+      <div className="absolute inset-0 bg-primary/30" />
       
       {/* Navigation Controls */}
       {currentProductions.length > 1 && (
@@ -80,48 +81,45 @@ const HeroSection = () => {
       )}
       
       {/* Content */}
-      <div className="relative z-10 text-center max-w-5xl mx-auto px-6">
+      <div className="relative z-10 text-center max-w-4xl mx-auto px-6">
         <div className="animate-fade-up">
-          <h1 className="text-display-xl text-primary-foreground mb-6">
-            Τώρα στη σκηνή: <span className="text-gold">{currentProduction.title}</span>
+          {/* Title with enhanced contrast */}
+          <h1 className="text-display-xl text-white mb-6 drop-shadow-2xl">
+            Τώρα στη σκηνή: <span className="text-gold drop-shadow-lg">{currentProduction.title}</span>
           </h1>
-          <h2 className="text-display-md text-primary-foreground/95 mb-4 font-light">
-            {currentProduction.subtitle}
-          </h2>
-          <p className="text-body-lg text-primary-foreground/90 mb-8 max-w-3xl mx-auto leading-relaxed">
-            {currentProduction.description}
-          </p>
+          
+          {/* Subtitle with background for readability */}
+          <div className="inline-block bg-background/80 backdrop-blur-md rounded-xl px-6 py-3 mb-8">
+            <h2 className="text-display-md text-foreground font-light">
+              {currentProduction.subtitle}
+            </h2>
+          </div>
+          
+          {/* Action buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             {currentProduction.bookingLink ? (
               <a
                 href={currentProduction.bookingLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group relative overflow-hidden bg-accent hover:bg-accent/90 text-accent-foreground px-8 py-4 text-lg font-medium transition-all duration-300 hover:shadow-dramatic rounded-lg backdrop-blur-sm border border-accent/20 hover:scale-105"
+                className="group relative overflow-hidden bg-accent hover:bg-accent/90 text-accent-foreground px-8 py-4 text-lg font-semibold transition-all duration-300 hover:shadow-dramatic rounded-xl backdrop-blur-sm border border-accent/20 hover:scale-105 shadow-xl"
               >
                 <span className="relative z-10">Κλείσε Εισιτήρια</span>
                 <div className="absolute inset-0 bg-gradient-accent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </a>
             ) : (
-              <span className="bg-muted/20 text-primary-foreground/70 px-8 py-4 text-lg font-medium rounded-lg backdrop-blur-sm border border-primary-foreground/10">
+              <span className="bg-muted text-muted-foreground px-8 py-4 text-lg font-semibold rounded-xl backdrop-blur-sm shadow-xl">
                 Σύντομα διαθέσιμα εισιτήρια
               </span>
             )}
             <Link
               to={`/productions/${currentProduction.id}`}
-              className="group relative overflow-hidden border border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 px-8 py-4 text-lg font-medium transition-all duration-300 rounded-lg backdrop-blur-sm hover:scale-105 hover:border-primary-foreground/50"
+              className="group relative overflow-hidden bg-white/90 backdrop-blur-md text-primary hover:bg-white px-8 py-4 text-lg font-semibold transition-all duration-300 rounded-xl hover:scale-105 shadow-xl border border-white/20"
             >
               <span className="relative z-10">Μάθετε περισσότερα</span>
-              <div className="absolute inset-0 bg-primary-foreground/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             </Link>
           </div>
-          
-          {/* Production Info */}
-          {currentProduction.nextShow && (
-            <div className="mt-8 inline-flex items-center gap-2 px-6 py-3 rounded-full bg-background/10 backdrop-blur-md border border-primary-foreground/20 text-primary-foreground">
-              <span className="text-sm font-medium">📅 {currentProduction.nextShow}</span>
-            </div>
-          )}
         </div>
       </div>
       
