@@ -1,4 +1,5 @@
-import { Mail, Phone, MapPin } from "lucide-react";
+import { Mail, Phone, MapPin, Instagram, Facebook, Youtube } from "lucide-react";
+import productionCompanyData from "@/data/productionCompany.json";
 
 const ContactSection = () => {
   return (
@@ -6,11 +7,11 @@ const ContactSection = () => {
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-display-lg mb-6">
-            Connect With Us
+            Επικοινωνία
           </h2>
           <p className="text-body-lg opacity-90 max-w-2xl mx-auto">
-            Join our community of theater enthusiasts. Stay informed about upcoming 
-            productions, special events, and behind-the-scenes insights.
+            Συνδεθείτε με την κοινότητά μας των λάτρεων του θεάτρου και μείνετε ενημερωμένοι 
+            για τις επερχόμενες παραστάσεις και ειδικές εκδηλώσεις.
           </p>
         </div>
 
@@ -22,10 +23,10 @@ const ContactSection = () => {
             <h3 className="text-xl font-display mb-3">Email</h3>
             <p className="opacity-90">
               <a 
-                href="mailto:methexis.productions@gmail.com" 
+                href={`mailto:${productionCompanyData.company.contact.email}`}
                 className="hover:text-gold transition-colors duration-300"
               >
-                methexis.productions@gmail.com
+                {productionCompanyData.company.contact.email}
               </a>
             </p>
           </div>
@@ -34,13 +35,13 @@ const ContactSection = () => {
             <div className="bg-primary-foreground/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
               <Phone className="w-6 h-6 text-gold" />
             </div>
-            <h3 className="text-xl font-display mb-3">Box Office</h3>
+            <h3 className="text-xl font-display mb-3">Τηλέφωνο</h3>
             <p className="opacity-90">
               <a 
-                href="tel:+1-555-THEATER" 
+                href={`tel:${productionCompanyData.company.contact.phone[0]}`}
                 className="hover:text-gold transition-colors duration-300"
               >
-                (555) THEATER
+                {productionCompanyData.company.contact.phone[0]}
               </a>
             </p>
           </div>
@@ -49,27 +50,52 @@ const ContactSection = () => {
             <div className="bg-primary-foreground/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
               <MapPin className="w-6 h-6 text-gold" />
             </div>
-            <h3 className="text-xl font-display mb-3">Location</h3>
+            <h3 className="text-xl font-display mb-3">Διεύθυνση</h3>
             <p className="opacity-90">
-              425 Arts District<br />
-              Downtown Cultural Quarter
+              {productionCompanyData.company.address.street}<br />
+              {productionCompanyData.company.address.city} {productionCompanyData.company.address.postal_code}
             </p>
           </div>
         </div>
 
         <div className="text-center">
-          <div className="bg-primary-foreground/5 p-8 rounded-lg max-w-md mx-auto">
-            <h3 className="text-display-md mb-6">Stay Connected</h3>
-            <form className="space-y-4">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="w-full px-4 py-3 bg-primary-foreground/10 border border-primary-foreground/20 rounded text-primary-foreground placeholder-primary-foreground/60 focus:outline-none focus:border-gold transition-colors duration-300"
-              />
-              <button className="w-full bg-accent hover:bg-accent/90 text-accent-foreground py-3 px-6 rounded font-medium transition-colors duration-300">
-                Subscribe to Updates
-              </button>
-            </form>
+          <div className="bg-primary-foreground/5 p-12 rounded-2xl max-w-lg mx-auto">
+            <h3 className="text-display-md mb-8">Ακολουθήστε μας</h3>
+            <p className="text-body opacity-80 mb-8">
+              Συνδεθείτε μαζί μας στα social media για καθημερινές ενημερώσεις και παρασκηνιακό υλικό.
+            </p>
+            
+            <div className="flex justify-center space-x-6">
+              <a 
+                href="https://www.instagram.com/methexis_productions/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group bg-primary-foreground/10 hover:bg-gold p-4 rounded-full transition-all duration-300 hover:scale-110 hover:shadow-lg"
+                aria-label="Instagram"
+              >
+                <Instagram className="w-6 h-6 text-primary-foreground group-hover:text-primary transition-colors duration-300" />
+              </a>
+              
+              <a 
+                href="https://www.facebook.com/methexis.productions/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group bg-primary-foreground/10 hover:bg-gold p-4 rounded-full transition-all duration-300 hover:scale-110 hover:shadow-lg"
+                aria-label="Facebook"
+              >
+                <Facebook className="w-6 h-6 text-primary-foreground group-hover:text-primary transition-colors duration-300" />
+              </a>
+              
+              <a 
+                href="https://www.youtube.com/@methexisproductions1453"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group bg-primary-foreground/10 hover:bg-gold p-4 rounded-full transition-all duration-300 hover:scale-110 hover:shadow-lg"
+                aria-label="YouTube"
+              >
+                <Youtube className="w-6 h-6 text-primary-foreground group-hover:text-primary transition-colors duration-300" />
+              </a>
+            </div>
           </div>
         </div>
       </div>

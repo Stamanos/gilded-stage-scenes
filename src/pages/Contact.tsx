@@ -1,8 +1,8 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import FloatingSocial from "@/components/FloatingSocial";
-import { Mail, Phone, MapPin, Clock } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Mail, Phone, MapPin, Clock, Instagram, Facebook, Youtube } from "lucide-react";
+import productionCompanyData from "@/data/productionCompany.json";
 
 const Contact = () => {
   return (
@@ -33,10 +33,10 @@ const Contact = () => {
               <h3 className="text-xl font-semibold text-foreground mb-3">Email</h3>
               <p className="text-muted-foreground">
                 <a 
-                  href="mailto:info@ateliertheater.gr" 
+                  href={`mailto:${productionCompanyData.company.contact.email}`}
                   className="hover:text-accent transition-colors duration-300"
                 >
-                  info@ateliertheater.gr
+                  {productionCompanyData.company.contact.email}
                 </a>
               </p>
             </div>
@@ -45,15 +45,19 @@ const Contact = () => {
               <div className="bg-accent/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
                 <Phone className="w-6 h-6 text-accent" />
               </div>
-              <h3 className="text-xl font-semibold text-foreground mb-3">Ταμείο</h3>
-              <p className="text-muted-foreground">
-                <a 
-                  href="tel:+302101234567" 
-                  className="hover:text-accent transition-colors duration-300"
-                >
-                  210 123 4567
-                </a>
-              </p>
+              <h3 className="text-xl font-semibold text-foreground mb-3">Τηλέφωνο</h3>
+              <div className="text-muted-foreground space-y-1">
+                {productionCompanyData.company.contact.phone.map((phone, index) => (
+                  <div key={index}>
+                    <a 
+                      href={`tel:${phone}`}
+                      className="hover:text-accent transition-colors duration-300"
+                    >
+                      {phone}
+                    </a>
+                  </div>
+                ))}
+              </div>
             </div>
 
             <div className="text-center animate-fade-up" style={{ animationDelay: "0.2s" }}>
@@ -62,8 +66,8 @@ const Contact = () => {
               </div>
               <h3 className="text-xl font-semibold text-foreground mb-3">Διεύθυνση</h3>
               <p className="text-muted-foreground">
-                Ερμού 125<br />
-                Πλάκα, Αθήνα 10551
+                {productionCompanyData.company.address.street}<br />
+                {productionCompanyData.company.address.city} {productionCompanyData.company.address.postal_code}
               </p>
             </div>
 
@@ -72,147 +76,70 @@ const Contact = () => {
                 <Clock className="w-6 h-6 text-accent" />
               </div>
               <h3 className="text-xl font-semibold text-foreground mb-3">Ώρες Λειτουργίας</h3>
-              <p className="text-muted-foreground text-sm">
-                Δευ-Παρ: 10:00-22:00<br />
-                Σαβ-Κυρ: 18:00-22:00
+              <div className="text-muted-foreground text-sm space-y-1">
+                {productionCompanyData.company.opening_hours.map((schedule, index) => (
+                  <div key={index}>
+                    <span className="font-medium">{schedule.day}:</span> {schedule.hours}
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* Social Media Section */}
+          <div className="text-center">
+            <div className="bg-accent/5 p-12 rounded-2xl border border-accent/20 max-w-2xl mx-auto">
+              <h3 className="text-display-md text-foreground mb-8">Ακολουθήστε μας</h3>
+              <p className="text-body text-muted-foreground mb-8">
+                Συνδεθείτε μαζί μας στα social media για καθημερινές ενημερώσεις και παρασκηνιακό υλικό.
               </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Contact Form & Newsletter */}
-      <section className="py-24 bg-secondary">
-        <div className="container mx-auto px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-            {/* Contact Form */}
-            <div className="animate-slide-in">
-              <h2 className="text-display-lg text-foreground mb-8">
-                Στείλτε μας Μήνυμα
-              </h2>
               
-              <form className="space-y-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
-                    <label className="block text-sm font-medium text-foreground mb-2">
-                      Όνομα *
-                    </label>
-                    <input
-                      type="text"
-                      required
-                      className="w-full px-4 py-3 bg-card border border-border rounded text-card-foreground placeholder-muted-foreground focus:outline-none focus:border-accent transition-colors duration-300"
-                      placeholder="Το όνομά σας"
-                    />
-                  </div>
-                  
-                  <div>
-                    <label className="block text-sm font-medium text-foreground mb-2">
-                      Email *
-                    </label>
-                    <input
-                      type="email"
-                      required
-                      className="w-full px-4 py-3 bg-card border border-border rounded text-card-foreground placeholder-muted-foreground focus:outline-none focus:border-accent transition-colors duration-300"
-                      placeholder="email@example.com"
-                    />
-                  </div>
-                </div>
-
-                <div>
-                  <label className="block text-sm font-medium text-foreground mb-2">
-                    Θέμα
-                  </label>
-                  <input
-                    type="text"
-                    className="w-full px-4 py-3 bg-card border border-border rounded text-card-foreground placeholder-muted-foreground focus:outline-none focus:border-accent transition-colors duration-300"
-                    placeholder="Θέμα μηνύματος"
-                  />
-                </div>
-
-                <div>
-                  <label className="block text-sm font-medium text-foreground mb-2">
-                    Μήνυμα *
-                  </label>
-                  <textarea
-                    required
-                    rows={6}
-                    className="w-full px-4 py-3 bg-card border border-border rounded text-card-foreground placeholder-muted-foreground focus:outline-none focus:border-accent transition-colors duration-300 resize-none"
-                    placeholder="Γράψτε το μήνυμά σας εδώ..."
-                  />
-                </div>
-
-                <Button className="bg-accent hover:bg-accent/90 text-accent-foreground px-8 py-3">
-                  Αποστολή Μηνύματος
-                </Button>
-              </form>
-            </div>
-
-            {/* Newsletter & Social */}
-            <div className="space-y-12 animate-fade-up">
-              <div className="bg-card p-8 rounded-lg shadow-elegant">
-                <h3 className="text-display-md text-card-foreground mb-6">Newsletter</h3>
-                <p className="text-body text-muted-foreground mb-6">
-                  Εγγραφείτε στο newsletter μας για να λαμβάνετε ενημερώσεις για νέες παραστάσεις, 
-                  ειδικές προσφορές και παρασκηνιακά νέα.
-                </p>
+              <div className="flex justify-center space-x-8">
+                <a 
+                  href="https://www.instagram.com/methexis_productions/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group bg-card hover:bg-accent p-6 rounded-2xl transition-all duration-300 hover:scale-110 hover:shadow-lg"
+                  aria-label="Instagram"
+                >
+                  <Instagram className="w-8 h-8 text-accent group-hover:text-accent-foreground transition-colors duration-300" />
+                </a>
                 
-                <form className="space-y-4">
-                  <input
-                    type="email"
-                    placeholder="Το email σας"
-                    className="w-full px-4 py-3 bg-secondary border border-border rounded text-foreground placeholder-muted-foreground focus:outline-none focus:border-accent transition-colors duration-300"
-                  />
-                  <Button className="w-full bg-accent hover:bg-accent/90 text-accent-foreground py-3">
-                    Εγγραφή
-                  </Button>
-                </form>
+                <a 
+                  href="https://www.facebook.com/methexis.productions/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group bg-card hover:bg-accent p-6 rounded-2xl transition-all duration-300 hover:scale-110 hover:shadow-lg"
+                  aria-label="Facebook"
+                >
+                  <Facebook className="w-8 h-8 text-accent group-hover:text-accent-foreground transition-colors duration-300" />
+                </a>
+                
+                <a 
+                  href="https://www.youtube.com/@methexisproductions1453"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group bg-card hover:bg-accent p-6 rounded-2xl transition-all duration-300 hover:scale-110 hover:shadow-lg"
+                  aria-label="YouTube"
+                >
+                  <Youtube className="w-8 h-8 text-accent group-hover:text-accent-foreground transition-colors duration-300" />
+                </a>
               </div>
 
-              <div className="bg-accent/5 p-8 rounded-lg border border-accent/20">
-                <h3 className="text-display-md text-foreground mb-6">Ακολουθήστε μας</h3>
-                <p className="text-body text-muted-foreground mb-6">
-                  Συνδεθείτε μαζί μας στα social media για καθημερινές ενημερώσεις και παρασκηνιακό υλικό.
-                </p>
-                
-                <div className="flex space-x-4">
-                  <a 
-                    href="#" 
-                    className="bg-card p-3 rounded-full hover:bg-accent hover:text-accent-foreground transition-all duration-300"
-                    aria-label="Facebook"
-                  >
-                    📘
-                  </a>
-                  <a 
-                    href="#" 
-                    className="bg-card p-3 rounded-full hover:bg-accent hover:text-accent-foreground transition-all duration-300"
-                    aria-label="Instagram"
-                  >
-                    📷
-                  </a>
-                  <a 
-                    href="#" 
-                    className="bg-card p-3 rounded-full hover:bg-accent hover:text-accent-foreground transition-all duration-300"
-                    aria-label="YouTube"
-                  >
-                    📺
-                  </a>
-                </div>
-              </div>
-
-              {/* Responsible Person */}
-              <div className="bg-card p-8 rounded-lg shadow-elegant">
-                <h3 className="text-display-md text-card-foreground mb-4">Υπεύθυνος Επικοινωνίας</h3>
+              <div className="mt-12 bg-card p-8 rounded-lg shadow-elegant">
+                <h4 className="text-display-sm text-card-foreground mb-4">Υπεύθυνος Επικοινωνίας</h4>
                 <div className="space-y-2 text-muted-foreground">
-                  <p><strong>Ελένη Κωνσταντίνου</strong></p>
-                  <p>Διευθύντρια Marketing & Επικοινωνίας</p>
-                  <p>📧 e.konstantinou@ateliertheater.gr</p>
-                  <p>📞 210 123 4568</p>
+                  <p><strong>{productionCompanyData.company.owner}</strong></p>
+                  <p>Παραγωγός / Σκηνοθέτης</p>
+                  <p>📧 {productionCompanyData.company.contact.email}</p>
+                  <p>📞 {productionCompanyData.company.contact.phone[0]}</p>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </section>
+
 
       <Footer />
       <FloatingSocial />

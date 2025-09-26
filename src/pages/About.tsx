@@ -1,25 +1,9 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import FloatingSocial from "@/components/FloatingSocial";
+import teamData from "@/data/team.json";
 
 const About = () => {
-  const teamMembers = [
-    {
-      name: "Μαρία Παπαδοπούλου",
-      role: "Καλλιτεχνική Διευθύντρια",
-      bio: "Με περισσότερα από 20 χρόνια εμπειρίας στο θέατρο, η Μαρία οραματίζεται ένα θέατρο που συνδέει παράδοση και καινοτομία."
-    },
-    {
-      name: "Λυδία Σγουράκη",
-      role: "Βοηθός Σκηνοθέτη / Ηθοποιός",
-      bio: "Βραβευμένη σκηνοθέτης με διεθνή παρουσία, φέρνει μια μοναδική οπτική στα κλασικά έργα. Συντεκνάκιιιιιι!!!!"
-    },
-    {
-      name: "Ελένη Κωνσταντίνου",
-      role: "Παραγωγός",
-      bio: "Διαχειρίζεται την παραγωγική διαδικασία με άψογο επαγγελματισμό και καλλιτεχνική ευαισθησία."
-    }
-  ];
 
   return (
     <div className="min-h-screen">
@@ -94,14 +78,18 @@ const About = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
-            {teamMembers.map((member, index) => (
+            {teamData.teamMembers.map((member, index) => (
               <div 
                 key={index}
                 className="text-center animate-scale-in"
                 style={{ animationDelay: `${index * 0.2}s` }}
               >
-                <div className="bg-accent/10 w-32 h-32 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <span className="text-4xl">👤</span>
+                <div className="w-32 h-32 rounded-full mx-auto mb-6 overflow-hidden shadow-elegant">
+                  <img
+                    src={member.image}
+                    alt={member.name}
+                    className="w-full h-full object-cover"
+                  />
                 </div>
                 <h3 className="text-xl font-semibold text-foreground mb-2">
                   {member.name}
