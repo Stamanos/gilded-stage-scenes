@@ -34,15 +34,20 @@
         "Γιώργος Τσουρουνάκης"
       ],
       "creativeTeam": {
-        "directorTranslator": "Γιώργος Κιμούλης",
-        "setDesign": "Μαρία Φιλίππου",
-        "music": "Ανδρέας Κατσιγιάννης",
-        "costumes": "Σοφία Νικολαΐδη, Ήλια Στριγγάρη",
-        "lighting": "Στέλλα Κάλτσου",
-        "movement": "Κυριάκος Κοσμίδης",
-        "creativeAgency": "GridFox"
+        "σκηνοθεσία_μετάφραση": "Γιώργος Κιμούλης",
+        "σκηνικά": "Μαρία Φιλίππου",
+        "μουσική": "Ανδρέας Κατσιγιάννης",
+        "κοστούμια": "Σοφία Νικολαΐδη, Ήλια Στριγγάρη",
+        "φωτισμοί": "Στέλλα Κάλτσου",
+        "κίνηση": "Κυριάκος Κοσμίδης",
+        "δημιουργικό_γραφείο": "GridFox"
       },
-      "productionCompany": "Εταιρεία Θεατρικών Παραγωγών «ΜΕΘΕΞΙΣ» - Χρήστος Τριπόδης",
+      "productionInfo": {
+        "premiere": "Καλοκαιρινή περιοδεία 2025",
+        "dates": "Καλοκαιρινή περιοδεία σε όλη την Ελλάδα και την Κύπρο",
+        "duration": "110 λεπτά"
+      },
+      "productionCompany": "productionCompany.company",
       "bookingInfo": {
         "phone": "210 7622034, 6943290294",
         "email": "methexis.productions@gmail.com"
@@ -101,12 +106,12 @@
       ],
       "voiceRecording": "Χρύσα Ρώπα",
       "creativeTeam": {
-        "playwright": "Γιώργος Διαλεγμένος",
-        "director": "Χρήστος Τριπόδης",
-        "setDesignCostumes": "Μαρία Φιλίππου",
-        "lighting": "Μελίνα Μάσχα",
-        "assistantDirector": "Λυδία Σγουράκη",
-        "creativeAgency": "GRID FOX"
+        "συγγραφέας": "Γιώργος Διαλεγμένος",
+        "σκηνοθεσία": "Χρήστος Τριπόδης",
+        "σκηνικά_κοστούμια": "Μαρία Φιλίππου",
+        "φωτισμοί": "Μελίνα Μάσχα",
+        "βοηθός_σκηνοθέτη": "Λυδία Σγουράκη",
+        "δημιουργικό_γραφείο": "GRID FOX"
       },
       "Tickets": "tickets.ticket_groups[0]",
       "productionCompany": "productionCompany.company",
@@ -149,14 +154,14 @@
         "Αλέξανδρος Σαριπανίδης"
       ],
       "creativeTeam": {
-        "playwright": "Γιάννης Ξανθούλης",
-        "director": "Χρήστος Τριπόδης",
-        "setDesignCostumes": "Αγγελίνα Παπαχατζάκη",
-        "music": "Μιχάλης Τριπόδης",
-        "creativeAgency": "GRIDFOX"
+        "συγγραφέας": "Γιάννης Ξανθούλης",
+        "σκηνοθεσία": "Χρήστος Τριπόδης",
+        "σκηνικά_κοστούμια": "Αγγελίνα Παπαχατζάκη",
+        "μουσική": "Μιχάλης Τριπόδης",
+        "δημιουργικό_γραφείο": "GRIDFOX"
       },
       "productionCompany": "productionCompany.company",
-      "tickets": "tickets.ticket_groups[1]"
+      "Tickets": "tickets.ticket_groups[1]"
     },
     {
       "id": 5,
@@ -186,11 +191,16 @@
       "status": "past",
       "nextShow": "never",
       "creativeTeam": {
-        "composer": "Camille Saint-Saëns",
-        "texts": "Γιώργος Γαλίτης",
-        "orchestration": "Αλέξανδρος Γκόνης"
+        "συνθέτης": "Camille Saint-Saëns",
+        "κείμενα": "Γιώργος Γαλίτης",
+        "ενορχήστρωση": "Αλέξανδρος Γκόνης"
       },
-      "productionCompany": "ΜΕΘΕΞΙΣ - Χρήστος Τριπόδης"
+      "productionInfo": {
+        "premiere": "Οκτώβριος",
+        "dates": "Οκτώβριος",
+        "duration": "85 λεπτά"
+      },
+      "productionCompany": "productionCompany.company"
     },
     {
       "id": 6,
@@ -212,10 +222,15 @@
       "status": "past",
       "nextShow": "never",
       "creativeTeam": {
-        "playwright": "Τάσος Ιωαννίδης",
-        "director": "Χρήστος Τριπόδης"
+        "συγγραφέας": "Τάσος Ιωαννίδης",
+        "σκηνοθεσία": "Χρήστος Τριπόδης"
       },
-      "productionCompany": "ΜΕΘΕΞΙΣ - Χρήστος Τριπόδης"
+      "productionInfo": {
+        "premiere": "Κάθε Σάββατο στις 17:00",
+        "dates": "Κάθε Σάββατο στις 17:00",
+        "duration": "80 λεπτά"
+      },
+      "productionCompany": "productionCompany.company"
     },
     {
       "id": 103,
@@ -244,10 +259,15 @@
         "Τάσος Χαλκιάς (Παππούς)"
       ],
       "creativeTeam": {
-        "playwright": "Δήμητρα Παπαδοπούλου",
-        "director": "Χρήστος Τριπόδης"
+        "συγγραφέας": "Δήμητρα Παπαδοπούλου",
+        "σκηνοθεσία": "Χρήστος Τριπόδης"
       },
-      "productionCompany": "Μέθεξις - Χρήστος Τριπόδης"
+      "productionInfo": {
+        "premiere": "Καλοκαιρινή περιοδεία",
+        "dates": "Καλοκαιρινή περιοδεία ανά την Ελλάδα",
+        "duration": "95 λεπτά"
+      },
+      "productionCompany": "productionCompany.company"
     },
     {
       "id": 106,
@@ -283,10 +303,15 @@
         "Ναταλία Μαρτίνη"
       ],
       "creativeTeam": {
-        "composer": "Σεργκέι Προκόφιεφ",
-        "director": "Χρήστος Τριπόδης"
+        "συνθέτης": "Σεργκέι Προκόφιεφ",
+        "σκηνοθεσία": "Χρήστος Τριπόδης"
       },
-      "productionCompany": "ΜΕΘΕΞΙΣ"
+      "productionInfo": {
+        "premiere": "Από Κυριακή 3 Νοεμβρίου 2024",
+        "dates": "Από Κυριακή 3 Νοεμβρίου 2024",
+        "duration": "65 λεπτά"
+      },
+      "productionCompany": "productionCompany.company"
     },
     {
       "id": 7,
@@ -321,15 +346,20 @@
         "Ιωάννης Απέργης"
       ],
       "creativeTeam": {
-        "directors": "Θανάσης Παπαθανασίου & Μιχάλης Ρέππας",
-        "costumes": "Κώστας Ζήσης",
-        "choreography": "Άννα Αθανασιάδη",
-        "setDesign": "Αγγελίνα Παπαχατζάκη",
-        "orchestrationRecording": "Θωμάς Πούτας",
-        "assistantDirectors": "Βίκυ Πάστρα",
-        "creativeAgency": "GRIDFOX"
+        "σκηνοθεσία": "Θανάσης Παπαθανασίου & Μιχάλης Ρέππας",
+        "κοστούμια": "Κώστας Ζήσης",
+        "χορογραφία": "Άννα Αθανασιάδη",
+        "σκηνικά": "Αγγελίνα Παπαχατζάκη",
+        "ενορχήστρωση_ηχογράφηση": "Θωμάς Πούτας",
+        "βοηθοί_σκηνοθέτη": "Βίκυ Πάστρα",
+        "δημιουργικό_γραφείο": "GRIDFOX"
       },
-      "productionCompany": "Χρήστος Τριπόδης - «Μέθεξις»"
+      "productionInfo": {
+        "premiere": "Καλοκαιρινή περιοδεία",
+        "dates": "Καλοκαιρινή περιοδεία ανά την Ελλάδα",
+        "duration": "90 λεπτά"
+      },
+      "productionCompany": "productionCompany.company"
     },
     {
       "id": 104,
@@ -369,12 +399,17 @@
         "Βασίλης Γιακουμάρος"
       ],
       "creativeTeam": {
-        "playwright": "Χάινριχ Φον Κλάιστ",
-        "directorTranslatorAdapter": "Γιώργος Κιμούλης",
-        "setDesignCostumes": "Κατερίνα Σβορώνου",
-        "creativeAgency": "Gridfox"
+        "συγγραφέας": "Χάινριχ Φον Κλάιστ",
+        "σκηνοθεσία_μετάφραση_διασκευή": "Γιώργος Κιμούλης",
+        "σκηνικά_κοστούμια": "Κατερίνα Σβορώνου",
+        "δημιουργικό_γραφείο": "Gridfox"
       },
-      "productionCompany": "Μέθεξις"
+      "productionInfo": {
+        "premiere": "17 Ιανουαρίου έως 9 Φεβρουαρίου",
+        "dates": "17 Ιανουαρίου έως 9 Φεβρουαρίου",
+        "duration": "100 λεπτά"
+      },
+      "productionCompany": "productionCompany.company"
     },
     {
       "id": 105,
@@ -405,15 +440,20 @@
         "Βασίλης Γιακουμάρος"
       ],
       "creativeTeam": {
-        "playwright": "Stephen Belber",
-        "directorTranslator": "Γιώργος Κιμούλης",
-        "setDesign": "Κατερίνα Σβορώνου",
-        "costumes": "Σοφία Νικολαΐδη",
-        "lighting": "Βασίλης Τριπόδης",
-        "assistantDirector": "Γιλμάζ Χουσμέν",
-        "creativeAgency": "GridFox"
+        "συγγραφέας": "Stephen Belber",
+        "σκηνοθεσία_μετάφραση": "Γιώργος Κιμούλης",
+        "σκηνικά": "Κατερίνα Σβορώνου",
+        "κοστούμια": "Σοφία Νικολαΐδη",
+        "φωτισμοί": "Βασίλης Τριπόδης",
+        "βοηθός_σκηνοθέτη": "Γιλμάζ Χουσμέν",
+        "δημιουργικό_γραφείο": "GridFox"
       },
-      "productionCompany": "Χρήστος Τριπόδης - \"Μέθεξις\"",
+      "productionInfo": {
+        "premiere": "Από 8 Νοεμβρίου 2024",
+        "dates": "Από 8 Νοεμβρίου 2024",
+        "duration": "90 λεπτά"
+      },
+      "productionCompany": "productionCompany.company",
       "bookingInfo": {
         "phone": "210 7012123",
         "website": "https://www.more.com/theater/i-synantisi/"
@@ -450,11 +490,16 @@
         "Τάσος Χαλκιάς (ως Τσέχωφ)"
       ],
       "creativeTeam": {
-        "director": "Νικορέστης Χανιωτάκης",
-        "adaptation": "Ελένη Ράντου",
-        "basedOn": "Διηγήματα του Άντον Τσέχωφ του Νηλ Σάιμον"
+        "σκηνοθεσία": "Νικορέστης Χανιωτάκης",
+        "διασκευή": "Ελένη Ράντου",
+        "βασισμένο_σε": "Διηγήματα του Άντον Τσέχωφ του Νηλ Σάιμον"
       },
-      "productionCompany": "Εταιρεία «Μέθεξις» του Χρήστου Τριπόδη"
+      "productionInfo": {
+        "premiere": "Από 31 Οκτωβρίου",
+        "dates": "Από 31 Οκτωβρίου",
+        "duration": "105 λεπτά"
+      },
+      "productionCompany": "productionCompany.company"
     },
     {
       "id": 102,
@@ -493,10 +538,15 @@
         "Χρόνης Στρίκος"
       ],
       "creativeTeam": {
-        "director": "Χρήστος Τριπόδης",
-        "adaptation": "Μάνος Τσότρας"
+        "σκηνοθεσία": "Χρήστος Τριπόδης",
+        "διασκευή": "Μάνος Τσότρας"
       },
-      "productionCompany": "Μέθεξις - Χρήστος Τριπόδης"
+      "productionInfo": {
+        "premiere": "Καλοκαιρινή περιοδεία",
+        "dates": "Καλοκαιρινή περιοδεία ανά την Ελλάδα",
+        "duration": "75 λεπτά"
+      },
+      "productionCompany": "productionCompany.company"
     }
   ]
 }

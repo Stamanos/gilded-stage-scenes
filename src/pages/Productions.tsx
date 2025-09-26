@@ -123,9 +123,25 @@ const Productions = () => {
                       </span>
                     </div>
                     
-                    <Button className="bg-accent hover:bg-accent/90 text-accent-foreground px-8 py-3">
-                      Κλείσε Εισιτήρια
-                    </Button>
+                    {production.bookingLink ? (
+                      <Button 
+                        className="bg-accent hover:bg-accent/90 text-accent-foreground px-8 py-3"
+                        onClick={(e) => {
+                          e.preventDefault();
+                          e.stopPropagation();
+                          window.open(production.bookingLink, '_blank', 'noopener,noreferrer');
+                        }}
+                      >
+                        Κλείσε Εισιτήρια
+                      </Button>
+                    ) : (
+                      <Button 
+                        className="bg-muted text-muted-foreground px-8 py-3" 
+                        disabled
+                      >
+                        Μη διαθέσιμα εισιτήρια
+                      </Button>
+                    )}
                   </div>
                 </div>
               </Link>

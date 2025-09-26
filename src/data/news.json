@@ -1,0 +1,44 @@
+{
+  "news": [
+    {
+      "id": 1,
+      "title": "«Χάσαμε τη Θεία στοπ»: Μια κριτική για την παράσταση",
+      "url": "https://www.documentonews.gr/article/kritiki-theatrou-chasame-ti-theia-stop/",
+      "category": "Κριτική",
+      "date": "2024-12-15",
+      "type": "review"
+    },
+    {
+      "id": 2,
+      "title": "Χάσαμε τη Θεία STOP - Athinorama",
+      "url": "https://www.athinorama.gr/theatre/performance/xasame_ti_theia_stop-10086607/",
+      "category": "Παρουσίαση",
+      "date": "2024-11-20",
+      "type": "feature"
+    },
+    {
+      "id": 3,
+      "title": "Είδαμε την παράσταση «Χάσαμε τη Θεία STOP» στο Κέντρο Πολιτισμού «Ελληνικός Κόσμος»",
+      "url": "https://ειδήσει.gr/eidame/item/5144-είδαμε-την-παράσταση-χάσαμε-τη-θεία-στοπ-στο-κέντρο-πολιτισμού-«ελληνικός-κόσμος».html",
+      "category": "Κριτική",
+      "date": "2024-11-10",
+      "type": "review"
+    },
+    {
+      "id": 4,
+      "title": "Η «Βότκα Μολότοφ» για 2 μόνο παραστάσεις στην Κέρκυρα",
+      "url": "https://www.sindetiras.gr/event/i-votka-molotof-gia-2-mono-parastaseis-stin-kerkyra/",
+      "category": "Νέα",
+      "date": "2024-10-25",
+      "type": "news"
+    },
+    {
+      "id": 5,
+      "title": "8 τελευταίες παραστάσεις για τη «Βότκα Μολότοφ» στον Ελληνικό Κόσμο",
+      "url": "https://www.topontiki.gr/2025/04/01/8-teleftees-parastasis-advertorial-gia-ti-votka-molotof-ston-elliniko-kosmo/",
+      "category": "Νέα",
+      "date": "2025-04-01",
+      "type": "news"
+    }
+  ]
+}
