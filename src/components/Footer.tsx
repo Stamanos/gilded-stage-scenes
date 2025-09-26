@@ -44,11 +44,6 @@ const Footer = () => {
             <h4 className="font-display text-lg text-foreground mb-4">Επικοινωνία</h4>
             <ul className="space-y-2 text-muted-foreground">
               <li>
-                <a href="/contact" className="hover:text-accent transition-colors duration-300">
-                  Newsletter
-                </a>
-              </li>
-              <li>
                 <a href="#" className="hover:text-accent transition-colors duration-300">
                   Instagram
                 </a>
