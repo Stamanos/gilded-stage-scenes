@@ -26,11 +26,11 @@
       "id": 3,
       "url": "https://xn--mxahi4ajr.gr/eidame/item/5144-%CE%B5%CE%AF%CE%B4%CE%B1%CE%BC%CE%B5-%CF%84%CE%B7%CE%BD-%CF%80%CE%B1%CF%81%CE%AC%CF%83%CF%84%CE%B1%CF%83%CE%B7-%CF%87%CE%B1%CF%83%CE%B1%CE%BC%CE%B5-%CF%84%CE%B7-%CE%B8%CE%B5%CE%B9%CE%B1-%CF%83%CF%84%CE%BF%CF%80-%CF%83%CF%84%CE%BF-%CE%BA%CE%AD%CE%BD%CF%84%CF%81%CE%BF-%CF%80%CE%BF%CE%BB%CE%B9%CF%84%CE%B9%CF%83%CE%BC%CE%BF%CF%8D-%C2%AB%CE%B5%CE%BB%CE%BB%CE%B7%CE%BD%CE%B9%CE%BA%CF%8C%CF%82-%CE%BA%CF%8C%CF%83%CE%BC%CE%BF%CF%82%C2%BB.html",
       "title": "Είδαμε την παράσταση «Χάσαμε τη Θεία STOP»",
-      "description": "Αναλυτική κριτική της παράστασης από το ειδήσει.gr με εντυπώσεις από την παρακολούθηση.",
+      "description": "Αναλυτική κριτική της παράστασης από το θεατρο.gr με εντυπώσεις από την παρακολούθηση.",
       "image": "/productions/xasame-ti-theia-stop/crew.jpg",
       "type": "Κριτική",
       "date": "2024-11-10",
-      "site_name": "ειδήσει.gr",
+      "site_name": "θεατρο.gr",
       "production_id": 3
     },
     {
@@ -42,7 +42,7 @@
       "type": "Ενημέρωση",
       "date": "2024-10-25",
       "site_name": "Sindetiras.gr",
-      "production_id": 8
+      "production_id": 101
     },
     {
       "id": 5,
@@ -53,7 +53,7 @@
       "type": "Ενημέρωση",
       "date": "2025-04-01",
       "site_name": "ToΠontiki",
-      "production_id": 8
+      "production_id": 101
     }
   ]
 }
