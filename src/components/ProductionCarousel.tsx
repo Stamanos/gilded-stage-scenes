@@ -7,7 +7,6 @@ import {
 } from "@/components/ui/carousel";
 import { Link } from "react-router-dom";
 import productionsData from "@/data/productions.json";
-// ...existing code...
 
 const ProductionCarousel = () => {
   const productions = productionsData.productions;

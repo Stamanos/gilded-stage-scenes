@@ -4,7 +4,9 @@ const FloatingSocial = () => {
   return (
     <div className="fixed bottom-6 right-6 z-50 flex flex-col space-y-3">
       <a
-        href="#"
+        href="https://www.instagram.com/methexis_productions/"
+        target="_blank"
+        rel="noopener noreferrer"
         className="bg-card/80 backdrop-blur-md border border-border/50 p-3 rounded-full shadow-elegant hover:shadow-dramatic transition-all duration-300 hover:scale-110 hover:bg-accent hover:text-accent-foreground group"
         aria-label="Instagram"
       >
@@ -12,7 +14,9 @@ const FloatingSocial = () => {
       </a>
       
       <a
-        href="#"
+        href="https://www.facebook.com/methexis.productions/"
+        target="_blank"
+        rel="noopener noreferrer"
         className="bg-card/80 backdrop-blur-md border border-border/50 p-3 rounded-full shadow-elegant hover:shadow-dramatic transition-all duration-300 hover:scale-110 hover:bg-accent hover:text-accent-foreground group"
         aria-label="Facebook"
       >
@@ -20,7 +24,9 @@ const FloatingSocial = () => {
       </a>
       
       <a
-        href="#"
+        href="https://www.youtube.com/@methexisproductions1453"
+        target="_blank"
+        rel="noopener noreferrer"
         className="bg-card/80 backdrop-blur-md border border-border/50 p-3 rounded-full shadow-elegant hover:shadow-dramatic transition-all duration-300 hover:scale-110 hover:bg-accent hover:text-accent-foreground group"
         aria-label="YouTube"
       >

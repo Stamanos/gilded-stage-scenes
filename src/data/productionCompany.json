@@ -1,0 +1,18 @@
+{
+  "company": {
+    "name": "Θεατρικών Παραγωγών ΜΕΘΕΞΙΣ",
+    "owner": "Χρήστος Τριπόδης",
+    "contact": {
+      "phone": [
+        "2107622034",
+        "6943290294"
+      ],
+      "email": "methexis.productions@gmail.com"
+    },
+    "address": {
+      "street": "Ξάνθου 26",
+      "city": "Νέο Ψυχικό",
+      "postal_code": "15451"
+    }
+  }
+}
