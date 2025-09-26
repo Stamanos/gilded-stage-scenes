@@ -47,7 +47,7 @@
         "dates": "Καλοκαιρινή περιοδεία σε όλη την Ελλάδα και την Κύπρο",
         "duration": "110 λεπτά"
       },
-      "productionCompany": "productionCompany.company",
+      "productionCompany": "Θεατρικών Παραγωγών ΜΕΘΕΞΙΣ",
       "bookingInfo": {
         "phone": "210 7622034, 6943290294",
         "email": "methexis.productions@gmail.com"
@@ -207,7 +207,7 @@
         "dates": "Οκτώβριος",
         "duration": "85 λεπτά"
       },
-      "productionCompany": "productionCompany.company"
+      "productionCompany": "Θεατρικών Παραγωγών ΜΕΘΕΞΙΣ"
     },
     {
       "id": 6,
@@ -237,7 +237,7 @@
         "dates": "Κάθε Σάββατο στις 17:00",
         "duration": "80 λεπτά"
       },
-      "productionCompany": "productionCompany.company"
+      "productionCompany": "Θεατρικών Παραγωγών ΜΕΘΕΞΙΣ"
     },
     {
       "id": 103,
@@ -274,7 +274,7 @@
         "dates": "Καλοκαιρινή περιοδεία ανά την Ελλάδα",
         "duration": "95 λεπτά"
       },
-      "productionCompany": "productionCompany.company"
+      "productionCompany": "Θεατρικών Παραγωγών ΜΕΘΕΞΙΣ"
     },
     {
       "id": 106,
@@ -318,7 +318,7 @@
         "dates": "Από Κυριακή 3 Νοεμβρίου 2024",
         "duration": "65 λεπτά"
       },
-      "productionCompany": "productionCompany.company"
+      "productionCompany": "Θεατρικών Παραγωγών ΜΕΘΕΞΙΣ"
     },
     {
       "id": 7,
@@ -366,7 +366,7 @@
         "dates": "Καλοκαιρινή περιοδεία ανά την Ελλάδα",
         "duration": "90 λεπτά"
       },
-      "productionCompany": "productionCompany.company"
+      "productionCompany": "Θεατρικών Παραγωγών ΜΕΘΕΞΙΣ"
     },
     {
       "id": 104,
@@ -416,7 +416,7 @@
         "dates": "17 Ιανουαρίου έως 9 Φεβρουαρίου",
         "duration": "100 λεπτά"
       },
-      "productionCompany": "productionCompany.company"
+      "productionCompany": "Θεατρικών Παραγωγών ΜΕΘΕΞΙΣ"
     },
     {
       "id": 105,
@@ -460,7 +460,7 @@
         "dates": "Από 8 Νοεμβρίου 2024",
         "duration": "90 λεπτά"
       },
-      "productionCompany": "productionCompany.company",
+      "productionCompany": "Θεατρικών Παραγωγών ΜΕΘΕΞΙΣ",
       "bookingInfo": {
         "phone": "210 7012123",
         "website": "https://www.more.com/theater/i-synantisi/"
@@ -506,7 +506,7 @@
         "dates": "Από 31 Οκτωβρίου",
         "duration": "105 λεπτά"
       },
-      "productionCompany": "productionCompany.company"
+      "productionCompany": "Θεατρικών Παραγωγών ΜΕΘΕΞΙΣ"
     },
     {
       "id": 102,
@@ -553,7 +553,7 @@
         "dates": "Καλοκαιρινή περιοδεία ανά την Ελλάδα",
         "duration": "75 λεπτά"
       },
-      "productionCompany": "productionCompany.company"
+      "productionCompany": "Θεατρικών Παραγωγών ΜΕΘΕΞΙΣ"
     }
   ]
 }
