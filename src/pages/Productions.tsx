@@ -1,15 +1,38 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import FloatingSocial from "@/components/FloatingSocial";
+import ProductionFilters from "@/components/ProductionFilters";
 import { Button } from "@/components/ui/button";
 import productionsData from "@/data/productions.json";
 import { Link } from "react-router-dom";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 
 const Productions = () => {
+  const [selectedLocation, setSelectedLocation] = useState<string>("all");
+  const [selectedGenre, setSelectedGenre] = useState<string>("all");
+  
   const productions = productionsData.productions;
-  const currentProductions = productions.filter(p => p.status === "current");
-  const pastProductions = productions.filter(p => p.status === "past");
+
+  // Extract available locations and genres
+  const availableLocations = useMemo(() => {
+    return [...new Set(productions.map(p => p.location).filter(Boolean))];
+  }, [productions]);
+
+  const availableGenres = useMemo(() => {
+    return [...new Set(productions.map(p => p.genre).filter(Boolean))];
+  }, [productions]);
+
+  // Filter productions
+  const filteredProductions = useMemo(() => {
+    return productions.filter(production => {
+      const locationMatch = selectedLocation === "all" || production.location === selectedLocation;
+      const genreMatch = selectedGenre === "all" || production.genre === selectedGenre;
+      return locationMatch && genreMatch;
+    });
+  }, [productions, selectedLocation, selectedGenre]);
+
+  const currentProductions = filteredProductions.filter(p => p.status === "current");
+  const pastProductions = filteredProductions.filter(p => p.status === "past");
 
   // Background slideshow
   const slideImages = [
@@ -57,8 +80,8 @@ const Productions = () => {
         {/* Content */}
         <div className="relative z-10 container mx-auto px-6">
           <div className="text-center animate-fade-up">
-            <h1 className="text-display-xl mb-6 text-white drop-shadow-lg">Παραστάσεις</h1>
-            <p className="text-body-lg text-white/90 max-w-3xl mx-auto drop-shadow-md">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white drop-shadow-lg">Παραστάσεις</h1>
+            <p className="text-lg text-white/90 max-w-3xl mx-auto drop-shadow-md">
               Κάθε παράσταση δημιουργείται με προσοχή για να δημιουργήσει έναν βαθύ διάλογο 
               μεταξύ κοινού και ερμηνευτή, εξερευνώντας τα βάθη της ανθρώπινης εμπειρίας.
             </p>
@@ -66,148 +89,204 @@ const Productions = () => {
         </div>
       </section>
 
-      {/* Current Productions */}
-      <section className="py-24 bg-background">
+      {/* Filters Section */}
+      <section className="py-8 bg-background border-b border-border">
         <div className="container mx-auto px-6">
-          <h2 className="text-display-lg text-foreground mb-16 text-center">
-            Παίζονται Τώρα
-          </h2>
-          
-          <div className="space-y-16">
-            {currentProductions.map((production, index) => (
-              <Link
-                to={`/productions/${production.id}`}
-                key={production.id}
-                className="group animate-fade-up block"
-                style={{ animationDelay: `${index * 0.2}s` }}
-              >
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                  <div className={`${index % 2 === 1 ? 'lg:order-2' : ''}`}>
-                    <div className="aspect-[4/3] bg-secondary rounded-lg overflow-hidden shadow-elegant">
-                      {production.images?.main ? (
-                        <img
-                          src={production.images.main}
-                          alt={production.title}
-                          className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                        />
-                      ) : (
-                        <div className="w-full h-full bg-gradient-to-br from-accent/20 to-accent/5 flex items-center justify-center">
-                          <span className="text-muted-foreground text-sm">Εικόνα παράστασης</span>
-                        </div>
-                      )}
-                    </div>
-                  </div>
-                  
-                  <div className={`${index % 2 === 1 ? 'lg:order-1' : ''}`}>
-                    <div className="mb-4">
-                      <span className="text-sm font-medium text-accent bg-accent/10 px-3 py-1 rounded-full">
-                        Τρέχουσα Παράσταση
-                      </span>
-                    </div>
-                    
-                    <h3 className="text-display-md text-foreground mb-4 group-hover:text-accent transition-colors duration-300">
-                      {production.title}
-                    </h3>
-                    
-                    <h4 className="text-xl text-muted-foreground font-light mb-6">
-                      {production.subtitle}
-                    </h4>
-                    
-                    <p className="text-body text-muted-foreground mb-6 leading-relaxed">
-                      {production.description}
-                    </p>
-                    
-                    <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 mb-8">
-                      <span className="text-sm text-muted-foreground">
-                        📅 {production.dates}
-                      </span>
-                    </div>
-                    
-                    {production.bookingLink ? (
-                      <Button 
-                        className="bg-accent hover:bg-accent/90 text-accent-foreground px-8 py-3"
-                        onClick={(e) => {
-                          e.preventDefault();
-                          e.stopPropagation();
-                          window.open(production.bookingLink, '_blank', 'noopener,noreferrer');
-                        }}
-                      >
-                        Κλείσε Εισιτήρια
-                      </Button>
-                    ) : (
-                      <Button 
-                        className="bg-muted text-muted-foreground px-8 py-3" 
-                        disabled
-                      >
-                        Μη διαθέσιμα εισιτήρια
-                      </Button>
-                    )}
-                  </div>
-                </div>
-              </Link>
-            ))}
+          <div className="max-w-4xl mx-auto">
+            <ProductionFilters
+              selectedLocation={selectedLocation}
+              selectedGenre={selectedGenre}
+              onLocationChange={setSelectedLocation}
+              onGenreChange={setSelectedGenre}
+              availableLocations={availableLocations}
+              availableGenres={availableGenres}
+            />
           </div>
         </div>
       </section>
 
-      
-      {/* Past Productions */}
-      <section className="py-24 bg-secondary">
-        <div className="container mx-auto px-6">
-          <h2 className="text-display-lg text-foreground mb-16 text-center">
-            Παλαιότερες Παραστάσεις
-          </h2>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-            {pastProductions.map((production, index) => (
-              <Link
-                to={`/productions/${production.id}`}
-                key={production.id}
-                className="group bg-card rounded-lg overflow-hidden shadow-elegant hover:shadow-dramatic transition-all duration-500 animate-scale-in block"
-                style={{ animationDelay: `${index * 0.2}s` }}
-              >
-                <div className="aspect-[4/3] bg-secondary rounded-lg overflow-hidden">
-                  {production.images?.main ? (
-                    <img
-                      src={production.images.main}
-                      alt={production.title}
-                      className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                    />
-                  ) : (
-                    <div className="w-full h-full bg-gradient-to-br from-accent/10 to-accent/5 flex items-center justify-center">
-                      <span className="text-muted-foreground text-sm">Εικόνα παράστασης</span>
+      {/* Current Productions */}
+      {currentProductions.length > 0 && (
+        <section className="py-24 bg-background">
+          <div className="container mx-auto px-6">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-16 text-center">
+              Παίζονται Τώρα
+            </h2>
+            
+            <div className="space-y-16">
+              {currentProductions.map((production, index) => (
+                <Link
+                  to={`/productions/${production.id}`}
+                  key={production.id}
+                  className="group animate-fade-up block"
+                  style={{ animationDelay: `${index * 0.2}s` }}
+                >
+                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div className={`${index % 2 === 1 ? 'lg:order-2' : ''}`}>
+                      <div className="aspect-[4/3] bg-secondary rounded-lg overflow-hidden shadow-lg">
+                        {production.images?.main ? (
+                          <img
+                            src={production.images.main}
+                            alt={production.title}
+                            className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                          />
+                        ) : (
+                          <div className="w-full h-full bg-gradient-to-br from-accent/20 to-accent/5 flex items-center justify-center">
+                            <span className="text-muted-foreground text-sm">Εικόνα παράστασης</span>
+                          </div>
+                        )}
+                      </div>
                     </div>
-                  )}
-                </div>
-                
-                <div className="p-8">
-                  <div className="mb-4">
-                    <span className="text-sm font-medium text-muted-foreground bg-muted px-3 py-1 rounded-full">
-                      Αρχείο
-                    </span>
+                    
+                    <div className={`${index % 2 === 1 ? 'lg:order-1' : ''}`}>
+                      <div className="flex items-center gap-2 mb-4">
+                        <span className="text-sm font-medium text-accent bg-accent/10 px-3 py-1 rounded-full">
+                          Τρέχουσα Παράσταση
+                        </span>
+                        {production.genre && (
+                          <span className="text-xs text-muted-foreground bg-muted px-2 py-1 rounded-full">
+                            {production.genre}
+                          </span>
+                        )}
+                        {production.location && (
+                          <span className="text-xs text-muted-foreground bg-muted px-2 py-1 rounded-full">
+                            {production.location}
+                          </span>
+                        )}
+                      </div>
+                      
+                      <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-4 group-hover:text-accent transition-colors duration-300">
+                        {production.title}
+                      </h3>
+                      
+                      <h4 className="text-xl text-muted-foreground font-light mb-6">
+                        {production.subtitle}
+                      </h4>
+                      
+                      <p className="text-muted-foreground mb-6 leading-relaxed">
+                        {production.description}
+                      </p>
+                      
+                      <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 mb-8">
+                        <span className="text-sm text-muted-foreground">
+                          📅 {production.dates}
+                        </span>
+                        {production.venue && (
+                          <span className="text-sm text-muted-foreground">
+                            📍 {production.venue}
+                          </span>
+                        )}
+                      </div>
+                      
+                      {production.bookingLink ? (
+                        <Button 
+                          className="bg-accent hover:bg-accent/90 text-accent-foreground px-8 py-3"
+                          onClick={(e) => {
+                            e.preventDefault();
+                            e.stopPropagation();
+                            window.open(production.bookingLink, '_blank', 'noopener,noreferrer');
+                          }}
+                        >
+                          Κλείσε Εισιτήρια
+                        </Button>
+                      ) : (
+                        <Button 
+                          className="bg-muted text-muted-foreground px-8 py-3" 
+                          disabled
+                        >
+                          Μη διαθέσιμα εισιτήρια
+                        </Button>
+                      )}
+                    </div>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* Past Productions */}
+      {pastProductions.length > 0 && (
+        <section className="py-24 bg-secondary">
+          <div className="container mx-auto px-6">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-16 text-center">
+              Παλαιότερες Παραστάσεις
+            </h2>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {pastProductions.map((production, index) => (
+                <Link
+                  to={`/productions/${production.id}`}
+                  key={production.id}
+                  className="group bg-card rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 block"
+                  style={{ animationDelay: `${index * 0.1}s` }}
+                >
+                  <div className="aspect-[4/3] bg-secondary overflow-hidden">
+                    {production.images?.main ? (
+                      <img
+                        src={production.images.main}
+                        alt={production.title}
+                        className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                      />
+                    ) : (
+                      <div className="w-full h-full bg-gradient-to-br from-accent/10 to-accent/5 flex items-center justify-center">
+                        <span className="text-muted-foreground text-sm">Εικόνα παράστασης</span>
+                      </div>
+                    )}
                   </div>
                   
-                  <h3 className="text-display-md text-card-foreground mb-2 group-hover:text-accent transition-colors duration-300">
-                    {production.title}
-                  </h3>
-                  
-                  <h4 className="text-lg text-muted-foreground font-light mb-4">
-                    {production.subtitle}
-                  </h4>
-                  
-                  <p className="text-body text-muted-foreground mb-6 leading-relaxed">
-                    {production.description}
-                  </p>
-                  
-                  <span className="text-sm text-muted-foreground">
-                    📅 {production.dates}
-                  </span>
-                </div>
-              </Link>
-            ))}
+                  <div className="p-6">
+                    <div className="flex flex-wrap gap-2 mb-3">
+                      <span className="text-xs font-medium text-muted-foreground bg-muted px-2 py-1 rounded-full">
+                        Αρχείο
+                      </span>
+                      {production.genre && (
+                        <span className="text-xs text-muted-foreground bg-muted px-2 py-1 rounded-full">
+                          {production.genre}
+                        </span>
+                      )}
+                      {production.location && (
+                        <span className="text-xs text-muted-foreground bg-muted px-2 py-1 rounded-full">
+                          {production.location}
+                        </span>
+                      )}
+                    </div>
+                    
+                    <h3 className="text-xl font-bold text-card-foreground mb-2 group-hover:text-accent transition-colors duration-300 line-clamp-2">
+                      {production.title}
+                    </h3>
+                    
+                    <h4 className="text-sm text-muted-foreground font-light mb-3 line-clamp-1">
+                      {production.subtitle}
+                    </h4>
+                    
+                    <p className="text-sm text-muted-foreground mb-4 leading-relaxed line-clamp-3">
+                      {production.description}
+                    </p>
+                    
+                    <div className="text-xs text-muted-foreground">
+                      📅 {production.dates}
+                    </div>
+                  </div>
+                </Link>
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      )}
+
+      {/* No Results */}
+      {currentProductions.length === 0 && pastProductions.length === 0 && (
+        <section className="py-24 bg-background">
+          <div className="container mx-auto px-6 text-center">
+            <p className="text-muted-foreground text-lg">
+              Δεν βρέθηκαν παραστάσεις με τα επιλεγμένα φίλτρα
+            </p>
+          </div>
+        </section>
+      )}
+
       <Footer />
     </div>
   );

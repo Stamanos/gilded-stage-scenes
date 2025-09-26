@@ -2,43 +2,58 @@
   "news": [
     {
       "id": 1,
-      "title": "«Χάσαμε τη Θεία στοπ»: Μια κριτική για την παράσταση",
       "url": "https://www.documentonews.gr/article/kritiki-theatrou-chasame-ti-theia-stop/",
-      "category": "Κριτική",
+      "title": "«Χάσαμε τη Θεία στοπ»: Μια κριτική για την παράσταση",
+      "description": "Κριτική για την εξαιρετική παράσταση του Γιώργου Διαλεγμένου που παρουσιάζεται στο Κέντρο Πολιτισμού «Ελληνικός Κόσμος».",
+      "image": "/productions/xasame-ti-theia-stop/wallpaper.jpg",
+      "type": "Κριτική",
       "date": "2024-12-15",
-      "type": "review"
+      "site_name": "DocumentoNews",
+      "production_id": 3
     },
     {
       "id": 2,
-      "title": "Χάσαμε τη Θεία STOP - Athinorama",
       "url": "https://www.athinorama.gr/theatre/performance/xasame_ti_theia_stop-10086607/",
-      "category": "Παρουσίαση",
+      "title": "Χάσαμε τη Θεία STOP - Athinorama",
+      "description": "Παρουσίαση της παράστασης στο Athinorama με πλήρη στοιχεία για το έργο και τους συντελεστές.",
+      "image": "/productions/xasame-ti-theia-stop/DIAGOUPI.jpg",
+      "type": "Παρουσίαση",
       "date": "2024-11-20",
-      "type": "feature"
+      "site_name": "Athinorama",
+      "production_id": 3
     },
     {
       "id": 3,
-      "title": "Είδαμε την παράσταση «Χάσαμε τη Θεία STOP» στο Κέντρο Πολιτισμού «Ελληνικός Κόσμος»",
       "url": "https://xn--mxahi4ajr.gr/eidame/item/5144-%CE%B5%CE%AF%CE%B4%CE%B1%CE%BC%CE%B5-%CF%84%CE%B7%CE%BD-%CF%80%CE%B1%CF%81%CE%AC%CF%83%CF%84%CE%B1%CF%83%CE%B7-%CF%87%CE%B1%CF%83%CE%B1%CE%BC%CE%B5-%CF%84%CE%B7-%CE%B8%CE%B5%CE%B9%CE%B1-%CF%83%CF%84%CE%BF%CF%80-%CF%83%CF%84%CE%BF-%CE%BA%CE%AD%CE%BD%CF%84%CF%81%CE%BF-%CF%80%CE%BF%CE%BB%CE%B9%CF%84%CE%B9%CF%83%CE%BC%CE%BF%CF%8D-%C2%AB%CE%B5%CE%BB%CE%BB%CE%B7%CE%BD%CE%B9%CE%BA%CF%8C%CF%82-%CE%BA%CF%8C%CF%83%CE%BC%CE%BF%CF%82%C2%BB.html",
-      "category": "Κριτική",
+      "title": "Είδαμε την παράσταση «Χάσαμε τη Θεία STOP»",
+      "description": "Αναλυτική κριτική της παράστασης από το ειδήσει.gr με εντυπώσεις από την παρακολούθηση.",
+      "image": "/productions/xasame-ti-theia-stop/crew.jpg",
+      "type": "Κριτική",
       "date": "2024-11-10",
-      "type": "review"
+      "site_name": "ειδήσει.gr",
+      "production_id": 3
     },
     {
       "id": 4,
-      "title": "Η «Βότκα Μολότοφ» για 2 μόνο παραστάσεις στην Κέρκυρα",
       "url": "https://www.sindetiras.gr/event/i-votka-molotof-gia-2-mono-parastaseis-stin-kerkyra/",
-      "category": "Νέα",
+      "title": "Η «Βότκα Μολότοφ» για 2 μόνο παραστάσεις στην Κέρκυρα",
+      "description": "Ανακοίνωση για τις δύο τελευταίες παραστάσεις της «Βότκα Μολότοφ» στην Κέρκυρα.",
+      "image": "/productions/votka-molotof/banner.jpg",
+      "type": "Ενημέρωση",
       "date": "2024-10-25",
-      "type": "news"
+      "site_name": "Sindetiras.gr",
+      "production_id": 8
     },
     {
       "id": 5,
-      "title": "8 τελευταίες παραστάσεις για τη «Βότκα Μολότοφ» στον Ελληνικό Κόσμο",
       "url": "https://www.topontiki.gr/2025/04/01/8-teleftees-parastasis-advertorial-gia-ti-votka-molotof-ston-elliniko-kosmo/",
-      "category": "Νέα",
+      "title": "8 τελευταίες παραστάσεις για τη «Βότκα Μολότοφ»",
+      "description": "Το τέλος μιας επιτυχημένης θεατρικής σεζόν με τις 8 τελευταίες παραστάσεις του έργου.",
+      "image": "/productions/votka-molotof/banner.jpg",
+      "type": "Ενημέρωση",
       "date": "2025-04-01",
-      "type": "news"
+      "site_name": "ToΠontiki",
+      "production_id": 8
     }
   ]
 }
