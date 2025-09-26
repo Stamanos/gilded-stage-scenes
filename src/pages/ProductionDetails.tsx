@@ -55,9 +55,10 @@ const ProductionDetails = () => {
         <div className="relative z-10 container mx-auto px-4 md:px-6 min-h-[85vh] md:min-h-[90vh] flex items-center">
           <div className="max-w-4xl pt-20 md:pt-24">
             <div className="mb-6">
-              <Badge variant="secondary" className="mb-4 bg-white/10 text-white border-white/20 backdrop-blur-sm">
-                {production.status === "current" ? "Παίζεται Τώρα" : "Από το Αρχείο"}
-              </Badge>
+                <Badge variant="secondary" className="mb-4 bg-white/10 text-white border-white/20 backdrop-blur-sm">
+                  {production.status === "current" ? "Παίζεται Τώρα" : 
+                   production.status === "upcoming" ? "Προσεχώς" : "Από το Αρχείο"}
+                </Badge>
             </div>
             
             <h1 className="text-3xl md:text-5xl lg:text-6xl text-white mb-4 md:mb-6 font-bold leading-tight">
@@ -73,14 +74,20 @@ const ProductionDetails = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4">
-              {production.bookingLink && production.status === "current" && (
-                <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground shadow-lg" asChild>
-                  <a href={production.bookingLink} target="_blank" rel="noopener noreferrer">
-                    <ExternalLink className="mr-2 h-4 w-4" />
-                    Κλείσε Εισιτήρια
-                  </a>
-                </Button>
-              )}
+              {(production.bookingLink && production.status === "current") || production.status === "upcoming" ? (
+                production.status === "current" ? (
+                  <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground shadow-lg" asChild>
+                    <a href={production.bookingLink} target="_blank" rel="noopener noreferrer">
+                      <ExternalLink className="mr-2 h-4 w-4" />
+                      Κλείσε Εισιτήρια
+                    </a>
+                  </Button>
+                ) : (
+                  <Button size="lg" className="bg-primary/20 text-primary border border-primary/30 shadow-lg" disabled>
+                    Προσεχώς
+                  </Button>
+                )
+              ) : null}
             </div>
           </div>
         </div>
@@ -220,7 +227,7 @@ const ProductionDetails = () => {
                     <Calendar className="h-4 w-4 text-accent mt-1" />
                     <div>
                       <p className="font-medium text-foreground">Ημερομηνίες</p>
-                      <p className="text-sm text-muted-foreground">{production.dates}</p>
+                      <p className="text-sm text-muted-foreground">{production.productionInfo?.dates || production.dates || 'Ημερομηνίες θα ανακοινωθούν'}</p>
                       {production.schedule && (
                         <p className="text-xs text-muted-foreground mt-1">{production.schedule}</p>
                       )}

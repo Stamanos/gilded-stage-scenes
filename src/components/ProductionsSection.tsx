@@ -35,8 +35,14 @@ const ProductionsSection = () => {
               )}
               <div className="p-8">
                 <div className="mb-4">
-                  <span className="text-sm font-medium text-accent bg-accent/10 px-3 py-1 rounded-full">
-                    {production.status}
+                  <span className={`text-sm font-medium px-3 py-1 rounded-full ${
+                    production.status === 'current' ? 'text-accent bg-accent/10' :
+                    production.status === 'upcoming' ? 'text-primary bg-primary/10' :
+                    'text-muted-foreground bg-muted/10'
+                  }`}>
+                    {production.status === 'current' ? 'Παίζεται Τώρα' :
+                     production.status === 'upcoming' ? 'Προσεχώς' :
+                     production.status}
                   </span>
                 </div>
                 <h3 className="text-display-md text-card-foreground mb-2 group-hover:text-accent transition-colors duration-300">
@@ -50,7 +56,7 @@ const ProductionsSection = () => {
                 </p>
                 <div className="flex items-center justify-between">
                   <span className="text-sm text-muted-foreground">
-                    {production.dates}
+                    {production.productionInfo?.dates || production.dates || 'Ημερομηνίες θα ανακοινωθούν'}
                   </span>
                   <button className="text-accent hover:text-accent/80 font-medium transition-colors duration-300">
                     Learn More →

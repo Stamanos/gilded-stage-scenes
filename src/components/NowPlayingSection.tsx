@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const NowPlayingSection = () => {
   const nowPlaying = productionsData.productions.filter(
-    (p) => p.status === "current"
+    (p) => p.status === "current" || p.status === "upcoming"
   );
 
   return (
@@ -11,7 +11,7 @@ const NowPlayingSection = () => {
       <div className="container mx-auto px-6">
         <div className="text-center mb-16 animate-fade-up">
           <h2 className="text-display-md text-foreground mb-6">
-            Παίζονται Τώρα
+            Παίζονται Τώρα & Προσεχώς
           </h2>
           <p className="text-body-lg text-muted-foreground max-w-2xl mx-auto">
             Ζήστε τις τρέχουσες παραστάσεις μας που κεντρίζουν το ενδιαφέρον 
@@ -34,8 +34,11 @@ const NowPlayingSection = () => {
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
                 <div className="absolute top-4 left-4">
-                  <span className="bg-accent text-accent-foreground px-3 py-1 rounded-full text-sm font-medium">
-                    {show.status}
+                  <span className={`px-3 py-1 rounded-full text-sm font-medium ${
+                    show.status === 'current' ? 'bg-accent text-accent-foreground' :
+                    'bg-primary text-primary-foreground'
+                  }`}>
+                    {show.status === 'current' ? 'Παίζεται Τώρα' : 'Προσεχώς'}
                   </span>
                 </div>
               </div>
@@ -56,7 +59,7 @@ const NowPlayingSection = () => {
                       📅 {show.nextShow}
                     </p>
                   </div>
-                  {show.bookingLink ? (
+                  {show.bookingLink && show.status === "current" ? (
                     <a
                       href={show.bookingLink}
                       target="_blank"
@@ -66,6 +69,14 @@ const NowPlayingSection = () => {
                     >
                       Κλείσε Εισιτήρια
                     </a>
+                  ) : show.status === "upcoming" ? (
+                    <button
+                      className="bg-primary/20 text-primary border border-primary/30 px-4 py-2 rounded font-medium"
+                      disabled
+                      onClick={e => e.stopPropagation()}
+                    >
+                      Προσεχώς
+                    </button>
                   ) : (
                     <button
                       className="bg-muted text-muted-foreground px-4 py-2 rounded font-medium"

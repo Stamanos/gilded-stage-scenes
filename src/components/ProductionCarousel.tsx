@@ -13,12 +13,27 @@ const ProductionCarousel = () => {
 
   const getStatusColor = (status: string) => {
     switch (status) {
-      case 'Τρέχουσα Παράσταση':
+      case 'current':
         return 'bg-accent text-accent-foreground';
-      case 'Επόμενη Παράσταση':
+      case 'upcoming':
         return 'bg-primary text-primary-foreground';
+      case 'past':
+        return 'bg-secondary text-secondary-foreground';
       default:
         return 'bg-secondary text-secondary-foreground';
+    }
+  };
+
+  const getStatusLabel = (status: string) => {
+    switch (status) {
+      case 'current':
+        return 'Παίζεται Τώρα';
+      case 'upcoming':
+        return 'Προσεχώς';
+      case 'past':
+        return 'Αρχείο';
+      default:
+        return status;
     }
   };
 
@@ -57,7 +72,7 @@ const ProductionCarousel = () => {
                     />
                     <div className="absolute top-4 left-4">
                       <span className={`px-3 py-1 rounded-full text-xs font-medium ${getStatusColor(production.status)}`}>
-                        {production.status}
+                        {getStatusLabel(production.status)}
                       </span>
                     </div>
                   </div>
