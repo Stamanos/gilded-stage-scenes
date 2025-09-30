@@ -8,6 +8,7 @@ import productionsData from "@/data/productions.json";
 import { Link } from "react-router-dom";
 import { useState, useMemo, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
+import LazyLoad from "react-lazyload";
 
 const Productions = () => {
   const [selectedLocation, setSelectedLocation] = useState<string>("all");
@@ -151,29 +152,34 @@ const Productions = () => {
                 const isVisible = activeCurrentIndex !== null && Math.abs(index - activeCurrentIndex) <= 1;
                 
                 return (
-                  <motion.div
+                  <LazyLoad 
                     key={production.id}
-                    ref={(el) => (currentObserverRefs.current[index] = el)}
-                    initial={false}
-                    animate={isVisible ? {
-                      opacity: isPast ? 0 : isActive ? 1 : 0.2,
-                      x: isActive ? 0 : isFromLeft ? -200 : 200,
-                      scale: isActive ? 1 : 0.9,
-                      filter: isActive ? "blur(0px)" : "blur(3px)"
-                    } : {
-                      opacity: 0,
-                      x: isFromLeft ? -200 : 200,
-                      scale: 0.9,
-                      filter: "blur(3px)"
-                    }}
-                    transition={{
-                      duration: 0.9,
-                      ease: [0.22, 1, 0.36, 1]
-                    }}
-                    style={{
-                      willChange: isVisible ? 'transform, opacity, filter' : 'auto'
-                    }}
+                    height={600} 
+                    offset={300}
+                    once
                   >
+                    <motion.div
+                      ref={(el) => (currentObserverRefs.current[index] = el)}
+                      initial={false}
+                      animate={isVisible ? {
+                        opacity: isPast ? 0 : isActive ? 1 : 0.2,
+                        x: isActive ? 0 : isFromLeft ? -200 : 200,
+                        scale: isActive ? 1 : 0.9,
+                        filter: isActive ? "blur(0px)" : "blur(3px)"
+                      } : {
+                        opacity: 0,
+                        x: isFromLeft ? -200 : 200,
+                        scale: 0.9,
+                        filter: "blur(3px)"
+                      }}
+                      transition={{
+                        duration: 0.9,
+                        ease: [0.22, 1, 0.36, 1]
+                      }}
+                      style={{
+                        willChange: isVisible ? 'transform, opacity, filter' : 'auto'
+                      }}
+                    >
                     <Link
                       to={`/productions/${production.id}`}
                       className="group block"
@@ -259,9 +265,10 @@ const Productions = () => {
                       </div>
                     </Link>
                   </motion.div>
-                );
-              })}
-            </div>
+                </LazyLoad>
+              );
+            })}
+          </div>
           </div>
         </section>
       )}
@@ -282,29 +289,34 @@ const Productions = () => {
                 const isVisible = activeUpcomingIndex !== null && Math.abs(index - activeUpcomingIndex) <= 1;
                 
                 return (
-                  <motion.div
+                  <LazyLoad 
                     key={production.id}
-                    ref={(el) => (upcomingObserverRefs.current[index] = el)}
-                    initial={false}
-                    animate={isVisible ? {
-                      opacity: isPast ? 0 : isActive ? 1 : 0.2,
-                      x: isActive ? 0 : isFromLeft ? -200 : 200,
-                      scale: isActive ? 1 : 0.9,
-                      filter: isActive ? "blur(0px)" : "blur(3px)"
-                    } : {
-                      opacity: 0,
-                      x: isFromLeft ? -200 : 200,
-                      scale: 0.9,
-                      filter: "blur(3px)"
-                    }}
-                    transition={{
-                      duration: 0.9,
-                      ease: [0.22, 1, 0.36, 1]
-                    }}
-                    style={{
-                      willChange: isVisible ? 'transform, opacity, filter' : 'auto'
-                    }}
+                    height={600} 
+                    offset={300}
+                    once
                   >
+                    <motion.div
+                      ref={(el) => (upcomingObserverRefs.current[index] = el)}
+                      initial={false}
+                      animate={isVisible ? {
+                        opacity: isPast ? 0 : isActive ? 1 : 0.2,
+                        x: isActive ? 0 : isFromLeft ? -200 : 200,
+                        scale: isActive ? 1 : 0.9,
+                        filter: isActive ? "blur(0px)" : "blur(3px)"
+                      } : {
+                        opacity: 0,
+                        x: isFromLeft ? -200 : 200,
+                        scale: 0.9,
+                        filter: "blur(3px)"
+                      }}
+                      transition={{
+                        duration: 0.9,
+                        ease: [0.22, 1, 0.36, 1]
+                      }}
+                      style={{
+                        willChange: isVisible ? 'transform, opacity, filter' : 'auto'
+                      }}
+                    >
                     <Link
                       to={`/productions/${production.id}`}
                       className="group block"
@@ -377,9 +389,10 @@ const Productions = () => {
                       </div>
                     </Link>
                   </motion.div>
-                );
-              })}
-            </div>
+                </LazyLoad>
+              );
+            })}
+          </div>
           </div>
         </section>
       )}
