@@ -14,7 +14,6 @@ interface FloatingInfoTipProps {
 const FloatingInfoTip = ({ page }: FloatingInfoTipProps) => {
   const [isVisible, setIsVisible] = useState(false);
   const [isPopupOpen, setIsPopupOpen] = useState(false);
-  const [hasAutoShown, setHasAutoShown] = useState(false);
   const [currentTipIndex, setCurrentTipIndex] = useState(0);
 
   const tips: InfoTip[] = infoTipsData.pageTips[page] || [];
@@ -26,19 +25,6 @@ const FloatingInfoTip = ({ page }: FloatingInfoTipProps) => {
 
       if (shouldShow && !isVisible) {
         setIsVisible(true);
-        
-        // Auto-show popup after first scroll, only once
-        if (!hasAutoShown) {
-          setTimeout(() => {
-            setIsPopupOpen(true);
-            setHasAutoShown(true);
-            
-            // Auto-hide after 3 seconds
-            setTimeout(() => {
-              setIsPopupOpen(false);
-            }, 3000);
-          }, 500);
-        }
       } else if (!shouldShow) {
         setIsVisible(false);
       }
@@ -48,7 +34,7 @@ const FloatingInfoTip = ({ page }: FloatingInfoTipProps) => {
     handleScroll(); // Check initial position
 
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [isVisible, hasAutoShown]);
+  }, [isVisible]);
 
   const handleToggle = () => {
     setIsPopupOpen(!isPopupOpen);
@@ -76,7 +62,7 @@ const FloatingInfoTip = ({ page }: FloatingInfoTipProps) => {
       {/* Info Icon Button */}
       <button
         onClick={handleToggle}
-        className="bg-accent/90 backdrop-blur-md border border-accent-foreground/20 p-3 rounded-full shadow-elegant hover:shadow-dramatic transition-all duration-300 hover:scale-110 hover:bg-accent group animate-bounce-gentle"
+        className="bg-accent/90 backdrop-blur-md border border-accent-foreground/20 p-3 rounded-full shadow-elegant hover:shadow-dramatic transition-all duration-300 hover:scale-110 hover:bg-accent group animate-bounce"
         aria-label="Χρήσιμες πληροφορίες"
       >
         <Info className="w-5 h-5 text-accent-foreground" />

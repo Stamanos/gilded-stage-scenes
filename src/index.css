@@ -200,10 +200,6 @@ All colors MUST be HSL.
     @apply transition-all duration-300 hover:shadow-stage;
   }
 
-  .animate-bounce-gentle {
-    animation: bounceGentle 3s ease-in-out infinite;
-  }
-
   /* Enhanced Button Styles */
   .btn-primary {
     @apply group relative overflow-hidden bg-accent hover:bg-accent/90 text-accent-foreground px-6 py-3 font-medium transition-all duration-300 hover:shadow-dramatic rounded-lg backdrop-blur-sm border border-accent/20 hover:scale-105;
@@ -257,14 +253,5 @@ All colors MUST be HSL.
   }
   to {
     opacity: 1;
-  }
-}
-
-@keyframes bounceGentle {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-8px);
   }
 }
