@@ -6,14 +6,12 @@ import ProductionFilters from "@/components/ProductionFilters";
 import { Button } from "@/components/ui/button";
 import productionsData from "@/data/productions.json";
 import { Link } from "react-router-dom";
-import { useState, useMemo, useEffect, useRef } from "react";
+import { useState, useMemo } from "react";
 
 const Productions = () => {
   const [selectedLocation, setSelectedLocation] = useState<string>("all");
   const [selectedGenre, setSelectedGenre] = useState<string>("all");
   const [searchQuery, setSearchQuery] = useState<string>("");
-  const [visibleItems, setVisibleItems] = useState<Set<string>>(new Set());
-  const observerRef = useRef<IntersectionObserver | null>(null);
   
   const productions = productionsData.productions;
 
@@ -42,29 +40,6 @@ const Productions = () => {
   const currentProductions = filteredProductions.filter(p => p.status === "current");
   const upcomingProductions = filteredProductions.filter(p => p.status === "upcoming");
   const pastProductions = filteredProductions.filter(p => p.status === "past");
-
-  // Setup Intersection Observer for scroll animations
-  useEffect(() => {
-    observerRef.current = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setVisibleItems((prev) => new Set([...prev, entry.target.id]));
-          }
-        });
-      },
-      {
-        threshold: 0.1,
-        rootMargin: "50px",
-      }
-    );
-
-    return () => {
-      if (observerRef.current) {
-        observerRef.current.disconnect();
-      }
-    };
-  }, []);
 
   return (
     <div className="min-h-screen">
@@ -116,13 +91,8 @@ const Productions = () => {
                 <Link
                   to={`/productions/${production.id}`}
                   key={production.id}
-                  id={`production-${production.id}`}
-                  data-scroll-animate
-                  className={`group block transition-all duration-700 ${
-                    visibleItems.has(`production-${production.id}`)
-                      ? 'opacity-100 translate-y-0'
-                      : 'opacity-0 translate-y-12'
-                  }`}
+                  className="group stagger-item block"
+                  style={{ animationDelay: `${index * 0.15}s` }}
                 >
                   <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                     <div className={`${index % 2 === 1 ? 'lg:order-2' : ''}`}>
@@ -223,13 +193,8 @@ const Productions = () => {
                 <Link
                   to={`/productions/${production.id}`}
                   key={production.id}
-                  id={`production-${production.id}`}
-                  data-scroll-animate
-                  className={`group block transition-all duration-700 ${
-                    visibleItems.has(`production-${production.id}`)
-                      ? 'opacity-100 translate-y-0'
-                      : 'opacity-0 translate-y-12'
-                  }`}
+                  className="group stagger-item block"
+                  style={{ animationDelay: `${index * 0.15}s` }}
                 >
                   <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                     <div className={`${index % 2 === 1 ? 'lg:order-2' : ''}`}>
@@ -317,13 +282,8 @@ const Productions = () => {
                 <Link
                   to={`/productions/${production.id}`}
                   key={production.id}
-                  id={`production-${production.id}`}
-                  data-scroll-animate
-                  className={`group bg-card rounded-lg overflow-hidden shadow-lg hover:shadow-xl block transition-all duration-700 ${
-                    visibleItems.has(`production-${production.id}`)
-                      ? 'opacity-100 translate-y-0'
-                      : 'opacity-0 translate-y-12'
-                  }`}
+                  className="group bg-card rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 block stagger-item"
+                  style={{ animationDelay: `${index * 0.1}s` }}
                 >
                   <div className="aspect-[4/3] bg-secondary overflow-hidden">
                     {production.images?.main ? (
