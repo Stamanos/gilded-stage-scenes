@@ -11,6 +11,7 @@ import { useState, useMemo } from "react";
 const Productions = () => {
   const [selectedLocation, setSelectedLocation] = useState<string>("all");
   const [selectedGenre, setSelectedGenre] = useState<string>("all");
+  const [searchQuery, setSearchQuery] = useState<string>("");
   
   const productions = productionsData.productions;
 
@@ -28,9 +29,13 @@ const Productions = () => {
     return productions.filter(production => {
       const locationMatch = selectedLocation === "all" || production.location === selectedLocation;
       const genreMatch = selectedGenre === "all" || production.genre === selectedGenre;
-      return locationMatch && genreMatch;
+      const searchMatch = searchQuery.trim() === "" || 
+        production.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        production.subtitle?.toLowerCase().includes(searchQuery.toLowerCase());
+      
+      return locationMatch && genreMatch && searchMatch;
     });
-  }, [productions, selectedLocation, selectedGenre]);
+  }, [productions, selectedLocation, selectedGenre, searchQuery]);
 
   const currentProductions = filteredProductions.filter(p => p.status === "current");
   const upcomingProductions = filteredProductions.filter(p => p.status === "upcoming");
@@ -61,10 +66,13 @@ const Productions = () => {
             <ProductionFilters
               selectedLocation={selectedLocation}
               selectedGenre={selectedGenre}
+              searchQuery={searchQuery}
               onLocationChange={setSelectedLocation}
               onGenreChange={setSelectedGenre}
+              onSearchChange={setSearchQuery}
               availableLocations={availableLocations}
               availableGenres={availableGenres}
+              allProductions={productions}
             />
           </div>
         </div>
