@@ -42,8 +42,8 @@ const ProductionDetails = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="relative min-h-[85vh] md:min-h-[90vh] overflow-hidden">
-        <div className="absolute inset-0">
+      <section className="relative min-h-[70vh] sm:min-h-[80vh] md:min-h-[85vh] lg:min-h-[90vh] overflow-hidden">
+        <div className="absolute inset-0 overflow-hidden">
           <img
             src={production.images?.landscape || production.images?.main || "/images/theater-hero.jpg"}
             alt={production.title}
@@ -52,24 +52,24 @@ const ProductionDetails = () => {
           <div className="absolute inset-0 bg-gradient-to-br from-black/70 via-black/40 to-black/60" />
         </div>
         
-        <div className="relative z-10 container mx-auto px-4 md:px-6 min-h-[85vh] md:min-h-[90vh] flex items-center">
-          <div className="max-w-4xl pt-20 md:pt-24">
-            <div className="mb-6">
-                <Badge variant="secondary" className="mb-4 bg-white/10 text-white border-white/20 backdrop-blur-sm">
+        <div className="relative z-10 container mx-auto px-4 sm:px-6 min-h-[70vh] sm:min-h-[80vh] md:min-h-[85vh] lg:min-h-[90vh] flex items-center">
+          <div className="max-w-4xl pt-20 sm:pt-22 md:pt-24">
+            <div className="mb-4 sm:mb-6">
+                <Badge variant="secondary" className="mb-3 sm:mb-4 bg-white/10 text-white border-white/20 backdrop-blur-sm text-xs sm:text-sm">
                   {production.status === "current" ? "Παίζεται Τώρα" : 
                    production.status === "upcoming" ? "Προσεχώς" : "Από το Αρχείο"}
                 </Badge>
             </div>
             
-            <h1 className="text-3xl md:text-5xl lg:text-6xl text-white mb-4 md:mb-6 font-bold leading-tight">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-white mb-3 sm:mb-4 md:mb-6 font-bold leading-tight">
               {production.title}
             </h1>
             
-            <h2 className="text-lg md:text-2xl lg:text-3xl text-white/90 mb-6 md:mb-8 font-light leading-relaxed">
+            <h2 className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl text-white/90 mb-4 sm:mb-6 md:mb-8 font-light leading-relaxed">
               {production.subtitle}
             </h2>
             
-            <p className="text-sm md:text-base text-white/80 mb-8 md:mb-10 max-w-3xl leading-relaxed">
+            <p className="text-sm sm:text-base text-white/80 mb-6 sm:mb-8 md:mb-10 max-w-3xl leading-relaxed">
               {production.description}
             </p>
             

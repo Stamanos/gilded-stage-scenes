@@ -27,14 +27,14 @@ const NowPlayingSection = () => {
               className="group bg-card rounded-lg overflow-hidden shadow-elegant hover:shadow-dramatic transition-all duration-500 animate-scale-in block"
               style={{ animationDelay: `${index * 0.2}s` }}
             >
-              <div className="aspect-[4/3] bg-secondary relative overflow-hidden">
+              <div className="aspect-[16/9] sm:aspect-[4/3] bg-secondary relative overflow-hidden">
                 <img
-                  src={show.images?.main || "/images/theater-placeholder.jpg"}
+                  src={show.images?.landscape || show.images?.main || "/images/theater-placeholder.jpg"}
                   alt={show.title}
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
-                <div className="absolute top-4 left-4">
-                  <span className={`px-3 py-1 rounded-full text-sm font-medium ${
+                <div className="absolute top-3 left-3 sm:top-4 sm:left-4">
+                  <span className={`px-2 py-1 sm:px-3 sm:py-1 rounded-full text-xs sm:text-sm font-medium ${
                     show.status === 'current' ? 'bg-accent text-accent-foreground' :
                     'bg-primary text-primary-foreground'
                   }`}>
@@ -43,19 +43,19 @@ const NowPlayingSection = () => {
                 </div>
               </div>
 
-              <div className="p-8">
-                <h3 className="text-display-md text-card-foreground mb-2 group-hover:text-accent transition-colors duration-300">
+              <div className="p-4 sm:p-6 lg:p-8">
+                <h3 className="text-2xl sm:text-3xl md:text-4xl font-display font-normal leading-tight text-card-foreground mb-2 group-hover:text-accent transition-colors duration-300">
                   {show.title}
                 </h3>
-                <h4 className="text-lg text-muted-foreground font-light mb-4">
+                <h4 className="text-base sm:text-lg text-muted-foreground font-light mb-3 sm:mb-4">
                   {show.subtitle}
                 </h4>
-                <p className="text-body text-muted-foreground mb-6 leading-relaxed">
+                <p className="text-sm sm:text-base text-muted-foreground mb-4 sm:mb-6 leading-relaxed line-clamp-3">
                   {show.description}
                 </p>
-                <div className="flex items-center justify-between">
+                <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 sm:gap-2">
                   <div>
-                    <p className="text-sm text-accent font-medium">
+                    <p className="text-xs sm:text-sm text-accent font-medium">
                       📅 {show.nextShow}
                     </p>
                   </div>
@@ -64,14 +64,14 @@ const NowPlayingSection = () => {
                       href={show.bookingLink}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="bg-accent hover:bg-accent/90 text-accent-foreground px-4 py-2 rounded font-medium transition-all duration-300"
+                      className="w-full sm:w-auto bg-accent hover:bg-accent/90 text-accent-foreground px-4 py-2 rounded font-medium transition-all duration-300 text-center text-sm sm:text-base"
                       onClick={e => e.stopPropagation()}
                     >
                       Κλείσε Εισιτήρια
                     </a>
                   ) : show.status === "upcoming" ? (
                     <button
-                      className="bg-primary/20 text-primary border border-primary/30 px-4 py-2 rounded font-medium"
+                      className="w-full sm:w-auto bg-primary/20 text-primary border border-primary/30 px-4 py-2 rounded font-medium text-sm sm:text-base"
                       disabled
                       onClick={e => e.stopPropagation()}
                     >
@@ -79,7 +79,7 @@ const NowPlayingSection = () => {
                     </button>
                   ) : (
                     <button
-                      className="bg-muted text-muted-foreground px-4 py-2 rounded font-medium"
+                      className="w-full sm:w-auto bg-muted text-muted-foreground px-4 py-2 rounded font-medium text-sm sm:text-base"
                       disabled
                       onClick={e => e.stopPropagation()}
                     >
