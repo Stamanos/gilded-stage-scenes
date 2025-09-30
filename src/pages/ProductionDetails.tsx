@@ -378,7 +378,8 @@ const ProductionDetails = () => {
               {production.galleryImages.map((image, index) => (
                 <div 
                   key={index} 
-                  className="aspect-square bg-secondary rounded-lg overflow-hidden shadow-sm hover:shadow-elegant transition-all duration-300 cursor-pointer hover:scale-105"
+                  className="aspect-square bg-secondary rounded-lg overflow-hidden shadow-sm hover:shadow-elegant transition-all duration-300 cursor-pointer hover:scale-105 stagger-item"
+                  style={{ animationDelay: `${index * 0.05}s` }}
                   onClick={() => openLightbox(index)}
                 >
                   <img

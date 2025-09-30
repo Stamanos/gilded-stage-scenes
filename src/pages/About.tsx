@@ -82,8 +82,8 @@ const About = () => {
             {teamData.teamMembers.map((member, index) => (
               <div 
                 key={index}
-                className="text-center animate-scale-in"
-                style={{ animationDelay: `${index * 0.2}s` }}
+                className="text-center stagger-item"
+                style={{ animationDelay: `${index * 0.15}s` }}
               >
                 <div className="w-32 h-32 rounded-full mx-auto mb-6 overflow-hidden shadow-elegant">
                   <img
@@ -115,29 +115,35 @@ const About = () => {
           </h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-card p-8 rounded-lg shadow-elegant text-center animate-fade-up">
-              <div className="text-4xl mb-4">🎭</div>
-              <h3 className="text-xl font-semibold text-card-foreground mb-4">Αυθεντικότητα</h3>
-              <p className="text-body text-muted-foreground leading-relaxed">
-                Κάθε παράσταση αντικατοπτρίζει την πραγματική μας ουσία και τις βαθιές μας πεποιθήσεις.
-              </p>
-            </div>
-
-            <div className="bg-card p-8 rounded-lg shadow-elegant text-center animate-fade-up" style={{ animationDelay: "0.1s" }}>
-              <div className="text-4xl mb-4">✨</div>
-              <h3 className="text-xl font-semibold text-card-foreground mb-4">Καινοτομία</h3>
-              <p className="text-body text-muted-foreground leading-relaxed">
-                Αναζητούμε νέους τρόπους να αφηγηθούμε παλιές ιστορίες με σύγχρονη ματιά.
-              </p>
-            </div>
-
-            <div className="bg-card p-8 rounded-lg shadow-elegant text-center animate-fade-up" style={{ animationDelay: "0.2s" }}>
-              <div className="text-4xl mb-4">🤝</div>
-              <h3 className="text-xl font-semibold text-card-foreground mb-4">Κοινότητα</h3>
-              <p className="text-body text-muted-foreground leading-relaxed">
-                Το θέατρο ανθεί μέσα στην κοινότητα. Καλλιεργούμε σχέσεις με καλλιτέχνες και κοινό.
-              </p>
-            </div>
+            {[
+              {
+                icon: "🎭",
+                title: "Αυθεντικότητα",
+                description: "Κάθε παράσταση αντικατοπτρίζει την πραγματική μας ουσία και τις βαθιές μας πεποιθήσεις."
+              },
+              {
+                icon: "✨",
+                title: "Καινοτομία",
+                description: "Αναζητούμε νέους τρόπους να αφηγηθούμε παλιές ιστορίες με σύγχρονη ματιά."
+              },
+              {
+                icon: "🤝",
+                title: "Κοινότητα",
+                description: "Το θέατρο ανθεί μέσα στην κοινότητα. Καλλιεργούμε σχέσεις με καλλιτέχνες και κοινό."
+              }
+            ].map((value, index) => (
+              <div 
+                key={value.title}
+                className="bg-card p-8 rounded-lg shadow-elegant text-center stagger-item"
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                <div className="text-4xl mb-4">{value.icon}</div>
+                <h3 className="text-xl font-semibold text-card-foreground mb-4">{value.title}</h3>
+                <p className="text-body text-muted-foreground leading-relaxed">
+                  {value.description}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </section>

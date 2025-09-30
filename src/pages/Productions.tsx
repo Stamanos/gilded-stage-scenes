@@ -91,8 +91,8 @@ const Productions = () => {
                 <Link
                   to={`/productions/${production.id}`}
                   key={production.id}
-                  className="group animate-fade-up block"
-                  style={{ animationDelay: `${index * 0.2}s` }}
+                  className="group stagger-item block"
+                  style={{ animationDelay: `${index * 0.15}s` }}
                 >
                   <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                     <div className={`${index % 2 === 1 ? 'lg:order-2' : ''}`}>
@@ -193,8 +193,8 @@ const Productions = () => {
                 <Link
                   to={`/productions/${production.id}`}
                   key={production.id}
-                  className="group animate-fade-up block"
-                  style={{ animationDelay: `${index * 0.2}s` }}
+                  className="group stagger-item block"
+                  style={{ animationDelay: `${index * 0.15}s` }}
                 >
                   <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                     <div className={`${index % 2 === 1 ? 'lg:order-2' : ''}`}>
@@ -282,7 +282,7 @@ const Productions = () => {
                 <Link
                   to={`/productions/${production.id}`}
                   key={production.id}
-                  className="group bg-card rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 block"
+                  className="group bg-card rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 block stagger-item"
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
                   <div className="aspect-[4/3] bg-secondary overflow-hidden">

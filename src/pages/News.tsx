@@ -86,12 +86,17 @@ const News = () => {
             {/* News Grid */}
             {filteredNews.length > 0 ? (
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {filteredNews.map((item) => (
-                  <NewsCard
+                 {filteredNews.map((item, index) => (
+                  <div
                     key={item.id}
-                    item={item}
-                    productionTitle={getProductionTitle(item.production_id)}
-                  />
+                    className="stagger-item"
+                    style={{ animationDelay: `${index * 0.1}s` }}
+                  >
+                    <NewsCard
+                      item={item}
+                      productionTitle={getProductionTitle(item.production_id)}
+                    />
+                  </div>
                 ))}
               </div>
             ) : (
