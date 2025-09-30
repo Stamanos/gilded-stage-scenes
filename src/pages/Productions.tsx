@@ -6,14 +6,17 @@ import ProductionFilters from "@/components/ProductionFilters";
 import { Button } from "@/components/ui/button";
 import productionsData from "@/data/productions.json";
 import { Link } from "react-router-dom";
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect, useRef } from "react";
+import { motion } from "framer-motion";
 
 const Productions = () => {
   const [selectedLocation, setSelectedLocation] = useState<string>("all");
   const [selectedGenre, setSelectedGenre] = useState<string>("all");
   const [searchQuery, setSearchQuery] = useState<string>("");
+  const [activeIndex, setActiveIndex] = useState<number | null>(null);
   
   const productions = productionsData.productions;
+  const observerRefs = useRef<(HTMLDivElement | null)[]>([]);
 
   // Extract available locations and genres
   const availableLocations = useMemo(() => {
@@ -40,6 +43,35 @@ const Productions = () => {
   const currentProductions = filteredProductions.filter(p => p.status === "current");
   const upcomingProductions = filteredProductions.filter(p => p.status === "upcoming");
   const pastProductions = filteredProductions.filter(p => p.status === "past");
+
+  useEffect(() => {
+    const observers: IntersectionObserver[] = [];
+    
+    observerRefs.current.forEach((ref, index) => {
+      if (ref) {
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                setActiveIndex(index);
+              }
+            });
+          },
+          {
+            threshold: 0.5,
+            rootMargin: "-20% 0px -20% 0px"
+          }
+        );
+        
+        observer.observe(ref);
+        observers.push(observer);
+      }
+    });
+    
+    return () => {
+      observers.forEach(observer => observer.disconnect());
+    };
+  }, [currentProductions]);
 
   return (
     <div className="min-h-screen">
@@ -86,95 +118,114 @@ const Productions = () => {
               Παίζονται Τώρα
             </h2>
             
-            <div className="space-y-16">
-              {currentProductions.map((production, index) => (
-                <Link
-                  to={`/productions/${production.id}`}
-                  key={production.id}
-                  className="group stagger-item block"
-                  style={{ animationDelay: `${index * 0.15}s` }}
-                >
-                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                    <div className={`${index % 2 === 1 ? 'lg:order-2' : ''}`}>
-                      <div className="aspect-[4/3] bg-secondary rounded-lg overflow-hidden shadow-lg">
-                        {production.images?.main ? (
-                          <img
-                            src={production.images.main}
-                            alt={production.title}
-                            loading="lazy"
-                            className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                          />
-                        ) : (
-                          <div className="w-full h-full bg-gradient-to-br from-accent/20 to-accent/5 flex items-center justify-center">
-                            <span className="text-muted-foreground text-sm">Εικόνα παράστασης</span>
+            <div className="space-y-32">
+              {currentProductions.map((production, index) => {
+                const isFromLeft = index % 2 === 0;
+                const isActive = activeIndex === index;
+                const isPast = activeIndex !== null && index < activeIndex;
+                
+                return (
+                  <motion.div
+                    key={production.id}
+                    ref={(el) => (observerRefs.current[index] = el)}
+                    initial={{ opacity: 0, x: isFromLeft ? -100 : 100 }}
+                    animate={{
+                      opacity: isPast ? 0.3 : isActive ? 1 : 0.3,
+                      x: isActive ? 0 : isFromLeft ? -100 : 100,
+                      scale: isActive ? 1 : 0.95
+                    }}
+                    transition={{
+                      duration: 0.8,
+                      ease: [0.22, 1, 0.36, 1]
+                    }}
+                  >
+                    <Link
+                      to={`/productions/${production.id}`}
+                      className="group block"
+                    >
+                      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                        <div className={`${index % 2 === 1 ? 'lg:order-2' : ''}`}>
+                          <div className="aspect-[4/3] bg-secondary rounded-lg overflow-hidden shadow-lg">
+                            {production.images?.main ? (
+                              <img
+                                src={production.images.main}
+                                alt={production.title}
+                                loading="lazy"
+                                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                              />
+                            ) : (
+                              <div className="w-full h-full bg-gradient-to-br from-accent/20 to-accent/5 flex items-center justify-center">
+                                <span className="text-muted-foreground text-sm">Εικόνα παράστασης</span>
+                              </div>
+                            )}
                           </div>
-                        )}
+                        </div>
+                        
+                        <div className={`${index % 2 === 1 ? 'lg:order-1' : ''}`}>
+                          <div className="flex items-center gap-2 mb-4">
+                            <span className="text-sm font-medium text-accent bg-accent/10 px-3 py-1 rounded-full">
+                              Τρέχουσα Παράσταση
+                            </span>
+                            {production.genre && (
+                              <span className="text-xs text-muted-foreground bg-muted px-2 py-1 rounded-full">
+                                {production.genre}
+                              </span>
+                            )}
+                            {production.location && (
+                              <span className="text-xs text-muted-foreground bg-muted px-2 py-1 rounded-full">
+                                {production.location}
+                              </span>
+                            )}
+                          </div>
+                          
+                          <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-4 group-hover:text-accent transition-colors duration-300">
+                            {production.title}
+                          </h3>
+                          
+                          <h4 className="text-xl text-muted-foreground font-light mb-6">
+                            {production.subtitle}
+                          </h4>
+                          
+                          <p className="text-muted-foreground mb-6 leading-relaxed">
+                            {production.description}
+                          </p>
+                          
+                          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 mb-8">
+                            <span className="text-sm text-muted-foreground">
+                              📅 {production.productionInfo?.dates || production.dates || 'Ημερομηνίες θα ανακοινωθούν'}
+                            </span>
+                            {production.venue && (
+                              <span className="text-sm text-muted-foreground">
+                                📍 {production.venue}
+                              </span>
+                            )}
+                          </div>
+                          
+                          {production.bookingLink ? (
+                            <Button 
+                              className="bg-accent hover:bg-accent/90 text-accent-foreground px-8 py-3"
+                              onClick={(e) => {
+                                e.preventDefault();
+                                e.stopPropagation();
+                                window.open(production.bookingLink, '_blank', 'noopener,noreferrer');
+                              }}
+                            >
+                              Κλείσε Εισιτήρια
+                            </Button>
+                          ) : (
+                            <Button 
+                              className="bg-muted text-muted-foreground px-8 py-3" 
+                              disabled
+                            >
+                              Μη διαθέσιμα εισιτήρια
+                            </Button>
+                          )}
+                        </div>
                       </div>
-                    </div>
-                    
-                    <div className={`${index % 2 === 1 ? 'lg:order-1' : ''}`}>
-                      <div className="flex items-center gap-2 mb-4">
-                        <span className="text-sm font-medium text-accent bg-accent/10 px-3 py-1 rounded-full">
-                          Τρέχουσα Παράσταση
-                        </span>
-                        {production.genre && (
-                          <span className="text-xs text-muted-foreground bg-muted px-2 py-1 rounded-full">
-                            {production.genre}
-                          </span>
-                        )}
-                        {production.location && (
-                          <span className="text-xs text-muted-foreground bg-muted px-2 py-1 rounded-full">
-                            {production.location}
-                          </span>
-                        )}
-                      </div>
-                      
-                      <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-4 group-hover:text-accent transition-colors duration-300">
-                        {production.title}
-                      </h3>
-                      
-                      <h4 className="text-xl text-muted-foreground font-light mb-6">
-                        {production.subtitle}
-                      </h4>
-                      
-                      <p className="text-muted-foreground mb-6 leading-relaxed">
-                        {production.description}
-                      </p>
-                      
-                        <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 mb-8">
-                        <span className="text-sm text-muted-foreground">
-                          📅 {production.productionInfo?.dates || production.dates || 'Ημερομηνίες θα ανακοινωθούν'}
-                        </span>
-                        {production.venue && (
-                          <span className="text-sm text-muted-foreground">
-                            📍 {production.venue}
-                          </span>
-                        )}
-                      </div>
-                      
-                      {production.bookingLink ? (
-                        <Button 
-                          className="bg-accent hover:bg-accent/90 text-accent-foreground px-8 py-3"
-                          onClick={(e) => {
-                            e.preventDefault();
-                            e.stopPropagation();
-                            window.open(production.bookingLink, '_blank', 'noopener,noreferrer');
-                          }}
-                        >
-                          Κλείσε Εισιτήρια
-                        </Button>
-                      ) : (
-                        <Button 
-                          className="bg-muted text-muted-foreground px-8 py-3" 
-                          disabled
-                        >
-                          Μη διαθέσιμα εισιτήρια
-                        </Button>
-                      )}
-                    </div>
-                  </div>
-                </Link>
-              ))}
+                    </Link>
+                  </motion.div>
+                );
+              })}
             </div>
           </div>
         </section>
