@@ -13,10 +13,12 @@ const Productions = () => {
   const [selectedLocation, setSelectedLocation] = useState<string>("all");
   const [selectedGenre, setSelectedGenre] = useState<string>("all");
   const [searchQuery, setSearchQuery] = useState<string>("");
-  const [activeIndex, setActiveIndex] = useState<number | null>(null);
+  const [activeCurrentIndex, setActiveCurrentIndex] = useState<number | null>(null);
+  const [activeUpcomingIndex, setActiveUpcomingIndex] = useState<number | null>(null);
   
   const productions = productionsData.productions;
-  const observerRefs = useRef<(HTMLDivElement | null)[]>([]);
+  const currentObserverRefs = useRef<(HTMLDivElement | null)[]>([]);
+  const upcomingObserverRefs = useRef<(HTMLDivElement | null)[]>([]);
 
   // Extract available locations and genres
   const availableLocations = useMemo(() => {
@@ -47,13 +49,36 @@ const Productions = () => {
   useEffect(() => {
     const observers: IntersectionObserver[] = [];
     
-    observerRefs.current.forEach((ref, index) => {
+    // Observe current productions
+    currentObserverRefs.current.forEach((ref, index) => {
       if (ref) {
         const observer = new IntersectionObserver(
           (entries) => {
             entries.forEach((entry) => {
               if (entry.isIntersecting) {
-                setActiveIndex(index);
+                setActiveCurrentIndex(index);
+              }
+            });
+          },
+          {
+            threshold: 0.5,
+            rootMargin: "-20% 0px -20% 0px"
+          }
+        );
+        
+        observer.observe(ref);
+        observers.push(observer);
+      }
+    });
+    
+    // Observe upcoming productions
+    upcomingObserverRefs.current.forEach((ref, index) => {
+      if (ref) {
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                setActiveUpcomingIndex(index);
               }
             });
           },
@@ -71,7 +96,7 @@ const Productions = () => {
     return () => {
       observers.forEach(observer => observer.disconnect());
     };
-  }, [currentProductions]);
+  }, [currentProductions, upcomingProductions]);
 
   return (
     <div className="min-h-screen">
@@ -121,21 +146,22 @@ const Productions = () => {
             <div className="space-y-32">
               {currentProductions.map((production, index) => {
                 const isFromLeft = index % 2 === 0;
-                const isActive = activeIndex === index;
-                const isPast = activeIndex !== null && index < activeIndex;
+                const isActive = activeCurrentIndex === index;
+                const isPast = activeCurrentIndex !== null && index < activeCurrentIndex;
                 
                 return (
                   <motion.div
                     key={production.id}
-                    ref={(el) => (observerRefs.current[index] = el)}
-                    initial={{ opacity: 0, x: isFromLeft ? -100 : 100 }}
+                    ref={(el) => (currentObserverRefs.current[index] = el)}
+                    initial={{ opacity: 0, x: isFromLeft ? -200 : 200 }}
                     animate={{
-                      opacity: isPast ? 0.3 : isActive ? 1 : 0.3,
-                      x: isActive ? 0 : isFromLeft ? -100 : 100,
-                      scale: isActive ? 1 : 0.95
+                      opacity: isPast ? 0 : isActive ? 1 : 0.2,
+                      x: isActive ? 0 : isFromLeft ? -200 : 200,
+                      scale: isActive ? 1 : 0.9,
+                      filter: isActive ? "blur(0px)" : "blur(3px)"
                     }}
                     transition={{
-                      duration: 0.8,
+                      duration: 0.9,
                       ease: [0.22, 1, 0.36, 1]
                     }}
                   >
@@ -239,82 +265,102 @@ const Productions = () => {
               Προσεχώς
             </h2>
             
-            <div className="space-y-16">
-              {upcomingProductions.map((production, index) => (
-                <Link
-                  to={`/productions/${production.id}`}
-                  key={production.id}
-                  className="group stagger-item block"
-                  style={{ animationDelay: `${index * 0.15}s` }}
-                >
-                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                    <div className={`${index % 2 === 1 ? 'lg:order-2' : ''}`}>
-                      <div className="aspect-[4/3] bg-secondary rounded-lg overflow-hidden shadow-lg">
-                        {production.images?.main ? (
-                          <img
-                            src={production.images.main}
-                            alt={production.title}
-                            loading="lazy"
-                            className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                          />
-                        ) : (
-                          <div className="w-full h-full bg-gradient-to-br from-accent/20 to-accent/5 flex items-center justify-center">
-                            <span className="text-muted-foreground text-sm">Εικόνα παράστασης</span>
+            <div className="space-y-32">
+              {upcomingProductions.map((production, index) => {
+                const isFromLeft = index % 2 === 0;
+                const isActive = activeUpcomingIndex === index;
+                const isPast = activeUpcomingIndex !== null && index < activeUpcomingIndex;
+                
+                return (
+                  <motion.div
+                    key={production.id}
+                    ref={(el) => (upcomingObserverRefs.current[index] = el)}
+                    initial={{ opacity: 0, x: isFromLeft ? -200 : 200 }}
+                    animate={{
+                      opacity: isPast ? 0 : isActive ? 1 : 0.2,
+                      x: isActive ? 0 : isFromLeft ? -200 : 200,
+                      scale: isActive ? 1 : 0.9,
+                      filter: isActive ? "blur(0px)" : "blur(3px)"
+                    }}
+                    transition={{
+                      duration: 0.9,
+                      ease: [0.22, 1, 0.36, 1]
+                    }}
+                  >
+                    <Link
+                      to={`/productions/${production.id}`}
+                      className="group block"
+                    >
+                      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                        <div className={`${index % 2 === 1 ? 'lg:order-2' : ''}`}>
+                          <div className="aspect-[4/3] bg-secondary rounded-lg overflow-hidden shadow-lg">
+                            {production.images?.main ? (
+                              <img
+                                src={production.images.main}
+                                alt={production.title}
+                                loading="lazy"
+                                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                              />
+                            ) : (
+                              <div className="w-full h-full bg-gradient-to-br from-accent/20 to-accent/5 flex items-center justify-center">
+                                <span className="text-muted-foreground text-sm">Εικόνα παράστασης</span>
+                              </div>
+                            )}
                           </div>
-                        )}
+                        </div>
+                        
+                        <div className={`${index % 2 === 1 ? 'lg:order-1' : ''}`}>
+                          <div className="flex items-center gap-2 mb-4">
+                            <span className="text-sm font-medium text-primary bg-primary/10 px-3 py-1 rounded-full">
+                              Προσεχώς
+                            </span>
+                            {production.genre && (
+                              <span className="text-xs text-muted-foreground bg-muted px-2 py-1 rounded-full">
+                                {production.genre}
+                              </span>
+                            )}
+                            {production.location && (
+                              <span className="text-xs text-muted-foreground bg-muted px-2 py-1 rounded-full">
+                                {production.location}
+                              </span>
+                            )}
+                          </div>
+                          
+                          <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-4 group-hover:text-accent transition-colors duration-300">
+                            {production.title}
+                          </h3>
+                          
+                          <h4 className="text-xl text-muted-foreground font-light mb-6">
+                            {production.subtitle}
+                          </h4>
+                          
+                          <p className="text-muted-foreground mb-6 leading-relaxed">
+                            {production.description}
+                          </p>
+                          
+                          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 mb-8">
+                            <span className="text-sm text-muted-foreground">
+                              📅 {production.productionInfo?.dates || 'Ημερομηνίες θα ανακοινωθούν'}
+                            </span>
+                            {production.venue && (
+                              <span className="text-sm text-muted-foreground">
+                                📍 {production.venue}
+                              </span>
+                            )}
+                          </div>
+                          
+                          <Button 
+                            className="bg-primary/20 text-primary border border-primary/30 px-8 py-3" 
+                            disabled
+                          >
+                            Προσεχώς
+                          </Button>
+                        </div>
                       </div>
-                    </div>
-                    
-                    <div className={`${index % 2 === 1 ? 'lg:order-1' : ''}`}>
-                      <div className="flex items-center gap-2 mb-4">
-                        <span className="text-sm font-medium text-primary bg-primary/10 px-3 py-1 rounded-full">
-                          Προσεχώς
-                        </span>
-                        {production.genre && (
-                          <span className="text-xs text-muted-foreground bg-muted px-2 py-1 rounded-full">
-                            {production.genre}
-                          </span>
-                        )}
-                        {production.location && (
-                          <span className="text-xs text-muted-foreground bg-muted px-2 py-1 rounded-full">
-                            {production.location}
-                          </span>
-                        )}
-                      </div>
-                      
-                      <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-4 group-hover:text-accent transition-colors duration-300">
-                        {production.title}
-                      </h3>
-                      
-                      <h4 className="text-xl text-muted-foreground font-light mb-6">
-                        {production.subtitle}
-                      </h4>
-                      
-                      <p className="text-muted-foreground mb-6 leading-relaxed">
-                        {production.description}
-                      </p>
-                      
-                      <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 mb-8">
-                        <span className="text-sm text-muted-foreground">
-                          📅 {production.productionInfo?.dates || 'Ημερομηνίες θα ανακοινωθούν'}
-                        </span>
-                        {production.venue && (
-                          <span className="text-sm text-muted-foreground">
-                            📍 {production.venue}
-                          </span>
-                        )}
-                      </div>
-                      
-                      <Button 
-                        className="bg-primary/20 text-primary border border-primary/30 px-8 py-3" 
-                        disabled
-                      >
-                        Προσεχώς
-                      </Button>
-                    </div>
-                  </div>
-                </Link>
-              ))}
+                    </Link>
+                  </motion.div>
+                );
+              })}
             </div>
           </div>
         </section>
