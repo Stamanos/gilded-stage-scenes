@@ -146,16 +146,16 @@
       "genre": "Παιδικό",
       "targetAudience": "Παιδιά και οικογένειες",
       "images": {
-        "main": "/productions/aliki/aliki_hero-Image.jpg",
-        "square": "/productions/aliki/ALIKI_Square-Image.jpg",
-        "landscape": "/productions/aliki/Aliki_Wallpaper-Image.jpg",
-        "portrait": "/productions/aliki/Aliki_-Slide-Image.jpg"
+        "main": "/productions/aliki/aliki-gallery-image.jpg",
+        "square": "/productions/aliki/aliki-square-image.jpg",
+        "landscape": "/productions/aliki/aliki-wallpaper-image.jpg",
+        "portrait": "/productions/aliki/aliki-square-image.jpg"
       },
       "galleryImages": [
-        "/productions/aliki/aliki_gallery_photo.jpg",
-        "/productions/aliki/wallpaper.jpg",
-        "/productions/aliki/aliki_hero-Image.jpg",
-        "/productions/aliki/Aliki_Wallpaper-Image.jpg"
+        "/productions/aliki/aliki-gallery_photo.jpg",
+        "/productions/aliki/aliki-wallpaper-image.jpg",
+        "/productions/aliki/aliki-hero-image.jpg",
+        "/productions/aliki/aliki-wallpaper-image.jpg"
       ],
       "status": "upcoming",
       "nextShow": "Κυριακή 19 Οκτωβρίου",
