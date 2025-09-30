@@ -1,6 +1,7 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import FloatingSocial from "@/components/FloatingSocial";
+import FloatingInfoTip from "@/components/FloatingInfoTip";
 import NewsCard from "@/components/NewsCard";
 import NewsFilters from "@/components/NewsFilters";
 import { useState, useMemo } from "react";
@@ -106,6 +107,7 @@ const News = () => {
 
       <Footer />
       <FloatingSocial />
+      <FloatingInfoTip page="news" />
     </div>
   );
 };

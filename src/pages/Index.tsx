@@ -6,6 +6,7 @@ import AboutSection from "@/components/AboutSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 import FloatingSocial from "@/components/FloatingSocial";
+import FloatingInfoTip from "@/components/FloatingInfoTip";
 
 const Index = () => {
   return (
@@ -20,6 +21,7 @@ const Index = () => {
       </main>
       <Footer />
       <FloatingSocial />
+      <FloatingInfoTip page="home" />
     </div>
   );
 };

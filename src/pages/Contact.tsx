@@ -1,6 +1,7 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import FloatingSocial from "@/components/FloatingSocial";
+import FloatingInfoTip from "@/components/FloatingInfoTip";
 import { Mail, Phone, MapPin, Clock, Instagram, Facebook, Youtube } from "lucide-react";
 import productionCompanyData from "@/data/productionCompany.json";
 
@@ -143,6 +144,7 @@ const Contact = () => {
 
       <Footer />
       <FloatingSocial />
+      <FloatingInfoTip page="contact" />
     </div>
   );
 };

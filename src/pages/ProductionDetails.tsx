@@ -5,6 +5,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import ImageLightbox from "@/components/ImageLightbox";
 import FloatingSocial from "@/components/FloatingSocial";
+import FloatingInfoTip from "@/components/FloatingInfoTip";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -405,6 +406,7 @@ const ProductionDetails = () => {
         />
       )}
       <FloatingSocial />
+      <FloatingInfoTip page="production-details" />
     </div>
   );
 };

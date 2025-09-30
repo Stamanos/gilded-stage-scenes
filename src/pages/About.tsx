@@ -1,6 +1,7 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import FloatingSocial from "@/components/FloatingSocial";
+import FloatingInfoTip from "@/components/FloatingInfoTip";
 import teamData from "@/data/team.json";
 
 const About = () => {
@@ -143,6 +144,7 @@ const About = () => {
 
       <Footer />
       <FloatingSocial />
+      <FloatingInfoTip page="about" />
     </div>
   );
 };

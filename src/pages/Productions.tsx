@@ -1,6 +1,7 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import FloatingSocial from "@/components/FloatingSocial";
+import FloatingInfoTip from "@/components/FloatingInfoTip";
 import ProductionFilters from "@/components/ProductionFilters";
 import { Button } from "@/components/ui/button";
 import productionsData from "@/data/productions.json";
@@ -343,6 +344,8 @@ const Productions = () => {
       )}
 
       <Footer />
+      <FloatingSocial />
+      <FloatingInfoTip page="productions" />
     </div>
   );
 };
