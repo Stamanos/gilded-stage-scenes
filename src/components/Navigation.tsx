@@ -44,7 +44,7 @@ const Navigation = () => {
               className={`text-body font-medium tracking-wide transition-all duration-300 hover:scale-105 relative after:content-[''] after:absolute after:w-0 after:h-0.5 after:bottom-0 after:left-1/2 after:transition-all after:duration-300 hover:after:w-full hover:after:left-0 ${
                 isScrolled 
                   ? 'text-foreground hover:text-accent after:bg-accent' 
-                  : 'text-white/90 hover:text-white hover:drop-shadow-lg after:bg-white'
+                  : 'text-foreground drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] hover:text-accent hover:drop-shadow-lg after:bg-accent'
               }`}
             >
               Παραστάσεις
@@ -54,7 +54,7 @@ const Navigation = () => {
               className={`text-body font-medium tracking-wide transition-all duration-300 hover:scale-105 relative after:content-[''] after:absolute after:w-0 after:h-0.5 after:bottom-0 after:left-1/2 after:transition-all after:duration-300 hover:after:w-full hover:after:left-0 ${
                 isScrolled 
                   ? 'text-foreground hover:text-accent after:bg-accent' 
-                  : 'text-white/90 hover:text-white hover:drop-shadow-lg after:bg-white'
+                  : 'text-foreground drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] hover:text-accent hover:drop-shadow-lg after:bg-accent'
               }`}
             >
               Σχετικά με εμάς
@@ -64,7 +64,7 @@ const Navigation = () => {
               className={`text-body font-medium tracking-wide transition-all duration-300 hover:scale-105 relative after:content-[''] after:absolute after:w-0 after:h-0.5 after:bottom-0 after:left-1/2 after:transition-all after:duration-300 hover:after:w-full hover:after:left-0 ${
                 isScrolled 
                   ? 'text-foreground hover:text-accent after:bg-accent' 
-                  : 'text-white/90 hover:text-white hover:drop-shadow-lg after:bg-white'
+                  : 'text-foreground drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] hover:text-accent hover:drop-shadow-lg after:bg-accent'
               }`}
             >
               Νέα
@@ -74,7 +74,7 @@ const Navigation = () => {
               className={`text-body font-medium tracking-wide transition-all duration-300 hover:scale-105 relative after:content-[''] after:absolute after:w-0 after:h-0.5 after:bottom-0 after:left-1/2 after:transition-all after:duration-300 hover:after:w-full hover:after:left-0 ${
                 isScrolled 
                   ? 'text-foreground hover:text-accent after:bg-accent' 
-                  : 'text-white/90 hover:text-white hover:drop-shadow-lg after:bg-white'
+                  : 'text-foreground drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] hover:text-accent hover:drop-shadow-lg after:bg-accent'
               }`}
             >
               Επικοινωνία
@@ -91,7 +91,7 @@ const Navigation = () => {
             className={`transition-all duration-300 hover:scale-110 ${
               isScrolled 
                 ? 'text-foreground hover:text-accent' 
-                : 'text-white/90 hover:text-white hover:drop-shadow-lg'
+                : 'text-foreground drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] hover:text-accent'
             }`}
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Toggle menu"
