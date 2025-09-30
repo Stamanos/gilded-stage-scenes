@@ -146,14 +146,19 @@
       "genre": "Παιδικό",
       "targetAudience": "Παιδιά και οικογένειες",
       "images": {
-        "main": "/productions/aliki/wallpaper.jpg",
-        "square": "/productions/aliki/wallpaper.jpg",
-        "landscape": "/productions/aliki/wallpaper.jpg",
-        "portrait": "/productions/aliki/wallpaper.jpg"
+        "main": "/productions/aliki/aliki_hero-Image.jpg",
+        "square": "/productions/aliki/ALIKI_Square-Image.jpg",
+        "landscape": "/productions/aliki/Aliki_Wallpaper-Image.jpg",
+        "portrait": "/productions/aliki/Aliki_-Slide-Image.jpg"
       },
-      "galleryImages": [],
-      "status": "past",
-      "nextShow": "never",
+      "galleryImages": [
+        "/productions/aliki/aliki_gallery_photo.jpg",
+        "/productions/aliki/wallpaper.jpg",
+        "/productions/aliki/aliki_hero-Image.jpg",
+        "/productions/aliki/Aliki_Wallpaper-Image.jpg"
+      ],
+      "status": "upcoming",
+      "nextShow": "Κυριακή 19 Οκτωβρίου",
       "cast": [
         "Άννα Βασιλείου",
         "Βασίλης Γιαννέλος",
