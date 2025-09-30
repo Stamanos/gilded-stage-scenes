@@ -148,21 +148,30 @@ const Productions = () => {
                 const isFromLeft = index % 2 === 0;
                 const isActive = activeCurrentIndex === index;
                 const isPast = activeCurrentIndex !== null && index < activeCurrentIndex;
+                const isVisible = activeCurrentIndex !== null && Math.abs(index - activeCurrentIndex) <= 1;
                 
                 return (
                   <motion.div
                     key={production.id}
                     ref={(el) => (currentObserverRefs.current[index] = el)}
-                    initial={{ opacity: 0, x: isFromLeft ? -200 : 200 }}
-                    animate={{
+                    initial={false}
+                    animate={isVisible ? {
                       opacity: isPast ? 0 : isActive ? 1 : 0.2,
                       x: isActive ? 0 : isFromLeft ? -200 : 200,
                       scale: isActive ? 1 : 0.9,
                       filter: isActive ? "blur(0px)" : "blur(3px)"
+                    } : {
+                      opacity: 0,
+                      x: isFromLeft ? -200 : 200,
+                      scale: 0.9,
+                      filter: "blur(3px)"
                     }}
                     transition={{
                       duration: 0.9,
                       ease: [0.22, 1, 0.36, 1]
+                    }}
+                    style={{
+                      willChange: isVisible ? 'transform, opacity, filter' : 'auto'
                     }}
                   >
                     <Link
@@ -270,21 +279,30 @@ const Productions = () => {
                 const isFromLeft = index % 2 === 0;
                 const isActive = activeUpcomingIndex === index;
                 const isPast = activeUpcomingIndex !== null && index < activeUpcomingIndex;
+                const isVisible = activeUpcomingIndex !== null && Math.abs(index - activeUpcomingIndex) <= 1;
                 
                 return (
                   <motion.div
                     key={production.id}
                     ref={(el) => (upcomingObserverRefs.current[index] = el)}
-                    initial={{ opacity: 0, x: isFromLeft ? -200 : 200 }}
-                    animate={{
+                    initial={false}
+                    animate={isVisible ? {
                       opacity: isPast ? 0 : isActive ? 1 : 0.2,
                       x: isActive ? 0 : isFromLeft ? -200 : 200,
                       scale: isActive ? 1 : 0.9,
                       filter: isActive ? "blur(0px)" : "blur(3px)"
+                    } : {
+                      opacity: 0,
+                      x: isFromLeft ? -200 : 200,
+                      scale: 0.9,
+                      filter: "blur(3px)"
                     }}
                     transition={{
                       duration: 0.9,
                       ease: [0.22, 1, 0.36, 1]
+                    }}
+                    style={{
+                      willChange: isVisible ? 'transform, opacity, filter' : 'auto'
                     }}
                   >
                     <Link
