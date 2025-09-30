@@ -44,6 +44,7 @@ const HeroSection = () => {
         <img
           src={currentProduction.images?.landscape || currentProduction.images?.main || "/images/theater-placeholder.jpg"}
           alt={currentProduction.title}
+          loading="eager"
           className="w-full h-full object-cover transition-all duration-1000 ease-in-out"
         />
       </div>

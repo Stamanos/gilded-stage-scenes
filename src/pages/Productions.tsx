@@ -92,6 +92,7 @@ const Productions = () => {
                           <img
                             src={production.images.main}
                             alt={production.title}
+                            loading="lazy"
                             className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                           />
                         ) : (
@@ -193,6 +194,7 @@ const Productions = () => {
                           <img
                             src={production.images.main}
                             alt={production.title}
+                            loading="lazy"
                             className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                           />
                         ) : (
@@ -279,6 +281,7 @@ const Productions = () => {
                       <img
                         src={production.images.main}
                         alt={production.title}
+                        loading="lazy"
                         className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                       />
                     ) : (

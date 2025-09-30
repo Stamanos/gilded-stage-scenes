@@ -47,6 +47,7 @@ const ProductionDetails = () => {
           <img
             src={production.images?.landscape || production.images?.main || "/images/theater-hero.jpg"}
             alt={production.title}
+            loading="eager"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-br from-black/70 via-black/40 to-black/60" />
@@ -382,6 +383,7 @@ const ProductionDetails = () => {
                   <img
                     src={image}
                     alt={`${production.title} - Φωτογραφία ${index + 1}`}
+                    loading="lazy"
                     className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
                   />
                 </div>

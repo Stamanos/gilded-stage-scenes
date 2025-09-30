@@ -31,6 +31,7 @@ const NowPlayingSection = () => {
                 <img
                   src={show.images?.landscape || show.images?.main || "/images/theater-placeholder.jpg"}
                   alt={show.title}
+                  loading="lazy"
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
                 <div className="absolute top-3 left-3 sm:top-4 sm:left-4">
