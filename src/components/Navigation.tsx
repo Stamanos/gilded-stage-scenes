@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { Link } from "react-router-dom";
+import ThemeToggle from "./ThemeToggle";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -37,9 +38,9 @@ const Navigation = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-12">
+          <div className="hidden md:flex items-center space-x-8">
             <a 
-              href="/productions" 
+              href="/productions"
               className={`text-body font-medium tracking-wide transition-all duration-300 hover:scale-105 relative after:content-[''] after:absolute after:w-0 after:h-0.5 after:bottom-0 after:left-1/2 after:transition-all after:duration-300 hover:after:w-full hover:after:left-0 ${
                 isScrolled 
                   ? 'text-foreground hover:text-accent after:bg-accent' 
@@ -78,11 +79,16 @@ const Navigation = () => {
             >
               Επικοινωνία
             </a>
+            <ThemeToggle isScrolled={isScrolled} />
           </div>
 
-          {/* Mobile Menu Button */}
+        </div>
+
+        {/* Mobile Actions */}
+        <div className="md:hidden flex items-center gap-2">
+          <ThemeToggle isScrolled={isScrolled} />
           <button
-            className={`md:hidden transition-all duration-300 hover:scale-110 ${
+            className={`transition-all duration-300 hover:scale-110 ${
               isScrolled 
                 ? 'text-foreground hover:text-accent' 
                 : 'text-white/90 hover:text-white hover:drop-shadow-lg'
@@ -96,7 +102,7 @@ const Navigation = () => {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="md:hidden absolute top-full left-0 right-0 bg-background/30 backdrop-blur-xl border border-border/20 rounded-b-lg shadow-elegant animate-slide-in-right z-40">
+          <div className="md:hidden absolute top-full left-0 right-0 bg-background/95 backdrop-blur-xl border border-border/20 rounded-b-lg shadow-elegant animate-fade-in z-40">
             <div className="flex flex-col px-6 py-6 space-y-2">
               <a 
                 href="/productions" 

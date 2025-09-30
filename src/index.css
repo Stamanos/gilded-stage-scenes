@@ -173,6 +173,24 @@ All colors MUST be HSL.
     animation: slideIn 1s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
+  .animate-fade-in {
+    animation: fadeIn 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  /* Interactive Elements */
+  .transition-smooth {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  /* Hover Effects */
+  .hover-lift {
+    @apply transition-all duration-300 hover:-translate-y-1 hover:shadow-elegant;
+  }
+
+  .hover-glow {
+    @apply transition-all duration-300 hover:shadow-stage;
+  }
+
   /* Enhanced Button Styles */
   .btn-primary {
     @apply group relative overflow-hidden bg-accent hover:bg-accent/90 text-accent-foreground px-6 py-3 font-medium transition-all duration-300 hover:shadow-dramatic rounded-lg backdrop-blur-sm border border-accent/20 hover:scale-105;
@@ -217,5 +235,14 @@ All colors MUST be HSL.
   to {
     opacity: 1;
     transform: translateX(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
