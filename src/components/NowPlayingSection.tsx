@@ -32,7 +32,7 @@ const NowPlayingSection = () => {
                   src={show.images?.square || show.images?.main || "/images/theater-placeholder.jpg"}
                   alt={show.title}
                   loading="lazy"
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
                 />
                 <div className="absolute top-3 left-3 sm:top-4 sm:left-4">
                   <span className={`px-2 py-1 sm:px-3 sm:py-1 rounded-full text-xs sm:text-sm font-medium ${

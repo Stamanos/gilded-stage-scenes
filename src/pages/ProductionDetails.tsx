@@ -49,7 +49,7 @@ const ProductionDetails = () => {
             src={production.images?.landscape || production.images?.main || "/images/theater-hero.jpg"}
             alt={production.title}
             loading="eager"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover object-top" // Προσθήκη object-top
           />
           <div className="absolute inset-0 bg-gradient-to-br from-black/70 via-black/40 to-black/60" />
         </div>

@@ -95,10 +95,10 @@ const Productions = () => {
                       <div className="aspect-[4/3] bg-secondary rounded-lg overflow-hidden shadow-lg">
                         {production.images?.main ? (
                           <img
-                            src={production.images.main}
+                            src={production.images.square}
                             alt={production.title}
                             loading="lazy"
-                            className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                            className="w-full h-full object-cover object-top transition-transform duration-300 group-hover:scale-105"
                           />
                         ) : (
                           <div className="w-full h-full bg-gradient-to-br from-accent/20 to-accent/5 flex items-center justify-center">
