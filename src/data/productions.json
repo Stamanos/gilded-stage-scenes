@@ -1,6 +1,69 @@
 {
   "productions": [
     {
+      "id": 1,
+      "title": "TERROR",
+      "subtitle": "Μία πτήση. Μία έκρηξη. Μία δίκη.",
+      "description": "Οι θεατές στον ρόλο των ενόρκων. Το δυνατό δικαστικό θρίλερ του Φέρντιναντ φον Σίραχ, που έχει συγκλονίσει κοινό και κριτικούς σε περισσότερες από εβδομήντα σκηνές της Ευρώπης και της Αμερικής, παρουσιάζεται στο ολοκαίνουριο θέατρο ΦΙΛΙΠ, σε σκηνοθεσία Γιώργου Οικονόμου, μετάφραση Ευαγγελίας Α. Νάνου και διασκευή Μιρέλλας Παπαοικονόμου.",
+      "longDescription": "Μετά την τεράστια επιτυχία του σε διεθνές επίπεδο και την κινηματογραφική του μεταφορά, το «TERROR» έρχεται να θέσει στο κοινό το ακόλουθο ηθικό δίλημμα: Μπορεί να θυσιαστεί μια μικρότερη ομάδα αθώων ανθρώπων προκειμένου να σωθούν πολύ περισσότεροι; Ή αλλιώς: τι είναι πιο σημαντικό – η προστασία της ανθρώπινης αξιοπρέπειας και του απαραβίαστου της ζωής του καθενός, ή η σωτηρία του μεγαλύτερου αριθμού ανθρώπων; Έτσι, ο θεατής δεν παίρνει απλώς θέση σε μια δίκη· παίρνει θέση ανάμεσα σε δύο διαφορετικές φιλοσοφίες της ζωής και της δικαιοσύνης.Το «Terror» δεν είναι απλώς μια θεατρική παράσταση. Είναι μια ζωντανή δημοκρατική εμπειρία, όπου κάθε θεατής καλείται να σταθεί απέναντι στο πιο κρίσιμο ηθικό δίλημμα της εποχής μας.",
+      "dates": "Δευτέρα στις 20:30 και Τρίτη στις 21:15",
+      "venue": "Στο θέατρο ΦΙΛΙΠ, Θάσου 11 & Δροσοπούλου, Κυψέλη",
+      "location": "Θέατρο ΦΙΛΙΠ, Αθήνα",
+      "genre": "Δράμα", 
+      "duration": "60 λεπτά",
+      "images": {
+        "main": "/productions/Terror/TERROR_main.jpg",
+        "square": "/productions/Terror/TERROR_square.jpg",
+        "landscape": "/productions/Terror/TERROR_landscape.jpg",
+        "portrait": "/productions/Terror/TERROR_portrait.jpg"
+      },
+      "galleryImages": [
+        "/productions/Terror/photos/1.jpg",
+        "/productions/Terror/photos/2.jpg",
+        "/productions/Terror/photos/3.jpg",
+        "/productions/Terror/photos/4.jpg"
+      ],
+      "status": "current",
+      "nextShow": "Δευτέρα 3 Νοεμβρίου, 20:30",
+      "bookingLink": "https://www.more.com/gr-el/tickets/theater/terror-1/",
+      "cast": [
+        "Ίντρα Κέιν – Πρόεδρος",
+        "Θεοδώρα Σιάρκου – Εισαγγελέας",
+        "Δημήτρης Λιόλιος – Συνήγορος Υπεράσπισης",
+        "Χρήστος Παπαδόπουλος – Κατηγορούμενος",
+        "Βασίλης Μπατσακούτσας – Μάρτυρας Υπεράσπισης",
+        "Μαρία Νεφέλη Δούκα – Μάρτυρας Κατηγορίας"
+      ],
+      "creativeTeam": {
+        "Σκηνοθεσία": "Γιώργος Οικονόμου",
+        "Μετάφραση": "Ευαγγελία Α. Νάνου",
+        "Διασκευή": "Μιρέλλα Παπαοικονόμου",
+        "Φωτισμοί": "Μελίνα Μάσχα",
+        "Κοστούμια": "Νίκος Χαρλάφτης",
+        "Σκηνικά": "Χριστίνα Ντεκούλη",
+        "Μουσική επιμέλεια": "Γιώργος Οικονόμου",
+        "Βοηθός Σκηνοθέτη": "Ελένη Φανδρίδου",
+        "Φωτογραφία": "GRID FOX",
+        "Visual Identity": "Saint of Athens",
+        "Επικοινωνία": "Άντζυ Νομικού"
+      },
+      "productionInfo": {
+        "premiere": "Δευτέρα 3 Νοεμβρίου στις 20:30",
+        "dates": "Κάθε Δευτέρα στις 20:30 και Τρίτη στις 21:15",
+        "duration": "60 λεπτά"
+      },
+      "productionCompany": "Χρήστος Τριπόδης ΜΕΘΕΞΙΣ",
+      "bookingInfo": {
+        "phone": "210 7622034, 6943290294",
+        "email": "methexis.productions@gmail.com"
+      },
+      "pressContact": {
+        "name": "Μαργαρίτα Δρούτσα",
+        "phone": "6942065888",
+        "email": "mdroutsa@gmail.com"
+      }
+    },
+    {
       "id": 2,
       "title": "ΦΙΛΟΚΤΗΤΗΣ",
       "subtitle": "Η τραγωδία του Σοφοκλή",
@@ -18,7 +81,7 @@
         "portrait": "/productions/filoktitis/banner.jpg"
       },
       "galleryImages": [],
-      "status": "current",
+      "status": "past",
       "nextShow": "Σάββατο 15 Ιουνίου, 21:30",
       "bookingLink": "https://www.more.com/gr-el/tickets/theater/filoktitis-1",
       "cast": [
@@ -49,7 +112,7 @@
         "dates": "Καλοκαιρινή περιοδεία σε όλη την Ελλάδα και την Κύπρο",
         "duration": "110 λεπτά"
       },
-      "productionCompany": "Θεατρικών Παραγωγών ΜΕΘΕΞΙΣ",
+      "productionCompany": "Χρήστος Τριπόδης ΜΕΘΕΞΙΣ",
       "bookingInfo": {
         "phone": "210 7622034, 6943290294",
         "email": "methexis.productions@gmail.com"
@@ -76,24 +139,19 @@
       "genre": "Κωμωδία",
       "schedule": "Κάθε Πέμπτη, Παρασκευή, Σάββατο & Κυριακή, 21:15",
       "images": {
-        "main": "/productions/xasame-ti-theia-stop/wallpaper.jpg",
-        "square": "/productions/xasame-ti-theia-stop/wallpaper.jpg",
-        "landscape": "/productions/xasame-ti-theia-stop/wallpaper.jpg",
-        "portrait": "/productions/xasame-ti-theia-stop/wallpaper.jpg"
+        "main": "/productions/Theia/THEIA_main.jpg",
+        "square": "/productions/Theia/THEIA_square.jpg",
+        "landscape": "/productions/Theia/THEIA_landscape.jpg",
+        "portrait": "/productions/Theia/THEIA_portrait.jpg"
       },
       "galleryImages": [
-        "/productions/xasame-ti-theia-stop/DIAGOUPI.jpg",
-        "/productions/xasame-ti-theia-stop/NATASA.jpg",
-        "/productions/xasame-ti-theia-stop/ORESTIS.jpg",
-        "/productions/xasame-ti-theia-stop/SOYXES.jpg",
-        "/productions/xasame-ti-theia-stop/TZOIS.jpg",
-        "/productions/xasame-ti-theia-stop/VIVIAN.jpg",
-        "/productions/xasame-ti-theia-stop/XARIS.jpg",
-        "/productions/xasame-ti-theia-stop/DSC00220.jpg",
-        "/productions/xasame-ti-theia-stop/DSC00363.jpg",
-        "/productions/xasame-ti-theia-stop/DSC00395.jpg",
-        "/productions/xasame-ti-theia-stop/DSC00500.jpg",
-        "/productions/xasame-ti-theia-stop/DSC00539.jpg"
+        "/productions/Theia/photos/1.jpg",
+        "/productions/Theia/photos/2.jpg",
+        "/productions/Theia/photos/3.jpg",
+        "/productions/Theia/photos/4.jpg",
+        "/productions/Theia/photos/5.jpg",
+        "/productions/Theia/photos/6.jpg",
+        "/productions/Theia/photos/7.jpg"
       ],
       "status": "current",
       "nextShow": "Πέμπτη 11 Ιουλίου, 21:15",
@@ -141,23 +199,24 @@
         "dates": "Κυριακή 11:30 & 16:30",
         "duration": "80 λεπτά"
       },
+      "bookingLink": "https://www.more.com/gr-el/tickets/theater/i-aliki-sti-xora-ton-psarion/",
       "venue": "Θέατρον του Κέντρου Πολιτισμού «Ελληνικός Κόσμος» - Αίθουσα Ιφιγένεια",
       "location": "Αθήνα",
       "genre": "Παιδικό",
       "targetAudience": "Παιδιά και οικογένειες",
       "images": {
-        "main": "/productions/aliki/aliki-gallery-image.jpg",
-        "square": "/productions/aliki/aliki-square-image.jpg",
-        "landscape": "/productions/aliki/aliki-wallpaper-image.jpg",
-        "portrait": "/productions/aliki/aliki-square-image.jpg"
+        "main": "/productions/Aliki/ALIKI_main.jpg",
+        "square": "/productions/Aliki/ALIKI_square.jpg",
+        "landscape": "/productions/Aliki/ALIKI_landscape.jpg",
+        "portrait": "/productions/Aliki/ALIKI_portrait.jpg"
       },
       "galleryImages": [
-        "/productions/aliki/aliki-gallery-image.jpg",
-        "/productions/aliki/aliki-wallpaper-image.jpg",
-        "/productions/aliki/aliki-hero-image.jpg",
-        "/productions/aliki/aliki-wallpaper-image.jpg"
+        "/productions/Aliki/photos/1.jpg",
+        "/productions/Aliki/photos/2.jpg",
+        "/productions/Aliki/photos/3.jpg",
+        "/productions/Aliki/photos/4.jpg"
       ],
-      "status": "upcoming",
+      "status": "current",
       "nextShow": "Κυριακή 19 Οκτωβρίου",
       "cast": [
         "Άννα Βασιλείου",
@@ -220,7 +279,7 @@
         "dates": "Οκτώβριος",
         "duration": "85 λεπτά"
       },
-      "productionCompany": "Θεατρικών Παραγωγών ΜΕΘΕΞΙΣ"
+      "productionCompany": "Χρήστος Τριπόδης ΜΕΘΕΞΙΣ"
     },
     {
       "id": 6,
@@ -252,7 +311,7 @@
         "dates": "Κάθε Σάββατο στις 17:00",
         "duration": "80 λεπτά"
       },
-      "productionCompany": "Θεατρικών Παραγωγών ΜΕΘΕΞΙΣ"
+      "productionCompany": "Χρήστος Τριπόδης ΜΕΘΕΞΙΣ"
     },
     {
       "id": 103,
@@ -291,13 +350,13 @@
         "dates": "Καλοκαιρινή περιοδεία ανά την Ελλάδα",
         "duration": "95 λεπτά"
       },
-      "productionCompany": "Θεατρικών Παραγωγών ΜΕΘΕΞΙΣ"
+      "productionCompany": "Χρήστος Τριπόδης ΜΕΘΕΞΙΣ"
     },
     {
       "id": 106,
       "title": "Ο ΠΕΤΡΟΣ ΚΑΙ Ο ΛΥΚΟΣ",
       "subtitle": "Το διασημότερο μουσικό παραμύθι του Σεργκέι Προκόφιεφ",
-      "description": "H εταιρεία θεατρικών παραγωγών ΜΕΘΕΞΙΣ παρουσιάζει το διασημότερο μουσικό παραμύθι όλων των εποχών «Ο Πέτρος και ο λύκος», του Σεργκέι Προκόφιεφ, σε σκηνοθεσία Χρήστου Τριπόδη, με τον Ιωάννη Απέργη.",
+      "description": "H εταιρεία Χρήστος Τριπόδης ΜΕΘΕΞΙΣ παρουσιάζει το διασημότερο μουσικό παραμύθι όλων των εποχών «Ο Πέτρος και ο λύκος», του Σεργκέι Προκόφιεφ, σε σκηνοθεσία Χρήστου Τριπόδη, με τον Ιωάννη Απέργη.",
       "longDescription": "Το μαγευτικό κείμενο του Ρώσου συνθέτη Σεργκέι Προκόφιεφ γράφτηκε το 1936 και θεωρείται ένα από τα πιο σημαντικά μουσικά παραμύθια όλων των εποχών. Πρόκειται για μια θεατρική προσέγγιση του παραμυθιού, με στοιχεία χοροκίνησης, τραγουδιών και θέατρο σκιών.",
       "dates": "Από Κυριακή 3 Νοεμβρίου 2024",
       "venue": "Θέατρο ΔΙΑΝΑ",
@@ -337,7 +396,7 @@
         "dates": "Από Κυριακή 3 Νοεμβρίου 2024",
         "duration": "65 λεπτά"
       },
-      "productionCompany": "Θεατρικών Παραγωγών ΜΕΘΕΞΙΣ"
+      "productionCompany": "Χρήστος Τριπόδης ΜΕΘΕΞΙΣ"
     },
     {
       "id": 7,
@@ -350,19 +409,23 @@
       "location": "Περιοδεία",
       "genre": "Κωμωδία",
       "duration": "90 λεπτά",
+      "bookingLink": "https://www.more.com/gr-el/tickets/theater/oute-mpros-oute-piso/",
       "images": {
-        "main": "/productions/oute-mpros-oute-pisw/wallpaper.jpg",
-        "square": "/productions/oute-mpros-oute-pisw/square.jpg",
-        "landscape": "/productions/oute-mpros-oute-pisw/wallpaper.jpg", 
-        "portrait": "/productions/oute-mpros-oute-pisw/square.jpg"
+        "main": "/productions/Oute_bros/OUTE_BROS_OUTE_PISO_main.jpg",
+        "square": "/productions/Oute_bros/OUTE_BROS_OUTE_PISO_square.jpg",
+        "landscape": "/productions/Oute_bros/OUTE_BROS_OUTE_PISO_landscape.jpg",
+        "portrait": "/productions/Oute_bros/OUTE_BROS_OUTE_PISO_portrait.jpg"
       },
       "galleryImages": [
-        "/productions/oute-mpros-oute-pisw/1220_371___mpros_piso.jpg",
-        "/productions/oute-mpros-oute-pisw/500_500_mpros_piso.jpg",
-        "/productions/oute-mpros-oute-pisw/816_465___mpros_piso.jpg",
-        "/productions/oute-mpros-oute-pisw/wallpaper-2.jpg"
+        "/productions/Oute_bros/photos/1.jpg",
+        "/productions/Oute_bros/photos/2.jpg",
+        "/productions/Oute_bros/photos/3.jpg",
+        "/productions/Oute_bros/photos/4.jpg",
+        "/productions/Oute_bros/photos/5.jpg",
+        "/productions/Oute_bros/photos/6.jpg",
+        "/productions/Oute_bros/photos/7.jpg"
       ],
-      "status": "past",
+      "status": "current",
       "nextShow": "never",
       "cast": [
         "Χρύσα Ρώπα",
@@ -387,7 +450,7 @@
         "dates": "Καλοκαιρινή περιοδεία ανά την Ελλάδα",
         "duration": "90 λεπτά"
       },
-      "productionCompany": "Θεατρικών Παραγωγών ΜΕΘΕΞΙΣ"
+      "productionCompany": "Χρήστος Τριπόδης ΜΕΘΕΞΙΣ"
     },
     {
       "id": 104,
@@ -439,7 +502,7 @@
         "dates": "17 Ιανουαρίου έως 9 Φεβρουαρίου",
         "duration": "100 λεπτά"
       },
-      "productionCompany": "Θεατρικών Παραγωγών ΜΕΘΕΞΙΣ"
+      "productionCompany": "Χρήστος Τριπόδης ΜΕΘΕΞΙΣ"
     },
     {
       "id": 105,
@@ -485,7 +548,7 @@
         "dates": "Από 8 Νοεμβρίου 2024",
         "duration": "90 λεπτά"
       },
-      "productionCompany": "Θεατρικών Παραγωγών ΜΕΘΕΞΙΣ",
+      "productionCompany": "Χρήστος Τριπόδης ΜΕΘΕΞΙΣ",
       "bookingInfo": {
         "phone": "210 7012123",
         "website": "https://www.more.com/theater/i-synantisi/"
@@ -505,14 +568,20 @@
       "location": "Αθήνα",
       "genre": "Κωμωδία",
       "duration": "105 λεπτά",
+      "bookingLink": "https://www.more.com/gr-el/tickets/theater/botka-molotof/",
       "images": {
-        "main": "/productions/votka-molotof/banner.jpg",
-        "square": "/productions/votka-molotof/banner.jpg",
-        "landscape": "/productions/votka-molotof/banner.jpg",
-        "portrait": "/productions/votka-molotof/banner.jpg"
+        "main": "/productions/Vodka/VODKA_main.jpg",
+        "square": "/productions/Vodka/VODKA_square.jpg",
+        "landscape": "/productions/Vodka/VODKA_landscape.jpg",
+        "portrait": "/productions/Vodka/VODKA_portrait.jpg"
       },
-      "galleryImages": [],
-      "status": "past",
+      "galleryImages": [
+        "/productions/Vodka/photos/1.jpg",
+        "/productions/Vodka/photos/2.jpg",
+        "/productions/Vodka/photos/3.jpg",
+        "/productions/Vodka/photos/4.jpg"
+      ],
+      "status": "current",
       "nextShow": "never",
       "cast": [
         "Γιώργος Γαλίτης",
@@ -533,7 +602,7 @@
         "dates": "Από 31 Οκτωβρίου",
         "duration": "105 λεπτά"
       },
-      "productionCompany": "Θεατρικών Παραγωγών ΜΕΘΕΞΙΣ"
+      "productionCompany": "Χρήστος Τριπόδης ΜΕΘΕΞΙΣ"
     },
     {
       "id": 102,
@@ -582,7 +651,7 @@
         "dates": "Καλοκαιρινή περιοδεία ανά την Ελλάδα",
         "duration": "75 λεπτά"
       },
-      "productionCompany": "Θεατρικών Παραγωγών ΜΕΘΕΞΙΣ"
+      "productionCompany": "Χρήστος Τριπόδης ΜΕΘΕΞΙΣ"
     }
   ]
 }

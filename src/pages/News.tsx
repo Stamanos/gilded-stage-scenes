@@ -63,9 +63,6 @@ const News = () => {
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
             Νέα & Τύπος
           </h1>
-          <p className="text-lg opacity-90 max-w-2xl mx-auto">
-            Διαβάστε τι γράφει ο τύπος για τις παραστάσεις μας και μείνετε ενημερωμένοι
-          </p>
         </div>
       </section>
 

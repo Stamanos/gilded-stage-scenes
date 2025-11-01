@@ -51,10 +51,6 @@ const Productions = () => {
         <div className="container mx-auto px-6">
           <div className="text-center animate-fade-up">
             <h1 className="text-display-xl mb-6">Παραστάσεις</h1>
-            <p className="text-body-lg opacity-90 max-w-3xl mx-auto">
-              Κάθε παράσταση δημιουργείται με προσοχή για να δημιουργήσει έναν βαθύ διάλογο 
-              μεταξύ κοινού και ερμηνευτή, εξερευνώντας τα βάθη της ανθρώπινης εμπειρίας.
-            </p>
           </div>
         </div>
       </section>

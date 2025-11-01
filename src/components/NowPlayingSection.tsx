@@ -29,7 +29,7 @@ const NowPlayingSection = () => {
             >
               <div className="aspect-[16/9] sm:aspect-[4/3] bg-secondary relative overflow-hidden">
                 <img
-                  src={show.images?.landscape || show.images?.main || "/images/theater-placeholder.jpg"}
+                  src={show.images?.square || show.images?.main || "/images/theater-placeholder.jpg"}
                   alt={show.title}
                   loading="lazy"
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"

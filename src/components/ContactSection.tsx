@@ -10,8 +10,7 @@ const ContactSection = () => {
             Επικοινωνία
           </h2>
           <p className="text-body-lg opacity-90 max-w-2xl mx-auto">
-            Συνδεθείτε με την κοινότητά μας των λάτρεων του θεάτρου και μείνετε ενημερωμένοι 
-            για τις επερχόμενες παραστάσεις και ειδικές εκδηλώσεις.
+            Συνδεθείτε με την κοινότητά μας και μείνετε ενημερωμένοι για τις επερχόμενες παραστάσεις και ειδικές εκδηλώσεις.
           </p>
         </div>
 
@@ -41,7 +40,21 @@ const ContactSection = () => {
                 href={`tel:${productionCompanyData.company.contact.phone[0]}`}
                 className="hover:text-gold transition-colors duration-300"
               >
-                {productionCompanyData.company.contact.phone[0]}
+                ΜΕΘΕΞΙΣ {productionCompanyData.company.contact.phone[0]}
+              </a>
+              <br />
+              <a 
+                href={`tel:${productionCompanyData.company.contact.phone[1]}`}
+                className="hover:text-gold transition-colors duration-300"
+              >
+                ΜΕΘΕΞΙΣ {productionCompanyData.company.contact.phone[1]}
+              </a>
+              <br />
+              <a 
+                href={`tel:${productionCompanyData.company.filip.phone}`}
+                className="hover:text-gold transition-colors duration-300"
+              >
+                ΦΙΛΙΠ {productionCompanyData.company.filip.phone}
               </a>
             </p>
           </div>
@@ -52,8 +65,8 @@ const ContactSection = () => {
             </div>
             <h3 className="text-xl font-display mb-3">Διεύθυνση</h3>
             <p className="opacity-90">
-              {productionCompanyData.company.address.street}<br />
-              {productionCompanyData.company.address.city} {productionCompanyData.company.address.postal_code}
+              {productionCompanyData.company.filip.address.street}<br />
+              {productionCompanyData.company.filip.address.city} {productionCompanyData.company.filip.address.postal_code}
             </p>
           </div>
         </div>

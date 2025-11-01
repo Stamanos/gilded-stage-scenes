@@ -14,10 +14,9 @@ const About = () => {
       <section className="pt-32 pb-24 bg-primary text-primary-foreground">
         <div className="container mx-auto px-6">
           <div className="text-center animate-fade-up">
-            <h1 className="text-display-xl mb-6">Σχετικά με εμάς</h1>
+            <h1 className="text-display-xl mb-6">Μέθεξις</h1>
             <p className="text-body-lg opacity-90 max-w-3xl mx-auto">
-              Το Μέθεξις productions δημιουργήθηκε με την πεποίθηση ότι το θέατρο δεν είναι απλώς ψυχαγωγία, 
-              αλλά μια μεταμορφωτική εμπειρία που προκαλεί, εμπνέει και μας συνδέει με την κοινή μας ανθρωπιά.
+              Η συμμετοχή του κατώτερου στο ανώτερο, του αισθητού στο νοητό, του ανθρώπινου στο θείο - μια διαχρονική φιλοσοφία που καθοδηγεί το όραμά μας για το θέατρο.
             </p>
           </div>
         </div>
@@ -29,121 +28,58 @@ const About = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-24">
             <div className="animate-slide-in">
               <h2 className="text-display-lg text-foreground mb-8">
-                Η Φιλοσοφία μας
+                Το ΦΙΛΙΠ ξαναζωντανεύει από τον κινηματογράφο στην τέχνη του θεάτρου
               </h2>
               <div className="space-y-6">
-                <p className="text-body-lg text-muted-foreground leading-relaxed">
-                  Στον ιντιμιστικό μας χώρο των 150 θέσεων, δημιουργούμε ένα περιβάλλον όπου οι ιστορίες 
-                  ζωντανεύουν μέσα από τον γάμο της κλασικής τεχνικής με τη σύγχρονη οπτική.
+                <p className="text-body-lg text-muted-foreground leading-relaxed">                  
+                  Ο κινηματογράφος ΦΙΛΙΠ, που στεγαζόταν στο ισόγειο του κτιρίου του Αφεντάκειου Ιδρύματος στη γωνία Ιωάννου Δροσοπούλου και Θάσου, 
+                  ιδρύθηκε το 1966 από τον Φίλιππο Ρουμελιώτη. Υπήρξε ένας από τους πιο ποιοτικούς κινηματογράφους της Κυψέλης, γνωστός για την 
+                  προσεγμένη επιλογή των ταινιών του. Παρά την κρίση που έπληξε τον χώρο του κινηματογράφου, το 2002 ο ΦΙΛΙΠ πέρασε στη διεύθυνση 
+                  του Νεανικού Πλάνου και μεταμορφώθηκε σε σύγχρονο κινηματογράφο τέχνης, παραμένοντας προσηλωμένος στην ποιότητα και την καλλιτεχνική αξία. 
+                  Έκλεισε οριστικά το 2010, αφήνοντας όμως πίσω του ένα σημαντικό πολιτιστικό αποτύπωμα. Δεκαπέντε χρόνια αργότερα, το ΦΙΛΙΠ ανοίγει 
+                  ξανά τις πόρτες του, αυτή τη φορά για να υπηρετήσει μια άλλη μορφή τέχνης — την τέχνη του θεάτρου. Ο ιστορικός αυτός χώρος περνά 
+                  στα χέρια του καταξιωμένου ηθοποιού, σκηνοθέτη και παραγωγού Χρήστου Τριπόδη, ο οποίος, μέσω της εταιρείας παραγωγής του Μέθεξις, 
+                  δίνει νέα πνοή στα αθηναϊκά θεατρικά δρώμενα. Το όνομα παραμένει το ίδιο — ΦΙΛΙΠ — σε μια γειτονιά τόσο βαθιά συνδεδεμένη με την 
+                  τέχνη και τη δημιουργία, όπως είναι η Κυψέλη. Ο χώρος ανακαινίστηκε πλήρως, τηρώντας όλες τις σύγχρονες θεατρικές προδιαγραφές και 
+                  διατηρώντας τον σεβασμό στην ιστορική του ταυτότητα. Πιστό στην παράδοση του ποιοτικού πολιτισμού, το ΦΙΛΙΠ συνεχίζει τη διαδρομή 
+                  του ως ζωντανός πυρήνας τέχνης και δημιουργίας, προσφέροντας στο κοινό παραστάσεις υψηλού επιπέδου και συμβάλλοντας ενεργά στην 
+                  αναγέννηση της θεατρικής ζωής της πόλης.
                 </p>
                 <p className="text-body text-muted-foreground leading-relaxed">
-                  Η καλλιτεχνική μας φιλοσοφία επικεντρώνεται στη δύναμη της ζωντανής παράστασης να 
-                  δημιουργεί γνήσιες στιγμές αποκάλυψης και σύνδεσης. Πιστεύουμε στο θέατρο ως μια 
-                  συλλογική τέχνη που φέρνει κοντά καλλιτέχνες και κοινό σε κοινή ανακάλυψη.
                 </p>
               </div>
             </div>
 
             <div className="space-y-8 animate-fade-up">
               <div className="bg-card p-8 rounded-lg shadow-elegant">
-                <h3 className="text-display-md text-card-foreground mb-4">Όραμα</h3>
+                <h3 className="text-display-md text-card-foreground mb-4">Ποιοί είμαστε</h3>
                 <p className="text-body text-muted-foreground leading-relaxed">
-                  Να δημιουργήσουμε εξαιρετικές θεατρικές εμπειρίες που τιμούν την τέχνη ενώ 
-                  προωθούν τα καλλιτεχνικά όρια, καλλιεργώντας μια βαθύτερη κατανόηση της ανθρώπινης κατάστασης.
+                  Η εταιρία θεατρικών παραγωγών «ΜΕΘΕΞΙΣ» ιδρύθηκε το 2013 από τον Χρήστο Τριπόδη. Έχοντας συμπληρώσει δώδεκα χρόνια ενεργής παρουσίας και 
+                  με πάνω από τριάντα θεατρικές παραγωγές στο ενεργητικό της, η «ΜΕΘΕΞΙΣ» συνεχίζει με πίστη, συνέπεια και σεβασμό να δημιουργεί και να 
+                  παρουσιάζει θεάματα που ψυχαγωγούν και συγκινούν θεατές όλων των ηλικιών. Από το 2018, η εταιρία έχει αναλάβει τον προγραμματισμό, 
+                  τη διοργάνωση και την επιμέλεια των πολιτιστικών εκδηλώσεων του Καλοκαιρινού Φεστιβάλ Δήμου Παπάγου – Χολαργού, συνεργασία που συνεχίζεται 
+                  έως σήμερα. Από το 2024, έχει επίσης αναλάβει τον προγραμματισμό, τη διοργάνωση και την επιμέλεια των πολιτιστικών εκδηλώσεων του Καλοκαιρινού 
+                  Φεστιβάλ Δήμου Ηλιούπολης.
                 </p>
               </div>
 
               <div className="bg-accent/5 p-8 rounded-lg border border-accent/20">
-                <h3 className="text-display-md text-foreground mb-4">Αποστολή</h3>
+                <h3 className="text-display-md text-foreground mb-4">Στο ενεργητικό της περιλαμβάνονται πλήθος επιτυχημένων παραγωγών, όπως:</h3>
                 <p className="text-body text-muted-foreground leading-relaxed">
-                  Αναζητούμε να φωτίσουμε το βαθύ μέσα στο οικείο, δημιουργώντας θέατρο 
-                  που είναι ταυτόχρονα διανοητικά αυστηρό και συναισθηματικά συντονισμένο.
+                  «Χάσαμε τη Θεία Στοπ» (2025), «Φιλοκτήτης» (2025), «Ούτε Μπρος Ούτε Πίσω» (2025), «Η Σπασμένη Στάμνα» (2024–2025), «Βότκα Μολότοφ» (2023–2025), 
+                  «Η Συνάντηση» (2024–2025), «Ο Παππούς Έχει Πίεση» (2024–2025), Αρκάς – «Εκτός Ελέγχου» (2022), «Το Νυφικό Κρεβάτι» (2021), CINE (2021), 
+                  Αρκάς – «Η Ζωή Μετά» (2020–2021), Αρκάς – «Ζωή Μετά Χαμηλών Πτήσεων» (2019–2020), «Μόλις Χώρισα» (2018).                 
+                </p>
+              </div>
+              <div className="bg-accent/5 p-8 rounded-lg border border-accent/20">
+                <h3 className="text-display-md text-foreground mb-4">Παράλληλα, η «ΜΕΘΕΞΙΣ» δημιουργεί και παιδικές παραστάσεις, όπως:</h3>
+                <p className="text-body text-muted-foreground leading-relaxed">
+                  «Ο Πέτρος και ο Λύκος» (2024–2025), «Ο Θρύλος της Μουλάν» (2024–2025), «Το Καρναβάλι των Ζώων» (2023–2024), 
+                  «Λάχανα και Χάχανα – Ο Καλός μου Εαυτός» (2022–2024), «Το Όνειρο του Σκιάχτρου» (2019–2020).
+                  Η εταιρία είναι επίσης ιδιοκτήτης του Θεάτρου Φιλίπ, το οποίο φιλοξενεί μεγάλο μέρος των παραγωγών της.           
                 </p>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Team Section */}
-      <section className="py-24 bg-secondary">
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-display-lg text-foreground mb-6">
-              Η Δημιουργική μας Ομάδα
-            </h2>
-            <p className="text-body-lg text-muted-foreground max-w-2xl mx-auto">
-              Μια ομάδα έμπειρων καλλιτεχνών που εργάζονται με πάθος για τη δημιουργία 
-              αξέχαστων θεατρικών στιγμών.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
-            {teamData.teamMembers.map((member, index) => (
-              <div 
-                key={index}
-                className="text-center stagger-item"
-                style={{ animationDelay: `${index * 0.15}s` }}
-              >
-                <div className="w-32 h-32 rounded-full mx-auto mb-6 overflow-hidden shadow-elegant">
-                  <img
-                    src={member.image}
-                    alt={member.name}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <h3 className="text-xl font-semibold text-foreground mb-2">
-                  {member.name}
-                </h3>
-                <p className="text-accent font-medium mb-4">
-                  {member.role}
-                </p>
-                <p className="text-body text-muted-foreground leading-relaxed">
-                  {member.bio}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Values Section */}
-      <section className="py-24 bg-background">
-        <div className="container mx-auto px-6">
-          <h2 className="text-display-lg text-foreground mb-16 text-center">
-            Οι Αξίες μας
-          </h2>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              {
-                icon: "🎭",
-                title: "Αυθεντικότητα",
-                description: "Κάθε παράσταση αντικατοπτρίζει την πραγματική μας ουσία και τις βαθιές μας πεποιθήσεις."
-              },
-              {
-                icon: "✨",
-                title: "Καινοτομία",
-                description: "Αναζητούμε νέους τρόπους να αφηγηθούμε παλιές ιστορίες με σύγχρονη ματιά."
-              },
-              {
-                icon: "🤝",
-                title: "Κοινότητα",
-                description: "Το θέατρο ανθεί μέσα στην κοινότητα. Καλλιεργούμε σχέσεις με καλλιτέχνες και κοινό."
-              }
-            ].map((value, index) => (
-              <div 
-                key={value.title}
-                className="bg-card p-8 rounded-lg shadow-elegant text-center stagger-item"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                <div className="text-4xl mb-4">{value.icon}</div>
-                <h3 className="text-xl font-semibold text-card-foreground mb-4">{value.title}</h3>
-                <p className="text-body text-muted-foreground leading-relaxed">
-                  {value.description}
-                </p>
-              </div>
-            ))}
           </div>
         </div>
       </section>

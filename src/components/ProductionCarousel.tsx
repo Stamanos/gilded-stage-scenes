@@ -66,7 +66,7 @@ const ProductionCarousel = () => {
                 >
                   <div className="aspect-[3/4] bg-secondary relative overflow-hidden">
                     <img
-                      src={production.images?.main || "/images/theater-placeholder.jpg"}
+                      src={production.images?.portrait || "/images/theater-placeholder.jpg"}
                       alt={production.title}
                       className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                     />

@@ -16,8 +16,7 @@ const Contact = () => {
           <div className="text-center animate-fade-up">
             <h1 className="text-display-xl mb-6">Επικοινωνία</h1>
             <p className="text-body-lg opacity-90 max-w-3xl mx-auto">
-              Συνδεθείτε με την κοινότητά μας των λάτρεων του θεάτρου. Μείνετε ενημερωμένοι 
-              για τις επερχόμενες παραστάσεις, ειδικές εκδηλώσεις και παρασκηνιακά νέα.
+              Συνδεθείτε με την κοινότητά μας και μείνετε ενημερωμένοι για τις επερχόμενες παραστάσεις και ειδικές εκδηλώσεις.
             </p>
           </div>
         </div>
@@ -46,7 +45,7 @@ const Contact = () => {
               <div className="bg-accent/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
                 <Phone className="w-6 h-6 text-accent" />
               </div>
-              <h3 className="text-xl font-semibold text-foreground mb-3">Τηλέφωνο</h3>
+              <h3 className="text-xl font-semibold text-foreground mb-3">Τηλέφωνο ΜΕΘΕΞΙΣ</h3>
               <div className="text-muted-foreground space-y-1">
                 {productionCompanyData.company.contact.phone.map((phone, index) => (
                   <div key={index}>
@@ -65,22 +64,27 @@ const Contact = () => {
               <div className="bg-accent/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
                 <MapPin className="w-6 h-6 text-accent" />
               </div>
-              <h3 className="text-xl font-semibold text-foreground mb-3">Διεύθυνση</h3>
+              <h3 className="text-xl font-semibold text-foreground mb-3">Διεύθυνση ΦΙΛΙΠ</h3>
               <p className="text-muted-foreground">
-                {productionCompanyData.company.address.street}<br />
-                {productionCompanyData.company.address.city} {productionCompanyData.company.address.postal_code}
+                {productionCompanyData.company.filip.address.street}<br />
+                {productionCompanyData.company.filip.address.city} {productionCompanyData.company.filip.address.postal_code}
               </p>
             </div>
 
             <div className="text-center animate-fade-up" style={{ animationDelay: "0.3s" }}>
               <div className="bg-accent/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
-                <Clock className="w-6 h-6 text-accent" />
+                <Phone className="w-6 h-6 text-accent" />
               </div>
-              <h3 className="text-xl font-semibold text-foreground mb-3">Ώρες Λειτουργίας</h3>
-              <div className="text-muted-foreground text-sm space-y-1">
-                {productionCompanyData.company.opening_hours.map((schedule, index) => (
+              <h3 className="text-xl font-semibold text-foreground mb-3">Τηλέφωνο ΦΙΛΙΠ</h3>
+              <div className="text-muted-foreground space-y-1">
+                {productionCompanyData.company.filip.phone.map((phone, index) => (
                   <div key={index}>
-                    <span className="font-medium">{schedule.day}:</span> {schedule.hours}
+                    <a 
+                      href={`tel:${phone}`}
+                      className="hover:text-accent transition-colors duration-300"
+                    >
+                      {phone}
+                    </a>
                   </div>
                 ))}
               </div>
@@ -128,12 +132,12 @@ const Contact = () => {
               </div>
 
               <div className="mt-12 bg-card p-8 rounded-lg shadow-elegant">
-                <h4 className="text-display-sm text-card-foreground mb-4">Υπεύθυνος Επικοινωνίας</h4>
+                <h4 className="text-display-sm text-card-foreground mb-4">Επικοινωνία</h4>
                 <div className="space-y-2 text-muted-foreground">
-                  <p><strong>{productionCompanyData.company.owner}</strong></p>
-                  <p>Παραγωγός / Σκηνοθέτης</p>
+                  <p><strong>{productionCompanyData.company.name}</strong></p>
                   <p>📧 {productionCompanyData.company.contact.email}</p>
-                  <p>📞 {productionCompanyData.company.contact.phone[0]}</p>
+                  <p>📞Σταθερό {productionCompanyData.company.contact.phone[0]}</p>
+                  <p>📞Κινητό {productionCompanyData.company.contact.phone[1]}</p>
                 </div>
               </div>
             </div>

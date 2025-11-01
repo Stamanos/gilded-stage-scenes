@@ -9,7 +9,15 @@ const HeroSection = () => {
   );
   
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
   
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 640);
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
+
   // Manual navigation only - no auto-rotation
   
   const goToNext = () => {
@@ -34,18 +42,23 @@ const HeroSection = () => {
       </section>
     );
   }
-  
+
   const currentProduction = currentProductions[currentIndex];
+  
+  // Επιλογή εικόνας ανάλογα με το αν είναι mobile
+  const bgImage = isMobile
+    ? currentProduction.images?.portrait || currentProduction.images?.main || "/images/theater-placeholder.jpg"
+    : currentProduction.images?.main || currentProduction.images?.landscape || "/images/theater-placeholder.jpg";
   
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image - Responsive with object-fit */}
       <div className="absolute inset-0 overflow-hidden">
         <img
-          src={currentProduction.images?.landscape || currentProduction.images?.main || "/images/theater-placeholder.jpg"}
+          src={bgImage}
           alt={currentProduction.title}
           loading="eager"
-          className="w-full h-full object-cover transition-all duration-1000 ease-in-out"
+          className="w-full h-full object-cover object-top transition-all duration-1000 ease-in-out"
         />
       </div>
       
