@@ -101,6 +101,16 @@ const Contact = () => {
               
               <div className="flex justify-center space-x-8">
                 <a 
+                  href="https://www.instagram.com/filiptheater/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group bg-card hover:bg-accent p-6 rounded-2xl transition-all duration-300 hover:scale-110 hover:shadow-lg"
+                  aria-label="Instagram"
+                >
+                  <Instagram className="w-8 h-8 text-accent group-hover:text-accent-foreground transition-colors duration-300" />
+                </a>
+
+                <a 
                   href="https://www.instagram.com/methexis_productions/"
                   target="_blank"
                   rel="noopener noreferrer"

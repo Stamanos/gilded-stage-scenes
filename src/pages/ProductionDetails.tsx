@@ -49,7 +49,7 @@ const ProductionDetails = () => {
             src={production.images?.landscape || production.images?.main || "/images/theater-hero.jpg"}
             alt={production.title}
             loading="eager"
-            className="w-full h-full object-cover object-top" // Προσθήκη object-top
+            className="w-full h-full object-cover object-top"
           />
           <div className="absolute inset-0 bg-gradient-to-br from-black/70 via-black/40 to-black/60" />
         </div>
@@ -230,9 +230,6 @@ const ProductionDetails = () => {
                     <div>
                       <p className="font-medium text-foreground">Ημερομηνίες</p>
                       <p className="text-sm text-muted-foreground">{production.productionInfo?.dates || production.dates || 'Ημερομηνίες θα ανακοινωθούν'}</p>
-                      {production.schedule && (
-                        <p className="text-xs text-muted-foreground mt-1">{production.schedule}</p>
-                      )}
                     </div>
                   </div>
 
@@ -242,7 +239,18 @@ const ProductionDetails = () => {
                     <MapPin className="h-4 w-4 text-accent mt-1" />
                     <div>
                       <p className="font-medium text-foreground">Χώρος</p>
-                      <p className="text-sm text-muted-foreground">{production.venue}</p>
+                      {production.venue ? (
+                        <a
+                          href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(production.venue)}`}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-sm text-muted-foreground hover:underline"
+                        >
+                          {production.venue}
+                        </a>
+                      ) : (
+                        <p className="text-sm text-muted-foreground">—</p>
+                      )}
                     </div>
                   </div>
 
@@ -268,16 +276,6 @@ const ProductionDetails = () => {
                           <p className="font-medium text-foreground">Κοινό</p>
                           <p className="text-sm text-muted-foreground">{production.targetAudience}</p>
                         </div>
-                      </div>
-                    </>
-                  )}
-
-                  {production.nextShow && production.nextShow !== "never" && (
-                    <>
-                      <Separator />
-                      <div className="p-3 bg-accent/10 rounded-lg">
-                        <p className="font-medium text-accent text-sm">Επόμενη Παράσταση</p>
-                        <p className="text-sm text-muted-foreground">{production.nextShow}</p>
                       </div>
                     </>
                   )}
@@ -381,6 +379,15 @@ const ProductionDetails = () => {
                   className="aspect-square bg-secondary rounded-lg overflow-hidden shadow-sm hover:shadow-elegant transition-all duration-300 cursor-pointer hover:scale-105 stagger-item"
                   style={{ animationDelay: `${index * 0.05}s` }}
                   onClick={() => openLightbox(index)}
+                  onKeyDown={(e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      openLightbox(index);
+                    }
+                  }}
+                  role="button"
+                  tabIndex={0}
+                  aria-label={`${production.title} - Φωτογραφία ${index + 1}`}
                 >
                   <img
                     src={image}

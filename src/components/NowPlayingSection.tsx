@@ -57,7 +57,7 @@ const NowPlayingSection = () => {
                 <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 sm:gap-2">
                   <div>
                     <p className="text-xs sm:text-sm text-accent font-medium">
-                      📅 {show.nextShow}
+                      📅 {show.productionInfo.dates || show.dates || 'Οι ημερομηνίες θα ανακοινωθούν'}
                     </p>
                   </div>
                   {show.bookingLink && show.status === "current" ? (

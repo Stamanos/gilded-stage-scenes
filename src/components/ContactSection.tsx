@@ -80,6 +80,16 @@ const ContactSection = () => {
             
             <div className="flex justify-center space-x-6">
               <a 
+                href="https://www.instagram.com/filiptheater/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group bg-primary-foreground/10 hover:bg-gold p-4 rounded-full transition-all duration-300 hover:scale-110 hover:shadow-lg"
+                aria-label="Instagram"
+              >
+                <Instagram className="w-6 h-6 text-primary-foreground group-hover:text-primary transition-colors duration-300" />
+              </a>
+
+              <a 
                 href="https://www.instagram.com/methexis_productions/"
                 target="_blank"
                 rel="noopener noreferrer"

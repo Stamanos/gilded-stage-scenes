@@ -8,10 +8,19 @@ const Footer = () => {
               <span className="text-foreground">Μέθεξις</span>
               <span className="text-accent ml-2">Productions</span>
             </div>
-            <p className="text-body text-muted-foreground leading-relaxed max-w-md">
-              Creating transformative theatrical experiences that honor tradition 
-              while embracing contemporary artistic vision.
-            </p>
+            <div className="flex items-center space-x-6">
+              <img
+                src="/logo.png"
+                alt="Μέθεξις logo"
+                className="h-14 w-auto object-contain"
+              />
+              <img
+                src="/logo_filip.jpg"
+                alt="Θέατρο Φιλίπ logo"
+                className="h-14 w-auto object-contain"
+              />
+            </div>
+            
           </div>
 
           <div>
@@ -44,17 +53,22 @@ const Footer = () => {
             <h4 className="font-display text-lg text-foreground mb-4">Επικοινωνία</h4>
             <ul className="space-y-2 text-muted-foreground">
               <li>
-                <a href="#" className="hover:text-accent transition-colors duration-300">
-                  Instagram
+                <a href="https://www.instagram.com/filiptheater/" className="hover:text-accent transition-colors duration-300">
+                  Instagram ΦΙΛΙΠ
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-accent transition-colors duration-300">
+                <a href="https://www.instagram.com/methexis_productions/" className="hover:text-accent transition-colors duration-300">
+                  Instagram ΜΕΘΕΞΙΣ
+                </a>
+              </li>
+              <li>
+                <a href="https://www.facebook.com/methexis.productions/" className="hover:text-accent transition-colors duration-300">
                   Facebook
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-accent transition-colors duration-300">
+                <a href="https://www.youtube.com/@methexisproductions1453" className="hover:text-accent transition-colors duration-300">
                   YouTube
                 </a>
               </li>
