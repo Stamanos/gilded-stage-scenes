@@ -12,16 +12,16 @@
       "genre": "Δράμα", 
       "duration": "60 λεπτά",
       "images": {
-        "main": "/productions/Terror/TERROR_main.jpg",
-        "square": "/productions/Terror/TERROR_square.jpg",
-        "landscape": "/productions/Terror/TERROR_landscape.jpg",
-        "portrait": "/productions/Terror/TERROR_portrait.jpg"
+        "main": "/img/Terror/TERROR_main.jpg",
+        "square": "/img/Terror/TERROR_square.jpg",
+        "landscape": "/img/Terror/TERROR_landscape.jpg",
+        "portrait": "/img/Terror/TERROR_portrait.jpg"
       },
       "galleryImages": [
-        "/productions/Terror/photos/1.jpg",
-        "/productions/Terror/photos/2.jpg",
-        "/productions/Terror/photos/3.jpg",
-        "/productions/Terror/photos/4.jpg"
+        "/img/Terror/photos/1.jpg",
+        "/img/Terror/photos/2.jpg",
+        "/img/Terror/photos/3.jpg",
+        "/img/Terror/photos/4.jpg"
       ],
       "status": "current",
       "bookingLink": "https://www.more.com/gr-el/tickets/theater/terror-1/",
@@ -74,10 +74,10 @@
       "genre": "Τραγωδία", 
       "duration": "110 λεπτά",
       "images": {
-        "main": "/productions/filoktitis/wallpaper.jpg",
-        "square": "/productions/filoktitis/square.jpg",
-        "landscape": "/productions/filoktitis/wallpaper.jpg",
-        "portrait": "/productions/filoktitis/banner.jpg"
+        "main": "/img/filoktitis/wallpaper.jpg",
+        "square": "/img/filoktitis/square.jpg",
+        "landscape": "/img/filoktitis/wallpaper.jpg",
+        "portrait": "/img/filoktitis/banner.jpg"
       },
       "galleryImages": [],
       "status": "past",
@@ -137,19 +137,19 @@
       "genre": "Κωμωδία",
       "targetAudience": "Άνω των 12 ετών",
       "images": {
-        "main": "/productions/Theia/THEIA_main.jpg",
-        "square": "/productions/Theia/THEIA_square.jpg",
-        "landscape": "/productions/Theia/THEIA_landscape.jpg",
-        "portrait": "/productions/Theia/THEIA_portrait.jpg"
+        "main": "/img/Theia/THEIA_main.jpg",
+        "square": "/img/Theia/THEIA_square.jpg",
+        "landscape": "/img/Theia/THEIA_landscape.jpg",
+        "portrait": "/img/Theia/THEIA_portrait.jpg"
       },
       "galleryImages": [
-        "/productions/Theia/photos/1.jpg",
-        "/productions/Theia/photos/2.jpg",
-        "/productions/Theia/photos/3.jpg",
-        "/productions/Theia/photos/4.jpg",
-        "/productions/Theia/photos/5.jpg",
-        "/productions/Theia/photos/6.jpg",
-        "/productions/Theia/photos/7.jpg"
+        "/img/Theia/photos/1.jpg",
+        "/img/Theia/photos/2.jpg",
+        "/img/Theia/photos/3.jpg",
+        "/img/Theia/photos/4.jpg",
+        "/img/Theia/photos/5.jpg",
+        "/img/Theia/photos/6.jpg",
+        "/img/Theia/photos/7.jpg"
       ],
       "status": "current",
       "bookingLink": "https://www.more.com/gr-el/tickets/theater/xasame-ti-theia-stop/",
@@ -196,16 +196,16 @@
       "genre": "Παιδικό",
       "targetAudience": "Παιδιά και οικογένειες",
       "images": {
-        "main": "/productions/Aliki/ALIKI_main.jpg",
-        "square": "/productions/Aliki/ALIKI_square.jpg",
-        "landscape": "/productions/Aliki/ALIKI_landscape.jpg",
-        "portrait": "/productions/Aliki/ALIKI_portrait.jpg"
+        "main": "/img/Aliki/ALIKI_main.jpg",
+        "square": "/img/Aliki/ALIKI_square.jpg",
+        "landscape": "/img/Aliki/ALIKI_landscape.jpg",
+        "portrait": "/img/Aliki/ALIKI_portrait.jpg"
       },
       "galleryImages": [
-        "/productions/Aliki/photos/1.jpg",
-        "/productions/Aliki/photos/2.jpg",
-        "/productions/Aliki/photos/3.jpg",
-        "/productions/Aliki/photos/4.jpg"
+        "/img/Aliki/photos/1.jpg",
+        "/img/Aliki/photos/2.jpg",
+        "/img/Aliki/photos/3.jpg",
+        "/img/Aliki/photos/4.jpg"
       ],
       "status": "current",
       "cast": [
@@ -243,19 +243,19 @@
       "duration": "85 λεπτά",
       "targetAudience": "Παιδιά και οικογένειες",
       "images": {
-        "main": "/productions/karnavali/banner.jpg",
-        "square": "/productions/karnavali/banner.jpg", 
-        "landscape": "/productions/karnavali/banner-2.jpg",
-        "portrait": "/productions/karnavali/banner.jpg"
+        "main": "/img/karnavali/banner.jpg",
+        "square": "/img/karnavali/banner.jpg", 
+        "landscape": "/img/karnavali/banner-2.jpg",
+        "portrait": "/img/karnavali/banner.jpg"
       },
       "galleryImages": [
-        "/productions/karnavali/atomiko_A2 (1).jpg",
-        "/productions/karnavali/atomiko_B2 (1).jpg",
-        "/productions/karnavali/atomiko_C2 (1).jpg",
-        "/productions/karnavali/atomiko_D2 (1).jpg",
-        "/productions/karnavali/atomiko_F2 (1).jpg",
-        "/productions/karnavali/atomiko_G2 (1).jpg",
-        "/productions/karnavali/atomiko_H2 (1).jpg"
+        "/img/karnavali/atomiko_A2 (1).jpg",
+        "/img/karnavali/atomiko_B2 (1).jpg",
+        "/img/karnavali/atomiko_C2 (1).jpg",
+        "/img/karnavali/atomiko_D2 (1).jpg",
+        "/img/karnavali/atomiko_F2 (1).jpg",
+        "/img/karnavali/atomiko_G2 (1).jpg",
+        "/img/karnavali/atomiko_H2 (1).jpg"
       ],
       "status": "past",
       "creativeTeam": {
@@ -287,10 +287,10 @@
       "duration": "80 λεπτά",
       "targetAudience": "Παιδιά και οικογένειες",
       "images": {
-        "main": "/productions/laxana-xaxana/banner.jpg",
-        "square": "/productions/laxana-xaxana/banner.jpg",
-        "landscape": "/productions/laxana-xaxana/banner.jpg",
-        "portrait": "/productions/laxana-xaxana/banner.jpg"
+        "main": "/img/laxana-xaxana/banner.jpg",
+        "square": "/img/laxana-xaxana/banner.jpg",
+        "landscape": "/img/laxana-xaxana/banner.jpg",
+        "portrait": "/img/laxana-xaxana/banner.jpg"
       },
       "galleryImages": [],
       "status": "past",
@@ -321,10 +321,10 @@
       "genre": "Κωμωδία",
       "duration": "95 λεπτά",
       "images": {
-        "main": "/productions/o-pappous/banner.jpg",
-        "square": "/productions/o-pappous/banner.jpg",
-        "landscape": "/productions/o-pappous/banner.jpg",
-        "portrait": "/productions/o-pappous/banner.jpg"
+        "main": "/img/o-pappous/banner.jpg",
+        "square": "/img/o-pappous/banner.jpg",
+        "landscape": "/img/o-pappous/banner.jpg",
+        "portrait": "/img/o-pappous/banner.jpg"
       },
       "galleryImages": [],
       "status": "past",
@@ -364,10 +364,10 @@
       "duration": "65 λεπτά",
       "targetAudience": "Οικογένειες με παιδιά 5-12 ετών",
       "images": {
-        "main": "/productions/o-petros-kai-lykos/banner.jpg",
-        "square": "/productions/o-petros-kai-lykos/banner.jpg",
-        "landscape": "/productions/o-petros-kai-lykos/banner.jpg",
-        "portrait": "/productions/o-petros-kai-lykos/banner.jpg"
+        "main": "/img/o-petros-kai-lykos/banner.jpg",
+        "square": "/img/o-petros-kai-lykos/banner.jpg",
+        "landscape": "/img/o-petros-kai-lykos/banner.jpg",
+        "portrait": "/img/o-petros-kai-lykos/banner.jpg"
       },
       "galleryImages": [],
       "status": "past",
@@ -413,19 +413,19 @@
       "duration": "90 λεπτά",
       "bookingLink": "https://www.more.com/gr-el/tickets/theater/oute-mpros-oute-piso/",
       "images": {
-        "main": "/productions/Oute_bros/OUTE_BROS_OUTE_PISO_main.jpg",
-        "square": "/productions/Oute_bros/OUTE_BROS_OUTE_PISO_square.jpg",
-        "landscape": "/productions/Oute_bros/OUTE_BROS_OUTE_PISO_landscape.jpg",
-        "portrait": "/productions/Oute_bros/OUTE_BROS_OUTE_PISO_portrait.jpg"
+        "main": "/img/Oute_bros/OUTE_BROS_OUTE_PISO_main.jpg",
+        "square": "/img/Oute_bros/OUTE_BROS_OUTE_PISO_square.jpg",
+        "landscape": "/img/Oute_bros/OUTE_BROS_OUTE_PISO_landscape.jpg",
+        "portrait": "/img/Oute_bros/OUTE_BROS_OUTE_PISO_portrait.jpg"
       },
       "galleryImages": [
-        "/productions/Oute_bros/photos/1.jpg",
-        "/productions/Oute_bros/photos/2.jpg",
-        "/productions/Oute_bros/photos/3.jpg",
-        "/productions/Oute_bros/photos/4.jpg",
-        "/productions/Oute_bros/photos/5.jpg",
-        "/productions/Oute_bros/photos/6.jpg",
-        "/productions/Oute_bros/photos/7.jpg"
+        "/img/Oute_bros/photos/1.jpg",
+        "/img/Oute_bros/photos/2.jpg",
+        "/img/Oute_bros/photos/3.jpg",
+        "/img/Oute_bros/photos/4.jpg",
+        "/img/Oute_bros/photos/5.jpg",
+        "/img/Oute_bros/photos/6.jpg",
+        "/img/Oute_bros/photos/7.jpg"
       ],
       "status": "current",
       "cast": [
@@ -474,20 +474,20 @@
       "genre": "Κωμωδία",
       "duration": "100 λεπτά",
       "images": {
-        "main": "/productions/stamna/banner.jpg",
-        "square": "/productions/stamna/banner.jpg",
-        "landscape": "/productions/stamna/banner.jpg", 
-        "portrait": "/productions/stamna/banner.jpg"
+        "main": "/img/stamna/banner.jpg",
+        "square": "/img/stamna/banner.jpg",
+        "landscape": "/img/stamna/banner.jpg", 
+        "portrait": "/img/stamna/banner.jpg"
       },
       "galleryImages": [
-        "/productions/stamna/DSC02435-2.jpg",
-        "/productions/stamna/DSC02578.jpg",
-        "/productions/stamna/DSC02631.jpg",
-        "/productions/stamna/DSC02786.jpg",
-        "/productions/stamna/DSC02824.jpg",
-        "/productions/stamna/DSC03225.jpg",
-        "/productions/stamna/DSC03413.jpg",
-        "/productions/stamna/STAMN00058low (1).jpg"
+        "/img/stamna/DSC02435-2.jpg",
+        "/img/stamna/DSC02578.jpg",
+        "/img/stamna/DSC02631.jpg",
+        "/img/stamna/DSC02786.jpg",
+        "/img/stamna/DSC02824.jpg",
+        "/img/stamna/DSC03225.jpg",
+        "/img/stamna/DSC03413.jpg",
+        "/img/stamna/STAMN00058low (1).jpg"
       ],
       "status": "past",
       "cast": [
@@ -528,15 +528,15 @@
       "genre": "Δράμα",
       "duration": "90 λεπτά",
       "images": {
-        "main": "/productions/synantisi/banner.jpg",
-        "square": "/productions/synantisi/banner.jpg",
-        "landscape": "/productions/synantisi/banner.jpg",
-        "portrait": "/productions/synantisi/banner.jpg"
+        "main": "/img/synantisi/banner.jpg",
+        "square": "/img/synantisi/banner.jpg",
+        "landscape": "/img/synantisi/banner.jpg",
+        "portrait": "/img/synantisi/banner.jpg"
       },
       "galleryImages": [
-        "/productions/synantisi/DSC07461_web.jpg",
-        "/productions/synantisi/DSC07510.jpg", 
-        "/productions/synantisi/Group-1.jpg"
+        "/img/synantisi/DSC07461_web.jpg",
+        "/img/synantisi/DSC07510.jpg", 
+        "/img/synantisi/Group-1.jpg"
       ],
       "status": "past",
       "cast": [
@@ -580,16 +580,16 @@
       "duration": "60 λεπτά",
       "bookingLink": "https://www.more.com/gr-el/tickets/theater/botka-molotof/",
       "images": {
-        "main": "/productions/Vodka/VODKA_main.jpg",
-        "square": "/productions/Vodka/VODKA_square.jpg",
-        "landscape": "/productions/Vodka/VODKA_landscape.jpg",
-        "portrait": "/productions/Vodka/VODKA_portrait.jpg"
+        "main": "/img/Vodka/VODKA_main.jpg",
+        "square": "/img/Vodka/VODKA_square.jpg",
+        "landscape": "/img/Vodka/VODKA_landscape.jpg",
+        "portrait": "/img/Vodka/VODKA_portrait.jpg"
       },
       "galleryImages": [
-        "/productions/Vodka/photos/1.jpg",
-        "/productions/Vodka/photos/2.jpg",
-        "/productions/Vodka/photos/3.jpg",
-        "/productions/Vodka/photos/4.jpg"
+        "/img/Vodka/photos/1.jpg",
+        "/img/Vodka/photos/2.jpg",
+        "/img/Vodka/photos/3.jpg",
+        "/img/Vodka/photos/4.jpg"
       ],
       "status": "current",
       "cast": [
@@ -638,18 +638,18 @@
       "duration": "75 λεπτά",
       "targetAudience": "Παιδιά 4-12 ετών",
       "images": {
-        "main": "/productions/moulan/banner.jpg",
-        "square": "/productions/moulan/banner.jpg",
-        "landscape": "/productions/moulan/wallpaper.jpg",
-        "portrait": "/productions/moulan/banner.jpg"
+        "main": "/img/moulan/banner.jpg",
+        "square": "/img/moulan/banner.jpg",
+        "landscape": "/img/moulan/wallpaper.jpg",
+        "portrait": "/img/moulan/banner.jpg"
       },
       "galleryImages": [
-        "/productions/moulan/VILAN.JPG",
-        "/productions/moulan/emperor.JPG",
-        "/productions/moulan/fighter.JPG",
-        "/productions/moulan/kenshi.JPG",
-        "/productions/moulan/moulan.JPG",
-        "/productions/moulan/red_banner.jpg"
+        "/img/moulan/VILAN.JPG",
+        "/img/moulan/emperor.JPG",
+        "/img/moulan/fighter.JPG",
+        "/img/moulan/kenshi.JPG",
+        "/img/moulan/moulan.JPG",
+        "/img/moulan/red_banner.jpg"
       ],
       "status": "past",
       "cast": [
