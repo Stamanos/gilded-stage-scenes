@@ -138,6 +138,7 @@ All colors MUST be HSL.
   .text-body {
     @apply text-base font-body leading-relaxed;
   }
+  
 
   /* Gradient Backgrounds */
   .bg-gradient-hero {

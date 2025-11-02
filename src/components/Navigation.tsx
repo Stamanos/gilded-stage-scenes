@@ -104,50 +104,28 @@ const Navigation = () => {
         {isOpen && (
           <div className="md:hidden absolute top-full left-0 right-0 bg-background/95 backdrop-blur-xl border border-border/20 rounded-b-lg shadow-elegant animate-fade-in z-40">
             <div className="flex flex-col px-6 py-6 space-y-2">
-              <a 
-                href="/productions" 
-                className={`text-body font-medium tracking-wide transition-all duration-300 hover:scale-105 px-4 py-3 rounded-lg relative after:content-[''] after:absolute after:w-0 after:h-0.5 after:bottom-1 after:left-1/2 after:transition-all after:duration-300 hover:after:w-full hover:after:left-0 ${
-                  isScrolled 
-                    ? 'text-foreground hover:text-accent after:bg-accent hover:bg-accent/5' 
-                    : 'text-white/90 hover:text-white after:bg-white hover:bg-white/10'
-                }`}
-                onClick={() => setIsOpen(false)}
-              >
-                Παραστάσεις
-              </a>
-              <a 
-                href="/about" 
-                className={`text-body font-medium tracking-wide transition-all duration-300 hover:scale-105 px-4 py-3 rounded-lg relative after:content-[''] after:absolute after:w-0 after:h-0.5 after:bottom-1 after:left-1/2 after:transition-all after:duration-300 hover:after:w-full hover:after:left-0 ${
-                  isScrolled 
-                    ? 'text-foreground hover:text-accent after:bg-accent hover:bg-accent/5' 
-                    : 'text-white/90 hover:text-white after:bg-white hover:bg-white/10'
-                }`}
-                onClick={() => setIsOpen(false)}
-              >
-                Σχετικά με εμάς
-              </a>
-              <a 
-                href="/news" 
-                className={`text-body font-medium tracking-wide transition-all duration-300 hover:scale-105 px-4 py-3 rounded-lg relative after:content-[''] after:absolute after:w-0 after:h-0.5 after:bottom-1 after:left-1/2 after:transition-all after:duration-300 hover:after:w-full hover:after:left-0 ${
-                  isScrolled 
-                    ? 'text-foreground hover:text-accent after:bg-accent hover:bg-accent/5' 
-                    : 'text-white/90 hover:text-white after:bg-white hover:bg-white/10'
-                }`}
-                onClick={() => setIsOpen(false)}
-              >
-                Νέα
-              </a>
-              <a 
-                href="/contact" 
-                className={`text-body font-medium tracking-wide transition-all duration-300 hover:scale-105 px-4 py-3 rounded-lg relative after:content-[''] after:absolute after:w-0 after:h-0.5 after:bottom-1 after:left-1/2 after:transition-all after:duration-300 hover:after:w-full hover:after:left-0 ${
-                  isScrolled 
-                    ? 'text-foreground hover:text-accent after:bg-accent hover:bg-accent/5' 
-                    : 'text-white/90 hover:text-white after:bg-white hover:bg-white/10'
-                }`}
-                onClick={() => setIsOpen(false)}
-              >
-                Επικοινωνία
-              </a>
+              {[
+                { href: '/productions', label: 'Παραστάσεις' },
+                { href: '/about', label: 'Σχετικά με εμάς' },
+                { href: '/news', label: 'Νέα' },
+                { href: '/contact', label: 'Επικοινωνία' },
+              ].map((item) => (
+                <a
+                  key={item.href}
+                  href={item.href}
+                  onClick={() => setIsOpen(false)}
+                  className="
+                    group relative overflow-hidden
+                    font-medium tracking-wide transition-all duration-300 hover:scale-105
+                    px-4 py-3 rounded-lg border border-border/30 text-center
+                    bg-white/70 text-primary hover:bg-primary hover:text-white
+                    dark:bg-background/90 dark:text-foreground dark:hover:bg-accent dark:hover:text-background
+                  "
+                >
+                  <span className="relative z-10">{item.label}</span>
+                  <div className="absolute inset-0 bg-black/5 dark:bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                </a>
+              ))}
             </div>
           </div>
         )}
