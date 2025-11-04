@@ -30,7 +30,7 @@ const News = () => {
   }, []);
 
   const availableProductions = useMemo(() => {
-    const productionIds = [...new Set(newsData.news.map(item => item.production_id))];
+    const productionIds = [...new Set(newsData.news.map(item => item.production_id))].filter(id => id !== 0);
     return productionIds.map(id => {
       const production = productionsData.productions.find(p => p.id === id);
       return { id, title: production?.title || `Παράσταση ${id}` };
@@ -49,6 +49,7 @@ const News = () => {
 
   // Get production title for each news item
   const getProductionTitle = (productionId: number) => {
+    if (productionId === 0) return undefined;
     const production = productionsData.productions.find(p => p.id === productionId);
     return production?.title;
   };

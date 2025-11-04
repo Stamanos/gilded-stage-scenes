@@ -32,9 +32,9 @@ const NewsCard = ({ item, productionTitle }: NewsCardProps) => {
   };
 
   return (
-    <article
-      className="group bg-card rounded-xl border border-border/50 hover:border-border transition-all duration-300 overflow-hidden hover:shadow-lg cursor-pointer"
-      onClick={() => window.open(item.url, '_blank', 'noopener,noreferrer')}
+    <a
+      href={item.url}
+      className="group bg-card rounded-xl border border-border/50 hover:border-border transition-all duration-300 overflow-hidden hover:shadow-lg cursor-pointer block"
     >
       {/* Image */}
       <div className="aspect-[16/9] overflow-hidden">
@@ -90,7 +90,7 @@ const NewsCard = ({ item, productionTitle }: NewsCardProps) => {
           </span>
         </div>
       </div>
-    </article>
+    </a>
   );
 };
 

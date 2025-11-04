@@ -154,7 +154,7 @@ const Productions = () => {
                           onClick={(e) => {
                             e.preventDefault();
                             e.stopPropagation();
-                            window.open(production.bookingLink, '_blank', 'noopener,noreferrer');
+                            window.location.href = production.bookingLink;
                           }}
                         >
                           Κλείσε Εισιτήρια
