@@ -80,9 +80,7 @@ const ContactSection = () => {
             
             <div className="flex justify-center space-x-6">
               <a 
-                href="https://www.instagram.com/filiptheater/"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="https://www.instagram.com/theatro_filip/"
                 className="group bg-primary-foreground/10 hover:bg-gold p-4 rounded-full transition-all duration-300 hover:scale-110 hover:shadow-lg"
                 aria-label="Instagram"
               >
@@ -91,8 +89,6 @@ const ContactSection = () => {
 
               <a 
                 href="https://www.instagram.com/methexis_productions/"
-                target="_blank"
-                rel="noopener noreferrer"
                 className="group bg-primary-foreground/10 hover:bg-gold p-4 rounded-full transition-all duration-300 hover:scale-110 hover:shadow-lg"
                 aria-label="Instagram"
               >
@@ -101,8 +97,6 @@ const ContactSection = () => {
               
               <a 
                 href="https://www.facebook.com/methexis.productions/"
-                target="_blank"
-                rel="noopener noreferrer"
                 className="group bg-primary-foreground/10 hover:bg-gold p-4 rounded-full transition-all duration-300 hover:scale-110 hover:shadow-lg"
                 aria-label="Facebook"
               >
@@ -111,8 +105,6 @@ const ContactSection = () => {
               
               <a 
                 href="https://www.youtube.com/@methexisproductions1453"
-                target="_blank"
-                rel="noopener noreferrer"
                 className="group bg-primary-foreground/10 hover:bg-gold p-4 rounded-full transition-all duration-300 hover:scale-110 hover:shadow-lg"
                 aria-label="YouTube"
               >

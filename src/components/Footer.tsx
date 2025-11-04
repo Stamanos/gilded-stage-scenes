@@ -53,7 +53,7 @@ const Footer = () => {
             <h4 className="font-display text-lg text-foreground mb-4">Επικοινωνία</h4>
             <ul className="space-y-2 text-muted-foreground">
               <li>
-                <a href="https://www.instagram.com/filiptheater/" className="hover:text-accent transition-colors duration-300">
+                <a href="https://www.instagram.com/theatro_filip/" className="hover:text-accent transition-colors duration-300">
                   Instagram ΦΙΛΙΠ
                 </a>
               </li>

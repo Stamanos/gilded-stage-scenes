@@ -10,6 +10,7 @@ const HeroSection = () => {
   
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
+  const [isTransitioning, setIsTransitioning] = useState(false);
   
   useEffect(() => {
     const checkMobile = () => setIsMobile(window.innerWidth < 640);
@@ -18,14 +19,35 @@ const HeroSection = () => {
     return () => window.removeEventListener("resize", checkMobile);
   }, []);
 
-  // Manual navigation only - no auto-rotation
+  // Auto-rotation every 7 seconds
+  useEffect(() => {
+    if (currentProductions.length <= 1) return;
+    
+    const interval = setInterval(() => {
+      setIsTransitioning(true);
+      setTimeout(() => {
+        setCurrentIndex((prev) => (prev + 1) % currentProductions.length);
+        setIsTransitioning(false);
+      }, 500);
+    }, 7000);
+    
+    return () => clearInterval(interval);
+  }, [currentProductions.length]);
   
   const goToNext = () => {
-    setCurrentIndex((prev) => (prev + 1) % currentProductions.length);
+    setIsTransitioning(true);
+    setTimeout(() => {
+      setCurrentIndex((prev) => (prev + 1) % currentProductions.length);
+      setIsTransitioning(false);
+    }, 500);
   };
   
   const goToPrevious = () => {
-    setCurrentIndex((prev) => (prev - 1 + currentProductions.length) % currentProductions.length);
+    setIsTransitioning(true);
+    setTimeout(() => {
+      setCurrentIndex((prev) => (prev - 1 + currentProductions.length) % currentProductions.length);
+      setIsTransitioning(false);
+    }, 500);
   };
   
   if (currentProductions.length === 0) {
@@ -45,20 +67,22 @@ const HeroSection = () => {
 
   const currentProduction = currentProductions[currentIndex];
   
-  // Επιλογή εικόνας ανάλογα με το αν είναι mobile
   const bgImage = isMobile
     ? currentProduction.images?.portrait || currentProduction.images?.main || "/images/theater-placeholder.jpg"
     : currentProduction.images?.main || currentProduction.images?.landscape || "/images/theater-placeholder.jpg";
   
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Image - Responsive with object-fit */}
+      {/* Background Image with Crossfade */}
       <div className="absolute inset-0 overflow-hidden">
         <img
+          key={currentIndex}
           src={bgImage}
           alt={currentProduction.title}
           loading="eager"
-          className="w-full h-full object-cover object-top transition-all duration-1000 ease-in-out"
+          className={`w-full h-full object-cover object-top transition-opacity duration-1000 ease-in-out ${
+            isTransitioning ? 'opacity-0' : 'opacity-100'
+          }`}
         />
       </div>
       
@@ -86,13 +110,17 @@ const HeroSection = () => {
         </>
       )}
       
-      {/* Content */}
+      {/* Content with Fade Effect */}
       <div className="relative z-10 text-center max-w-4xl mx-auto px-4 sm:px-6">
-        <div className="animate-fade-up">
+        <div 
+          className={`transition-opacity duration-700 ease-in-out ${
+            isTransitioning ? 'opacity-0' : 'opacity-100'
+          }`}
+        >
           {/* Title with subtle shadow */}
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-display font-light leading-none tracking-tight text-white mb-4 sm:mb-6"
             style={{
-              textShadow: '0 2px 8px rgba(0,0,0,0.5), 0 4px 16px rgba(0,0,0,0.3)',
+              textShadow: '0 2px 8px rgba(0,0,0,0.5), 0 4px 16px rgba(0,0,0,0.3)'
             }}
           >
             Τώρα στη σκηνή: <span className="text-gold">{currentProduction.title}</span>
@@ -100,10 +128,10 @@ const HeroSection = () => {
           
           {/* Subtitle with subtle stroke */}
           <h2 
-            className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-display font-light leading-tight mb-6 sm:mb-8 animate-fade-in px-2"
+            className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-display font-light leading-tight mb-6 sm:mb-8 px-2"
             style={{
               color: 'white',
-              textShadow: '-1px -1px 0 rgba(0,0,0,0.8), 1px -1px 0 rgba(0,0,0,0.8), -1px 1px 0 rgba(0,0,0,0.8), 1px 1px 0 rgba(0,0,0,0.8), 0 2px 8px rgba(0,0,0,0.5)',
+              textShadow: '-1px -1px 0 rgba(0,0,0,0.8), 1px -1px 0 rgba(0,0,0,0.8), -1px 1px 0 rgba(0,0,0,0.8), 1px 1px 0 rgba(0,0,0,0.8), 0 2px 8px rgba(0,0,0,0.5)'
             }}
           >
             {currentProduction.subtitle}
@@ -114,8 +142,6 @@ const HeroSection = () => {
             {currentProduction.bookingLink ? (
               <a
                 href={currentProduction.bookingLink}
-                target="_blank"
-                rel="noopener noreferrer"
                 className="w-full sm:w-auto group relative overflow-hidden bg-accent hover:bg-accent/90 text-accent-foreground px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-semibold transition-all duration-300 hover:shadow-dramatic rounded-xl backdrop-blur-sm border border-accent/20 hover:scale-105 shadow-xl text-center"
               >
                 <span className="relative z-10">Κλείσε Εισιτήρια</span>
@@ -143,7 +169,13 @@ const HeroSection = () => {
           {currentProductions.map((_, index) => (
             <button
               key={index}
-              onClick={() => setCurrentIndex(index)}
+              onClick={() => {
+                setIsTransitioning(true);
+                setTimeout(() => {
+                  setCurrentIndex(index);
+                  setIsTransitioning(false);
+                }, 500);
+              }}
               className={`w-2 h-2 rounded-full transition-all duration-300 ${
                 index === currentIndex 
                   ? 'bg-gold w-6 sm:w-8' 

@@ -79,7 +79,7 @@ const ProductionDetails = () => {
               {(production.bookingLink && production.status === "current") || production.status === "upcoming" ? (
                 production.status === "current" ? (
                   <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground shadow-lg" asChild>
-                    <a href={production.bookingLink} target="_blank" rel="noopener noreferrer">
+                    <a href={production.bookingLink}>
                       <ExternalLink className="mr-2 h-4 w-4" />
                       Κλείσε Εισιτήρια
                     </a>
@@ -242,8 +242,6 @@ const ProductionDetails = () => {
                       {production.venue ? (
                         <a
                           href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(production.venue)}`}
-                          target="_blank"
-                          rel="noopener noreferrer"
                           className="text-sm text-muted-foreground hover:underline"
                         >
                           {production.venue}
@@ -304,19 +302,6 @@ const ProductionDetails = () => {
                             <div className="flex items-center gap-2">
                               <Mail className="h-3 w-3 text-accent" />
                               <span className="text-sm text-muted-foreground">{production.bookingInfo.email}</span>
-                            </div>
-                          )}
-                          {production.bookingInfo.website && (
-                            <div className="flex items-center gap-2">
-                              <Globe className="h-3 w-3 text-accent" />
-                              <a 
-                                href={production.bookingInfo.website} 
-                                className="text-sm text-accent hover:underline"
-                                target="_blank" 
-                                rel="noopener noreferrer"
-                              >
-                                Ιστοσελίδα
-                              </a>
                             </div>
                           )}
                         </div>
