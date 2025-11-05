@@ -61,13 +61,13 @@ const NowPlayingSection = () => {
                     </p>
                   </div>
                   {show.bookingLink && show.status === "current" ? (
-                    <a
-                      href={show.bookingLink}
+                    <Link
+                      to={`/booking/${show.id}`}
                       className="w-full sm:w-auto bg-accent hover:bg-accent/90 text-accent-foreground px-4 py-2 rounded font-medium transition-all duration-300 text-center text-sm sm:text-base"
                       onClick={e => e.stopPropagation()}
                     >
                       Κλείσε Εισιτήρια
-                    </a>
+                    </Link>
                   ) : show.status === "upcoming" ? (
                     <button
                       className="w-full sm:w-auto bg-primary/20 text-primary border border-primary/30 px-4 py-2 rounded font-medium text-sm sm:text-base"

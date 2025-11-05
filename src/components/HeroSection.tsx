@@ -140,13 +140,13 @@ const HeroSection = () => {
           {/* Action buttons */}
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center px-4">
             {currentProduction.bookingLink ? (
-              <a
-                href={currentProduction.bookingLink}
+              <Link
+                to={`/booking/${currentProduction.id}`}
                 className="w-full sm:w-auto group relative overflow-hidden bg-accent hover:bg-accent/90 text-accent-foreground px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-semibold transition-all duration-300 hover:shadow-dramatic rounded-xl backdrop-blur-sm border border-accent/20 hover:scale-105 shadow-xl text-center"
               >
                 <span className="relative z-10">Κλείσε Εισιτήρια</span>
                 <div className="absolute inset-0 bg-gradient-accent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              </a>
+              </Link>
             ) : (
               <span className="w-full sm:w-auto bg-muted text-muted-foreground px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-semibold rounded-xl backdrop-blur-sm shadow-xl text-center">
                 Σύντομα διαθέσιμα εισιτήρια

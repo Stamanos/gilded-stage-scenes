@@ -137,7 +137,7 @@ const Productions = () => {
                         {production.description}
                       </p>
                       
-                        <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 mb-8">
+                      <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 mb-8">
                         <span className="text-sm text-muted-foreground">
                           📅 {production.productionInfo?.dates || production.dates || 'Ημερομηνίες θα ανακοινωθούν'}
                         </span>
@@ -151,13 +151,11 @@ const Productions = () => {
                       {production.bookingLink ? (
                         <Button 
                           className="bg-accent hover:bg-accent/90 text-accent-foreground px-8 py-3"
-                          onClick={(e) => {
-                            e.preventDefault();
-                            e.stopPropagation();
-                            window.location.href = production.bookingLink;
-                          }}
+                          asChild
                         >
-                          Κλείσε Εισιτήρια
+                          <Link to={`/booking/${production.id}`}>
+                            Κλείσε Εισιτήρια
+                          </Link>
                         </Button>
                       ) : (
                         <Button 

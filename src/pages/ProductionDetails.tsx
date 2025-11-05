@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import productionsData from "@/data/productions.json";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
@@ -10,7 +10,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
-import { Calendar, Clock, MapPin, Users, Phone, Mail, Globe, ExternalLink } from "lucide-react";
+import { Calendar, Clock, MapPin, Users, Phone, Mail, ExternalLink } from "lucide-react";
 
 const ProductionDetails = () => {
   const { id } = useParams();
@@ -79,10 +79,10 @@ const ProductionDetails = () => {
               {(production.bookingLink && production.status === "current") || production.status === "upcoming" ? (
                 production.status === "current" ? (
                   <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground shadow-lg" asChild>
-                    <a href={production.bookingLink}>
+                    <Link to={`/booking/${production.id}`}>
                       <ExternalLink className="mr-2 h-4 w-4" />
                       Κλείσε Εισιτήρια
-                    </a>
+                    </Link>
                   </Button>
                 ) : (
                   <Button size="lg" className="bg-primary/20 text-primary border border-primary/30 shadow-lg" disabled>

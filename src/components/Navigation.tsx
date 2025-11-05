@@ -1,9 +1,12 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { Link } from "react-router-dom";
-import ThemeToggle from "./ThemeToggle";
 
-const Navigation = () => {
+interface NavigationProps {
+  forceBlackText?: boolean;
+}
+
+const Navigation = ({ forceBlackText = false }: NavigationProps) => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -39,12 +42,14 @@ const Navigation = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            <a 
+             <a 
               href="/productions"
               className={`text-body font-medium tracking-wide transition-all duration-300 hover:scale-105 relative after:content-[''] after:absolute after:w-0 after:h-0.5 after:bottom-0 after:left-1/2 after:transition-all after:duration-300 hover:after:w-full hover:after:left-0 ${
-                isScrolled 
-                  ? 'text-foreground hover:text-accent after:bg-accent' 
-                  : 'text-white/90 hover:text-white hover:drop-shadow-lg after:bg-white'
+                forceBlackText
+                  ? 'text-slate-900 hover:text-slate-700 after:bg-slate-900'
+                  : isScrolled 
+                    ? 'text-slate-900 hover:text-slate-700 after:bg-slate-900' 
+                    : 'text-white hover:text-slate-100 hover:drop-shadow-lg after:bg-white'
               }`}
             >
               Παραστάσεις
@@ -52,9 +57,11 @@ const Navigation = () => {
             <a 
               href="/about" 
               className={`text-body font-medium tracking-wide transition-all duration-300 hover:scale-105 relative after:content-[''] after:absolute after:w-0 after:h-0.5 after:bottom-0 after:left-1/2 after:transition-all after:duration-300 hover:after:w-full hover:after:left-0 ${
-                isScrolled 
-                  ? 'text-foreground hover:text-accent after:bg-accent' 
-                  : 'text-white/90 hover:text-white hover:drop-shadow-lg after:bg-white'
+                forceBlackText
+                  ? 'text-slate-900 hover:text-slate-700 after:bg-slate-900'
+                  : isScrolled 
+                    ? 'text-slate-900 hover:text-slate-700 after:bg-slate-900' 
+                    : 'text-white hover:text-slate-100 hover:drop-shadow-lg after:bg-white'
               }`}
             >
               Σχετικά με εμάς
@@ -62,9 +69,11 @@ const Navigation = () => {
             <a 
               href="/news" 
               className={`text-body font-medium tracking-wide transition-all duration-300 hover:scale-105 relative after:content-[''] after:absolute after:w-0 after:h-0.5 after:bottom-0 after:left-1/2 after:transition-all after:duration-300 hover:after:w-full hover:after:left-0 ${
-                isScrolled 
-                  ? 'text-foreground hover:text-accent after:bg-accent' 
-                  : 'text-white/90 hover:text-white hover:drop-shadow-lg after:bg-white'
+                forceBlackText
+                  ? 'text-slate-900 hover:text-slate-700 after:bg-slate-900'
+                  : isScrolled 
+                    ? 'text-slate-900 hover:text-slate-700 after:bg-slate-900' 
+                    : 'text-white hover:text-slate-100 hover:drop-shadow-lg after:bg-white'
               }`}
             >
               Νέα
@@ -72,26 +81,28 @@ const Navigation = () => {
             <a 
               href="/contact" 
               className={`text-body font-medium tracking-wide transition-all duration-300 hover:scale-105 relative after:content-[''] after:absolute after:w-0 after:h-0.5 after:bottom-0 after:left-1/2 after:transition-all after:duration-300 hover:after:w-full hover:after:left-0 ${
-                isScrolled 
-                  ? 'text-foreground hover:text-accent after:bg-accent' 
-                  : 'text-white/90 hover:text-white hover:drop-shadow-lg after:bg-white'
+                forceBlackText
+                  ? 'text-slate-900 hover:text-slate-700 after:bg-slate-900'
+                  : isScrolled 
+                    ? 'text-slate-900 hover:text-slate-700 after:bg-slate-900' 
+                    : 'text-white hover:text-slate-100 hover:drop-shadow-lg after:bg-white'
               }`}
             >
               Επικοινωνία
             </a>
-            <ThemeToggle isScrolled={isScrolled} />
           </div>
 
         </div>
 
         {/* Mobile Actions */}
         <div className="md:hidden flex items-center gap-2">
-          <ThemeToggle isScrolled={isScrolled} />
           <button
             className={`transition-all duration-300 hover:scale-110 ${
-              isScrolled 
-                ? 'text-foreground hover:text-accent' 
-                : 'text-white/90 hover:text-white hover:drop-shadow-lg'
+              forceBlackText
+                ? 'text-slate-900 hover:text-slate-700'
+                : isScrolled 
+                  ? 'text-slate-900 hover:text-slate-700' 
+                  : 'text-white hover:text-slate-100 hover:drop-shadow-lg'
             }`}
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Toggle menu"
@@ -119,11 +130,10 @@ const Navigation = () => {
                     font-medium tracking-wide transition-all duration-300 hover:scale-105
                     px-4 py-3 rounded-lg border border-border/30 text-center
                     bg-white/70 text-primary hover:bg-primary hover:text-white
-                    dark:bg-background/90 dark:text-foreground dark:hover:bg-accent dark:hover:text-background
                   "
                 >
                   <span className="relative z-10">{item.label}</span>
-                  <div className="absolute inset-0 bg-black/5 dark:bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  <div className="absolute inset-0 bg-black/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 </a>
               ))}
             </div>
