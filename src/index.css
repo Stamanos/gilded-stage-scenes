@@ -70,37 +70,6 @@ All colors MUST be HSL.
     --sidebar-border: 220 13% 91%;
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
-
-  .dark {
-    /* Enhanced dark mode with improved contrast (WCAG AA compliant) */
-    --background: 220 15% 10%;
-    --foreground: 0 0% 98%;
-
-    --card: 220 15% 13%;
-    --card-foreground: 0 0% 98%;
-
-    --popover: 220 15% 13%;
-    --popover-foreground: 0 0% 98%;
-
-    --primary: 45 85% 60%;
-    --primary-foreground: 220 15% 10%;
-
-    --secondary: 220 12% 18%;
-    --secondary-foreground: 0 0% 98%;
-
-    --muted: 220 12% 18%;
-    --muted-foreground: 0 0% 72%;
-
-    --accent: 345 70% 45%;
-    --accent-foreground: 0 0% 98%;
-
-    --destructive: 0 65% 50%;
-    --destructive-foreground: 0 0% 98%;
-
-    --border: 220 12% 22%;
-    --input: 220 12% 18%;
-    --ring: 45 85% 60%;
-  }
 }
 
 @layer base {
