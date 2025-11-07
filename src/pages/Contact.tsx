@@ -93,51 +93,51 @@ const Contact = () => {
 
           {/* Social Media Section */}
           <div className="text-center">
-            <div className="bg-accent/5 p-12 rounded-2xl border border-accent/20 max-w-2xl mx-auto">
-              <h3 className="text-display-md text-foreground mb-8">Ακολουθήστε μας</h3>
-              <p className="text-body text-muted-foreground mb-8">
+            <div className="bg-accent/5 p-6 sm:p-12 rounded-2xl border border-accent/20 w-full">
+              <h3 className="text-display-sm sm:text-display-md text-foreground mb-6 sm:mb-8">Ακολουθήστε μας</h3>
+              <p className="text-body text-muted-foreground mb-8 px-2">
                 Συνδεθείτε μαζί μας στα social media για καθημερινές ενημερώσεις και παρασκηνιακό υλικό.
               </p>
               
-              <div className="flex justify-center space-x-8">
+              <div className="flex flex-wrap justify-center gap-4 sm:gap-8 px-2 mb-8">
                 <a 
                   href="https://www.instagram.com/theatro_filip/"
-                  className="group bg-card hover:bg-accent p-6 rounded-2xl transition-all duration-300 hover:scale-110 hover:shadow-lg"
+                  className="group bg-card hover:bg-accent p-4 sm:p-6 rounded-2xl transition-all duration-300 hover:scale-110 hover:shadow-lg"
                   aria-label="Instagram"
                 >
-                  <Instagram className="w-8 h-8 text-accent group-hover:text-accent-foreground transition-colors duration-300" />
+                  <Instagram className="w-6 sm:w-8 h-6 sm:h-8 text-accent group-hover:text-accent-foreground transition-colors duration-300" />
                 </a>
 
                 <a 
                   href="https://www.instagram.com/methexis_productions/"
-                  className="group bg-card hover:bg-accent p-6 rounded-2xl transition-all duration-300 hover:scale-110 hover:shadow-lg"
+                  className="group bg-card hover:bg-accent p-4 sm:p-6 rounded-2xl transition-all duration-300 hover:scale-110 hover:shadow-lg"
                   aria-label="Instagram"
                 >
-                  <Instagram className="w-8 h-8 text-accent group-hover:text-accent-foreground transition-colors duration-300" />
+                  <Instagram className="w-6 sm:w-8 h-6 sm:h-8 text-accent group-hover:text-accent-foreground transition-colors duration-300" />
                 </a>
                 
                 <a 
                   href="https://www.facebook.com/methexis.productions/"
-                  className="group bg-card hover:bg-accent p-6 rounded-2xl transition-all duration-300 hover:scale-110 hover:shadow-lg"
+                  className="group bg-card hover:bg-accent p-4 sm:p-6 rounded-2xl transition-all duration-300 hover:scale-110 hover:shadow-lg"
                   aria-label="Facebook"
                 >
-                  <Facebook className="w-8 h-8 text-accent group-hover:text-accent-foreground transition-colors duration-300" />
+                  <Facebook className="w-6 sm:w-8 h-6 sm:h-8 text-accent group-hover:text-accent-foreground transition-colors duration-300" />
                 </a>
                 
                 <a 
                   href="https://www.youtube.com/@methexisproductions1453"
-                  className="group bg-card hover:bg-accent p-6 rounded-2xl transition-all duration-300 hover:scale-110 hover:shadow-lg"
+                  className="group bg-card hover:bg-accent p-4 sm:p-6 rounded-2xl transition-all duration-300 hover:scale-110 hover:shadow-lg"
                   aria-label="YouTube"
                 >
-                  <Youtube className="w-8 h-8 text-accent group-hover:text-accent-foreground transition-colors duration-300" />
+                  <Youtube className="w-6 sm:w-8 h-6 sm:h-8 text-accent group-hover:text-accent-foreground transition-colors duration-300" />
                 </a>
               </div>
 
-              <div className="mt-12 bg-card p-8 rounded-lg shadow-elegant">
+              <div className="mt-8 sm:mt-12 bg-card p-6 sm:p-8 rounded-lg shadow-elegant mx-2 sm:mx-0">
                 <h4 className="text-display-sm text-card-foreground mb-4">Επικοινωνία</h4>
-                <div className="space-y-2 text-muted-foreground">
+                <div className="space-y-2 text-muted-foreground text-sm sm:text-base break-words">
                   <p><strong>{productionCompanyData.company.name}</strong></p>
-                  <p>📧 {productionCompanyData.company.contact.email}</p>
+                  <p>📧 <a href={`mailto:${productionCompanyData.company.contact.email}`} className="hover:text-accent transition-colors">{productionCompanyData.company.contact.email}</a></p>
                   <p>📞Σταθερό {productionCompanyData.company.contact.phone[0]}</p>
                   <p>📞Κινητό {productionCompanyData.company.contact.phone[1]}</p>
                 </div>

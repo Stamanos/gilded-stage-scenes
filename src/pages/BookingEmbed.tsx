@@ -36,7 +36,7 @@ const BookingEmbed = () => {
       {/* Header */}
       <div className="bg-card border-b border-border py-8 flex-shrink-0">
         <div className="container mx-auto px-6">
-          <h1 className="text-2xl md:text-3xl font-bold text-slate-900 text-center md:text-left md:ml-48 max-w-xl break-words">
+          <h1 className="text-2xl md:text-3xl font-bold text-slate-900 text-center md:text-left md:ml-48 pl-8 md:pl-0 max-w-xl break-words">
             Κράτηση Εισιτηρίων - {production.title}
           </h1>
         </div>

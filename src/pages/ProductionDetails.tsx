@@ -115,6 +115,25 @@ const ProductionDetails = () => {
                 </div>
               )}
 
+              {/* Trailer */}
+              {production.trailerUrl && (
+                <div>
+                  <h3 className="text-display-md text-foreground mb-8">Trailer</h3>
+                  <div className="w-full aspect-video rounded-lg overflow-hidden shadow-elegant">
+                    <iframe
+                      width="100%"
+                      height="100%"
+                      src={production.trailerUrl.replace('watch?v=', 'embed/')}
+                      title={`${production.title} Trailer`}
+                      frameBorder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                      className="w-full h-full"
+                    />
+                  </div>
+                </div>
+              )}
+
               {/* Cast & Creative Team */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 {/* Cast */}
