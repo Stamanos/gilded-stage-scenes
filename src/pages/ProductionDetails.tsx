@@ -13,12 +13,12 @@ import { Separator } from "@/components/ui/separator";
 import { Calendar, Clock, MapPin, Users, Phone, Mail, ExternalLink } from "lucide-react";
 
 const ProductionDetails = () => {
-  const { id } = useParams();
+  const { slug } = useParams();
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [lightboxIndex, setLightboxIndex] = useState(0);
   
   const production = productionsData.productions.find(
-    (p) => String(p.id) === String(id)
+    (p) => p.slug === slug
   );
 
   const openLightbox = (index: number) => {
@@ -79,7 +79,7 @@ const ProductionDetails = () => {
               {(production.bookingLink && production.status === "current") || production.status === "upcoming" ? (
                 production.status === "current" ? (
                   <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground shadow-lg" asChild>
-                    <Link to={`/booking/${production.id}`}>
+                    <Link to={`/booking/${production.slug}`}>
                       <ExternalLink className="mr-2 h-4 w-4" />
                       Κλείσε Εισιτήρια
                     </Link>

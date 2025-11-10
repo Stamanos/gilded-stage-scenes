@@ -4,11 +4,11 @@ import Navigation from "@/components/Navigation";
 import { Button } from "@/components/ui/button";
 
 const BookingEmbed = () => {
-  const { id } = useParams();
+  const { slug } = useParams();
   const navigate = useNavigate();
   
   const production = productionsData.productions.find(
-    (p) => String(p.id) === String(id)
+    (p) => p.slug === slug
   );
 
   if (!production || !production.bookingLink) {

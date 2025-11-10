@@ -141,7 +141,7 @@ const HeroSection = () => {
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center px-4">
             {currentProduction.bookingLink ? (
               <Link
-                to={`/booking/${currentProduction.id}`}
+                to={`/booking/${currentProduction.slug}`}
                 className="w-full sm:w-auto group relative overflow-hidden bg-accent hover:bg-accent/90 text-accent-foreground px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-semibold transition-all duration-300 hover:shadow-dramatic rounded-xl backdrop-blur-sm border border-accent/20 hover:scale-105 shadow-xl text-center"
               >
                 <span className="relative z-10">Κλείσε Εισιτήρια</span>
@@ -153,7 +153,7 @@ const HeroSection = () => {
               </span>
             )}
             <Link
-              to={`/productions/${currentProduction.id}`}
+              to={`/productions/${currentProduction.slug}`}
               className="w-full sm:w-auto group relative overflow-hidden bg-white/90 backdrop-blur-md text-primary hover:bg-white px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-semibold transition-all duration-300 rounded-xl hover:scale-105 shadow-xl border border-white/20 text-center"
             >
               <span className="relative z-10">Μάθετε περισσότερα</span>

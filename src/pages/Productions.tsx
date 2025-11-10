@@ -85,7 +85,7 @@ const Productions = () => {
             <div className="space-y-16">
               {currentProductions.map((production, index) => (
                 <Link
-                  to={`/productions/${production.id}`}
+                  to={`/productions/${production.slug}`}
                   key={production.id}
                   className="group stagger-item block"
                   style={{ animationDelay: `${index * 0.15}s` }}
@@ -153,7 +153,7 @@ const Productions = () => {
                           className="bg-accent hover:bg-accent/90 text-accent-foreground px-8 py-3"
                           asChild
                         >
-                          <Link to={`/booking/${production.id}`}>
+                          <Link to={`/booking/${production.slug}`}>
                             Κλείσε Εισιτήρια
                           </Link>
                         </Button>
@@ -185,7 +185,7 @@ const Productions = () => {
             <div className="space-y-16">
               {upcomingProductions.map((production, index) => (
                 <Link
-                  to={`/productions/${production.id}`}
+                  to={`/productions/${production.slug}`}
                   key={production.id}
                   className="group stagger-item block"
                   style={{ animationDelay: `${index * 0.15}s` }}
@@ -274,7 +274,7 @@ const Productions = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {pastProductions.map((production, index) => (
                 <Link
-                  to={`/productions/${production.id}`}
+                  to={`/productions/${production.slug}`}
                   key={production.id}
                   className="group bg-card rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 block stagger-item"
                   style={{ animationDelay: `${index * 0.1}s` }}

@@ -8,6 +8,7 @@ import { Link } from "react-router-dom";
 
 interface Production {
   id: number | string;
+  slug?: string;
   title: string;
   subtitle?: string;
   year?: string;
@@ -130,7 +131,7 @@ const ProductionFilters = ({
               {suggestions.map((production, index) => (
                 <Link
                   key={production.id}
-                  to={`/productions/${production.id}`}
+                  to={`/productions/${production.slug}`}
                   className={`block px-4 py-3 hover:bg-accent/10 transition-colors border-b border-border last:border-b-0 ${
                     index === focusedIndex ? "bg-accent/10" : ""
                   }`}

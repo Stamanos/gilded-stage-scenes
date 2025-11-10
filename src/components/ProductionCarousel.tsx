@@ -61,7 +61,7 @@ const ProductionCarousel = () => {
             {productions.map((production, index) => (
               <CarouselItem key={production.id} className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
                 <Link
-                  to={`/productions/${production.id}`}
+                  to={`/productions/${production.slug}`}
                   className="group bg-card rounded-lg overflow-hidden shadow-elegant hover:shadow-dramatic transition-all duration-500 block"
                 >
                   <div className="aspect-[3/4] bg-secondary relative overflow-hidden">

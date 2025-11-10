@@ -22,7 +22,7 @@ const NowPlayingSection = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {nowPlaying.map((show, index) => (
             <Link
-              to={`/productions/${show.id}`}
+              to={`/productions/${show.slug}`}
               key={show.id}
               className="group bg-card rounded-lg overflow-hidden shadow-elegant hover:shadow-dramatic transition-all duration-500 animate-scale-in block"
               style={{ animationDelay: `${index * 0.2}s` }}
@@ -62,7 +62,7 @@ const NowPlayingSection = () => {
                   </div>
                   {show.bookingLink && show.status === "current" ? (
                     <Link
-                      to={`/booking/${show.id}`}
+                      to={`/booking/${show.slug}`}
                       className="w-full sm:w-auto bg-accent hover:bg-accent/90 text-accent-foreground px-4 py-2 rounded font-medium transition-all duration-300 text-center text-sm sm:text-base"
                       onClick={e => e.stopPropagation()}
                     >
