@@ -41,6 +41,26 @@
       "site_name": "kathimerini.gr",
       "production_id": 3
     },{
+      "id": 5,
+      "url": "https://www.xtypos.gr/%CF%83%CF%85%CE%BD%CE%B5%CE%BD%CF%84%CE%B5%CF%8D%CE%BE%CE%B5%CE%B9%CF%82/%CE%B9%CE%BD%CF%84%CF%81%CE%B1-%CE%BA%CE%AD%CE%B9%CE%BD-terror-%CE%B7-%CF%80%CF%81%CF%8C%CE%B5%CE%B4%CF%81%CE%BF%CF%82-%CF%84%CE%B7%CF%82-%CE%B4%CE%AF%CE%BA%CE%B7%CF%82-%CE%AE-%CE%B7-%CF%86/",
+      "title": "Ιντρα Κέιν – TERROR : «Η Πρόεδρος της Δίκης ή η φωνή της λογικής;»",
+      "description": "Στο TERROR του Φέρντιναντ φον Σίραχ, η Ίντρα Κέιν ενσαρκώνει την Πρόεδρο του Δικαστηρίου – μια μορφή που δεν ορίζει απλώς τη διαδικασία, αλλά κουβαλά στις πλάτες της το βάρος της ευθύνης, του ορίου και της ανθρώπινης κρίσης.",
+      "image": "/img/news/intra_kein.jpg",
+      "type": "Συνέντευξη",
+      "date": "2025-11-08",
+      "site_name": "xtypos.gr",
+      "production_id": 1
+    },{
+      "id": 6,
+      "url": "https://www.culturenow.gr/h-aliki-sti-xora-ton-psarion-toy-gianni-xanthoyli-se-skinothesia-xristoy-tripodi-ston-elliniko-kosmo/",
+      "title": "Η Αλίκη στη χώρα των ψαριών, του Γιάννη Ξανθούλη σε σκηνοθεσία Χρήστου Τριπόδη στον Ελληνικό Κόσμο",
+      "description": "Ο «Ελληνικός Κόσμος» υποδέχεται το ανατρεπτικό παραμύθι «Η Αλίκη στη χώρα των ψαριών» του Γιάννη Ξανθούλη, σε παραγωγή της εταιρίας Μέθεξις και σκηνοθεσία του Χρήστου Τριπόδη.",
+      "image": "/img/Aliki/ALIKI_landscape.jpg",
+      "type": "Κριτική",
+      "date": "2025-10-06",
+      "site_name": "culturenow.gr",
+      "production_id": 4
+    },{
       "id": 100,
       "url": "https://xn--mxahi4ajr.gr/eidame/item/5144-%CE%B5%CE%AF%CE%B4%CE%B1%CE%BC%CE%B5-%CF%84%CE%B7%CE%BD-%CF%80%CE%B1%CF%81%CE%AC%CF%83%CF%84%CE%B1%CF%83%CE%B7-%CF%87%CE%B1%CF%83%CE%B1%CE%BC%CE%B5-%CF%84%CE%B7-%CE%B8%CE%B5%CE%B9%CE%B1-%CF%83%CF%84%CE%BF%CF%80-%CF%83%CF%84%CE%BF-%CE%BA%CE%AD%CE%BD%CF%84%CF%81%CE%BF-%CF%80%CE%BF%CE%BB%CE%B9%CF%84%CE%B9%CF%83%CE%BC%CE%BF%CF%8D-%C2%AB%CE%B5%CE%BB%CE%BB%CE%B7%CE%BD%CE%B9%CE%BA%CF%8C%CF%82-%CE%BA%CF%8C%CF%83%CE%BC%CE%BF%CF%82%C2%BB.html?fbclid=IwY2xjawLcrPVleHRuA2FlbQIxMQABHkpdYzhZdpAD2lDC0vv_pWb0MT83Pz7QdNz-e6Oco_j3Wp--BCd70zJSs1Q7_aem_9OY0lNjtCr-RwEux4ca5Mw",
       "title": "«Είδαμε την παράσταση ''ΧΑΣΑΜΕ ΤΗ ΘΕΙΑ ΣΤΟΠ'' στο Κέντρο Πολιτισμού «Ελληνικός Κόσμος»",
