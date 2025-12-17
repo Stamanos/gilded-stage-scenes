@@ -39,12 +39,19 @@ const News = () => {
 
   // Filter news items
   const filteredNews = useMemo(() => {
-    return newsData.news.filter(item => {
-      const typeMatch = selectedType === "all" || item.type === selectedType;
-      const productionMatch = selectedProduction === "all" || 
-                            item.production_id.toString() === selectedProduction;
-      return typeMatch && productionMatch;
-    });
+    return newsData.news
+      .filter(item => {
+        const typeMatch = selectedType === "all" || item.type === selectedType;
+        const productionMatch = selectedProduction === "all" || 
+                              item.production_id.toString() === selectedProduction;
+        return typeMatch && productionMatch;
+      })
+      .sort((a, b) => {
+        // Sort by date, most recent first
+        const dateA = new Date(a.date);
+        const dateB = new Date(b.date);
+        return dateB.getTime() - dateA.getTime();
+      });
   }, [selectedType, selectedProduction]);
 
   // Get production title for each news item
