@@ -706,15 +706,25 @@
       "genre": "Κωμωδία",
       "duration": "100 λεπτά",
       "images": {
-        "main": "/img/misanthropos/1220_370.jpg",
-        "square": "/img/misanthropos/500_500 (1).jpg",
-        "landscape": "/img/misanthropos/816_46.jpg",
-        "portrait": "/img/misanthropos/1220_370.jpg"
+        "main": "/img/misanthropos/misanthropos_main.jpg",
+        "square": "/img/misanthropos/misanthropos_square.jpg",
+        "landscape": "/img/misanthropos/misanthropos_landscape.jpg",
+        "portrait": "/img/misanthropos/misanthropos_portrait.jpg"
       },
       "galleryImages": [
-        "/img/misanthropos/1220_370.jpg",
-        "/img/misanthropos/500_500 (1).jpg",
-        "/img/misanthropos/816_46.jpg"
+        "/img/misanthropos/photos/1.jpg",
+        "/img/misanthropos/photos/2.jpg",
+        "/img/misanthropos/photos/3.jpg",
+        "/img/misanthropos/photos/4.jpg",
+        "/img/misanthropos/photos/5.jpg",
+        "/img/misanthropos/photos/6.jpg",
+        "/img/misanthropos/photos/7.jpg",
+        "/img/misanthropos/photos/8.jpg",
+        "/img/misanthropos/photos/9.jpg",
+        "/img/misanthropos/photos/10.jpg",
+        "/img/misanthropos/photos/11.jpg",
+        "/img/misanthropos/photos/12.jpg",
+        "/img/misanthropos/photos/13.jpg"
       ],
       "status": "current",
       "bookingLink": "https://www.more.com/gr-el/tickets/theater/misanthropos-2/",
