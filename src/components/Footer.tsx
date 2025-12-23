@@ -37,13 +37,18 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <a href="/contact" className="hover:text-accent transition-colors duration-300">
-                  Επικοινωνία
+                <a href="/news" className="hover:text-accent transition-colors duration-300">
+                  Νέα & Τύπος
                 </a>
               </li>
               <li>
-                <a href="/news" className="hover:text-accent transition-colors duration-300">
-                  Νέα & Τύπος
+                <a href="/newsletter" className="hover:text-accent transition-colors duration-300">
+                  Newsletter
+                </a>
+              </li>
+              <li>
+                <a href="/contact" className="hover:text-accent transition-colors duration-300">
+                  Επικοινωνία
                 </a>
               </li>
             </ul>

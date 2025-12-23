@@ -79,6 +79,18 @@ const Navigation = ({ forceBlackText = false }: NavigationProps) => {
               Νέα
             </a>
             <a 
+              href="/newsletter" 
+              className={`text-body font-medium tracking-wide transition-all duration-300 hover:scale-105 relative after:content-[''] after:absolute after:w-0 after:h-0.5 after:bottom-0 after:left-1/2 after:transition-all after:duration-300 hover:after:w-full hover:after:left-0 ${
+                forceBlackText
+                  ? 'text-slate-900 hover:text-slate-700 after:bg-slate-900'
+                  : isScrolled 
+                    ? 'text-slate-900 hover:text-slate-700 after:bg-slate-900' 
+                    : 'text-white hover:text-slate-100 hover:drop-shadow-lg after:bg-white'
+              }`}
+            >
+              Newsletter
+            </a>
+            <a 
               href="/contact" 
               className={`text-body font-medium tracking-wide transition-all duration-300 hover:scale-105 relative after:content-[''] after:absolute after:w-0 after:h-0.5 after:bottom-0 after:left-1/2 after:transition-all after:duration-300 hover:after:w-full hover:after:left-0 ${
                 forceBlackText
@@ -119,6 +131,7 @@ const Navigation = ({ forceBlackText = false }: NavigationProps) => {
                 { href: '/productions', label: 'Παραστάσεις' },
                 { href: '/about', label: 'Σχετικά με εμάς' },
                 { href: '/news', label: 'Νέα' },
+                { href: '/newsletter', label: 'Newsletter' },
                 { href: '/contact', label: 'Επικοινωνία' },
               ].map((item) => (
                 <a

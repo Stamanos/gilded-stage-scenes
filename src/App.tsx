@@ -11,11 +11,13 @@ import ProductionDetails from "@/pages/ProductionDetails";
 import About from "./pages/About";
 import News from "./pages/News";
 import Contact from "./pages/Contact";
+import Newsletter from "./pages/Newsletter";
 import Privacy from "./pages/Privacy";
 import Terms from "./pages/Terms";
 import Cookies from "./pages/Cookies";
 import NotFound from "./pages/NotFound";
 import BookingEmbed from "./pages/BookingEmbed";
+import NewsletterPopup from "@/components/NewsletterPopup";
 
 const queryClient = new QueryClient();
 
@@ -30,6 +32,18 @@ const ScrollToTop = () => {
   return null;
 };
 
+// Component to conditionally show newsletter popup
+const ConditionalNewsletterPopup = () => {
+  const { pathname } = useLocation();
+  
+  // Don't show popup on newsletter page or booking pages
+  if (pathname === '/newsletter' || pathname.startsWith('/booking/')) {
+    return null;
+  }
+  
+  return <NewsletterPopup />;
+};
+
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
@@ -38,12 +52,14 @@ const App = () => (
         <Sonner />
         <BrowserRouter>
           <ScrollToTop />
+          <ConditionalNewsletterPopup />
           <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/productions" element={<Productions />} />
           <Route path="/about" element={<About />} />
           <Route path="/news" element={<News />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/newsletter" element={<Newsletter />} />
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/terms" element={<Terms />} />
           <Route path="/cookies" element={<Cookies />} />
