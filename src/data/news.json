@@ -71,6 +71,56 @@
       "site_name": "gpop.gr",
       "production_id": 7
     },{
+      "id": 8,
+      "url": "https://www.athinorama.gr/theatre/3065926/i-kura-tis-ro-ena-thruliko-prosopo-sti-skini-gia-9i-xronia/#goog_rewarded",
+      "title": "Η Κούρα της Ρό, ένα θρυλικό πρόσωπο στη σκηνή για 9η χρονιά",
+      "description": "Η παράσταση “Η Κούρα της Ρό” επιστρέφει στη σκηνή του θεάτρου για 9η χρονιά, με την υπογραφή του σκηνοθέτη Γιάννη Χουβαρδά.",
+      "image": "/img/news/kura_tis_ro.jpg",
+      "type": "Ενημέρωση",
+      "date": "2026-01-15",
+      "site_name": "athinorama.gr",
+      "production_id": 0
+    },{
+      "id": 9,
+      "url": "https://www.newsbomb.gr/politismos/story/1706633/paratasi-parastaseon-sto-theatro-filip/amp",
+      "title": "Παράταση παραστάσεων στο Θέατρο «ΦΙΛΙΠ»",
+      "description": "Οι παραστάσεις «Terror» και «Βότκα Μολότοφ» συνεχίζουνε και το 2026 μετά τη μεγάλη επιτυχία τους.",
+      "image": "/img/news/votka-terror.jpg",
+      "type": "Ενημέρωση",
+      "date": "2026-01-09",
+      "site_name": "newsbomb.gr",
+      "production_id": 1
+    },{
+      "id": 10,
+      "url": "https://www.culturenow.gr/xaris-mayroydis-mia-parastasi-poy-tha-ithela-na-eixa-dei-me-ta-paidia-moy/",
+      "title": "Χάρης Μαυρουδής: Μια παράσταση που θα ήθελα να είχα δει με τα παιδιά μου",
+      "description": "Ο Χάρης Μαυρουδής μίλησε στο CultureNow για την παράσταση «Αλίκη στη χώρα των ψαριών» και μοιράστηκε τις σκέψεις του σχετικά με τους χαρακτήρες, τα μηνύματα και την απήχηση του έργου στο παιδικό κοινό.",
+      "image": "/img/news/xarismayroudis.jpg",
+      "type": "Συνέντευξη",
+      "date": "2025-12-30",
+      "site_name": "culturenow.gr",
+      "production_id": 4
+    },{
+      "id": 11,
+      "url": "https://www.topontiki.gr/2026/01/20/giorgos-galitis-skinothetis-ithopios-i-skitsografos/#goog_rewarded",
+      "title": "Γιώργος Γαλίτης: Σκηνοθέτης, Ηθοποιός, Ιστορικός",
+      "description": "Η νέα σατιρική κωμωδία «Ούτε μπρος ούτε πίσω» των Θανάση Παπαθανασίου και Μιχάλη Ρέππα συνεχίζει την τεράστια επιτυχία της στο «Θέατρον» του Κέντρου Πολιτισμού «Ελληνικός Κόσμος». Ο Γιώργος Γαλίτης πρωταγωνιστεί στην παράσταση μαζί με τους Αντώνη Λουδάρο, Ματθίλδη Μαγγίρα, Σταύρο Νικολαΐδη, Δήμητρα Στογιάννη, Μάνο Ιωάννου και την Κατερίνα Ζαρίφη. Με αυτή την αφορμή μίλησε στο topontiki.gr.",
+      "image": "/img/news/galitis.jpg",
+      "type": "Eνημέρωση",
+      "date": "2026-01-20",
+      "site_name": "topontiki.gr",
+      "production_id": 7
+    },{
+      "id": 12,
+      "url": "https://www.gossip-tv.gr/g-specials/gossip-cam/story/866223/ta-theatra-ekopsan-tin-protoxroniatiki-pita-tous-oi-tyxeroi-pou-kerdisan-to-flouri-ta-xamogela",
+      "title": "Τα θέατρα έκοψαν την πρωτοχρονιάτικη πίτα τους! Οι τυχεροί που κέρδισαν το φλουρί & τα χαμόγελα",
+      "description": "Όπως κάθε χρόνο, έτσι και φέτος, αυτές τις πρώτες μέρες του χρόνου όλα τα θέατρα το έχουν παράδοση, όπως συμβαίνει και στα σπίτια, να γίνεται η κοπή της πρωτοχρονιάτικης πίτας. Και ο φωτογραφικός φακός ήταν εκεί για να απαθανατίσει χαμόγελα και την άλλη, πιο οικογενειακή πλευρά του ελληνικού θεάτρου.",
+      "image": "/img/news/kopi-pitas.jpg",
+      "type": "Eνημέρωση",
+      "date": "2026-01-19",
+      "site_name": "gossip-tv.gr",
+      "production_id": 0
+    },{
       "id": 100,
       "url": "https://xn--mxahi4ajr.gr/eidame/item/5144-%CE%B5%CE%AF%CE%B4%CE%B1%CE%BC%CE%B5-%CF%84%CE%B7%CE%BD-%CF%80%CE%B1%CF%81%CE%AC%CF%83%CF%84%CE%B1%CF%83%CE%B7-%CF%87%CE%B1%CF%83%CE%B1%CE%BC%CE%B5-%CF%84%CE%B7-%CE%B8%CE%B5%CE%B9%CE%B1-%CF%83%CF%84%CE%BF%CF%80-%CF%83%CF%84%CE%BF-%CE%BA%CE%AD%CE%BD%CF%84%CF%81%CE%BF-%CF%80%CE%BF%CE%BB%CE%B9%CF%84%CE%B9%CF%83%CE%BC%CE%BF%CF%8D-%C2%AB%CE%B5%CE%BB%CE%BB%CE%B7%CE%BD%CE%B9%CE%BA%CF%8C%CF%82-%CE%BA%CF%8C%CF%83%CE%BC%CE%BF%CF%82%C2%BB.html?fbclid=IwY2xjawLcrPVleHRuA2FlbQIxMQABHkpdYzhZdpAD2lDC0vv_pWb0MT83Pz7QdNz-e6Oco_j3Wp--BCd70zJSs1Q7_aem_9OY0lNjtCr-RwEux4ca5Mw",
       "title": "«Είδαμε την παράσταση ''ΧΑΣΑΜΕ ΤΗ ΘΕΙΑ ΣΤΟΠ'' στο Κέντρο Πολιτισμού «Ελληνικός Κόσμος»",
