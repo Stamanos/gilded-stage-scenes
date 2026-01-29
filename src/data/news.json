@@ -111,14 +111,34 @@
       "site_name": "topontiki.gr",
       "production_id": 7
     },{
-      "id": 12,
-      "url": "https://www.gossip-tv.gr/g-specials/gossip-cam/story/866223/ta-theatra-ekopsan-tin-protoxroniatiki-pita-tous-oi-tyxeroi-pou-kerdisan-to-flouri-ta-xamogela",
-      "title": "Τα θέατρα έκοψαν την πρωτοχρονιάτικη πίτα τους! Οι τυχεροί που κέρδισαν το φλουρί & τα χαμόγελα",
-      "description": "Όπως κάθε χρόνο, έτσι και φέτος, αυτές τις πρώτες μέρες του χρόνου όλα τα θέατρα το έχουν παράδοση, όπως συμβαίνει και στα σπίτια, να γίνεται η κοπή της πρωτοχρονιάτικης πίτας. Και ο φωτογραφικός φακός ήταν εκεί για να απαθανατίσει χαμόγελα και την άλλη, πιο οικογενειακή πλευρά του ελληνικού θεάτρου.",
-      "image": "/img/news/kopi-pitas.jpg",
+      "id": 13,
+      "url": "https://happykidsradio.gr/outandabout/oute-mpros-oute-piso-2026/",
+      "title": "Ούτε μπρος ούτε πίσω",
+      "description": "Η νέα σατιρική κωμωδία των Θανάση Παπαθανασίου και Μιχάλη Ρέππα για την παράνοια της καθημερινότητας",
+      "image": "img/Oute_bros/OUTE_BROS_OUTE_PISO_main.jpg",
       "type": "Eνημέρωση",
-      "date": "2026-01-19",
-      "site_name": "gossip-tv.gr",
+      "date": "2026-01-27",
+      "site_name": "happykidsradio.gr",
+      "production_id": 7
+    },{
+      "id": 14,
+      "url": "https://www.okmag.gr/people/sineneukseis/matthildi-mangira-den-eimaste-oloi-evgenikes-psyches-oute-tha-mas-kanei-i-politiki-orthotita/",
+      "title": "Ματθίλδη Μαγγίρα",
+      "description": "«Δεν είμαστε όλοι ευγενικές ψυχές, ούτε θα μας κάνει η πολιτική ορθότητα»",
+      "image": "/img/news/magira.jpg",
+      "type": "Συνέντευξη",
+      "date": "2026-01-24",
+      "site_name": "okmag.gr",
+      "production_id": 0
+    },{
+      "id": 15,
+      "url": "https://www.okmag.gr/people/sineneukseis/manos-ioannou-echo-perasei-erotikes-apogoitefseis/",
+      "title": "Μάνος Ιωάννου",
+      "description": "«Έχω περάσει ερωτικές απογοητεύσεις»",
+      "image": "/img/news/ioannou.jpg",
+      "type": "Συνέντευξη",
+      "date": "2026-01-25",
+      "site_name": "okmag.gr",
       "production_id": 0
     },{
       "id": 100,
